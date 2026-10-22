@@ -1,0 +1,874 @@
+{
+  "reservoir_id": "ex5_Garrison",
+  "folder": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison",
+  "name": "Garrison",
+  "base_script": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+  "coefficient_file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\coefficentsm27Apr18-16-09.txt",
+  "operating_rule_file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\S2Q1JAN.m",
+  "writer_file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m",
+  "source_sha256": {
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m": "fefa4ae05cfde1f6c5d2528c51cc210d0050764c818d104a0829c1e5eeaab416",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\coefficentsm27Apr18-16-09.txt": "0a553bd3bf4f495054c559db5ef66dd0cc1f62bf24a8edfe689645c348ba1232",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\S2Q1JAN.m": "5d7f47d2a2ab3abceed5d75d7e78ff319996b273e4f3e16b17b857d400af8e0c",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m": "5be16c9e6ff794668f50f1ac769df78d945291f45ac74557eedd47148578fe8c",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\res_info.xlsx": "20c8ed5b20ff8399addc8cf6938b89a5f2b50ec4ebe5d3fdba2815bdd51c1108",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\res_info_out.mat": "5861ae7ba156cc5a03b7baaa34e2150506a8d1cc47834680b282c1bb1df38e9b"
+  },
+  "model": {
+    "capacity_m3": 30220000000.0,
+    "initial_release_m3s": 400.0,
+    "initial_storage_m3": 24000000000.0,
+    "channel_capacity_m3s": 2000.0,
+    "channel_capacity_mode": "finite",
+    "dead_storage_fraction": 0.1,
+    "dead_storage_expression": "0.1",
+    "inflow_correction": 1.0,
+    "flood_mode": "storage"
+  },
+  "sampling": {
+    "frequency": "monthly",
+    "timestep_days": 30.5,
+    "legacy_start": "1970-01-01",
+    "month_clock": "legacy_synthetic"
+  },
+  "selection": {
+    "start": "1970-01-01",
+    "end": "1999-12-31",
+    "t1": 1,
+    "t2": 360,
+    "t1_variable": "t1",
+    "t2_variable": "t2"
+  },
+  "initial_storage_source": "observed",
+  "initial_release_source": "coefficient",
+  "warmup_rows": 12,
+  "legacy_release_shift_rows": 0,
+  "legacy_storage_shift_rows": 0,
+  "status": "ready",
+  "warnings": [
+    "Static base-script selection does not establish which script last produced saved artifacts.",
+    "MATLAB uses fixed 30.5-day steps and synthetic month dates, which drift from calendar months."
+  ],
+  "evidence": [
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 5,
+      "field": "filename",
+      "code": "filename = [my_dir,'\\','coefficentsm27Apr18-16-09.txt'];    delimiterIn = ' ';     headerlinesIn = 0;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\coefficentsm27Apr18-16-09.txt",
+      "line": 1,
+      "field": "coefficient_constants",
+      "code": "30220000000"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\coefficentsm27Apr18-16-09.txt",
+      "line": 2,
+      "field": "coefficient_constants",
+      "code": "400.000"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\coefficentsm27Apr18-16-09.txt",
+      "line": 3,
+      "field": "coefficient_constants",
+      "code": "24000000000"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\coefficentsm27Apr18-16-09.txt",
+      "line": 4,
+      "field": "coefficient_constants",
+      "code": "2000.000"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 8,
+      "field": "Ld",
+      "code": "Ld      = 0.1;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 6,
+      "field": "icor",
+      "code": "icor    = 1.00;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 7,
+      "field": "cse",
+      "code": "cse     = 1;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 36,
+      "field": "stoSIM(1,1)",
+      "code": "stoSIM(1,1) = stoObs(1,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 34,
+      "field": "flowSIM(1,1)",
+      "code": "flowSIM(1,1)= Intflow(1,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 30,
+      "field": "tinterval",
+      "code": "tinterval   = 30.5;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 14,
+      "field": "date1",
+      "code": "date1 = datenum(1970,1,1);       date2 = datenum(1999,12,31);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 14,
+      "field": "date2",
+      "code": "date1 = datenum(1970,1,1);       date2 = datenum(1999,12,31);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 13,
+      "field": "strtime",
+      "code": "formatOuttime = 'yyyy/mm/dd';  strtime = '1970/01/01';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 16,
+      "field": "t1",
+      "code": "t1          = 1;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 17,
+      "field": "t2",
+      "code": "t2          = 360;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 19,
+      "field": "stoObs",
+      "code": "stoObs  = res_info_out.stoobs(t1:t2,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 20,
+      "field": "flowObs",
+      "code": "flowObs = res_info_out.outflow(t1:t2,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 54,
+      "field": "wrmp",
+      "code": "wrmp = 13;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 9,
+      "field": "niter",
+      "code": "niter   = 1000;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 21,
+      "field": "flowI",
+      "code": "flowI   = res_info_out.inflow(t1:t2,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 54,
+      "field": "wrmp",
+      "code": "wrmp = 13;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 10,
+      "field": "coeff",
+      "code": "coeff    = importdata(filename,delimiterIn,headerlinesIn);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 11,
+      "field": "coeff2",
+      "code": "coeff2   = reshape(coeff(5:end,1),12,19)';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 22,
+      "field": "smax",
+      "code": "smax    = coeff(1,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 23,
+      "field": "Intflow",
+      "code": "Intflow = coeff(2,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 24,
+      "field": "Intstor1",
+      "code": "Intstor1= coeff(3,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 25,
+      "field": "qds",
+      "code": "qds     = coeff(4,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 26,
+      "field": "Lc",
+      "code": "Lc      = coeff2(2,:)./smax;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 27,
+      "field": "Ln",
+      "code": "Ln      = coeff2(3,:)./smax;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 28,
+      "field": "Lf",
+      "code": "Lf      = coeff2(4,:)./smax;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 29,
+      "field": "qmin",
+      "code": "qmin   =  coeff2(5,:); qnorm   =  coeff2(6,:); qnd   =  coeff2(7,:);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 29,
+      "field": "qnorm",
+      "code": "qmin   =  coeff2(5,:); qnorm   =  coeff2(6,:); qnd   =  coeff2(7,:);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 29,
+      "field": "qnd",
+      "code": "qmin   =  coeff2(5,:); qnorm   =  coeff2(6,:); qnd   =  coeff2(7,:);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m",
+      "line": 31,
+      "field": "dt",
+      "code": "dt          = 60*60*(tinterval*24);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m",
+      "line": 15,
+      "field": "res_info_out.stoobs",
+      "code": "res_info_out.stoobs  = resdata(k1:k2,4).*1000000;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m",
+      "line": 16,
+      "field": "res_info_out.inflow",
+      "code": "res_info_out.inflow  = resdata(k1:k2,5);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m",
+      "line": 17,
+      "field": "res_info_out.outflow",
+      "code": "res_info_out.outflow = resdata(k1:k2,6);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m",
+      "line": 4,
+      "field": "strdate2",
+      "code": "strdate2 = '1970/01/01';  enddate2 = '1999/12/31';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m",
+      "line": 5,
+      "field": "strdate",
+      "code": "strdate = '1970/01/01';  enddate = '1999/12/31';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m",
+      "line": 5,
+      "field": "enddate",
+      "code": "strdate = '1970/01/01';  enddate = '1999/12/31';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m",
+      "line": 4,
+      "field": "strdate2",
+      "code": "strdate2 = '1970/01/01';  enddate2 = '1999/12/31';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m",
+      "line": 4,
+      "field": "enddate2",
+      "code": "strdate2 = '1970/01/01';  enddate2 = '1999/12/31';"
+    }
+  ],
+  "base_script_candidates": [
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\SimRISM14.m"
+  ],
+  "simulation_supported": true,
+  "raw_monthly_targets": {
+    "storage_critical_m3": [
+      16784800000.0,
+      16319200000.0,
+      16740500000.0,
+      16648500000.0,
+      17073000000.0,
+      18590500000.0,
+      18843000000.0,
+      18062000000.0,
+      17859000000.0,
+      17835500000.0,
+      17698000000.0,
+      17133500000.0
+    ],
+    "storage_normal_m3": [
+      22488550000.0,
+      22004700000.0,
+      22547000000.0,
+      22789000000.0,
+      23573000000.0,
+      24969000000.0,
+      25677000000.0,
+      25570000000.0,
+      24257000000.0,
+      24205000000.0,
+      23422000000.0,
+      22901000000.0
+    ],
+    "storage_flood_m3": [
+      24004250000.0,
+      23693000000.0,
+      24670000000.0,
+      24938000000.0,
+      25648000000.0,
+      27400000000.0,
+      27628000000.0,
+      27006000000.0,
+      26486000000.0,
+      26050000000.0,
+      25311000000.0,
+      24574000000.0
+    ],
+    "release_critical_m3s": [
+      557.842,
+      558.41,
+      355.375,
+      339.805,
+      409.18,
+      430.415,
+      495.545,
+      511.115,
+      375.2,
+      293.08,
+      321.395,
+      516.785
+    ],
+    "release_normal_m3s": [
+      675.926,
+      748.131,
+      549.35,
+      495.54,
+      543.68,
+      588.99,
+      622.97,
+      645.62,
+      546.52,
+      484.22,
+      538.02,
+      591.82
+    ],
+    "release_flood_m3s": [
+      790.746,
+      825.719,
+      750.4,
+      784.38,
+      1010.91,
+      1030.73,
+      1033.56,
+      883.49,
+      920.3,
+      804.2,
+      835.35,
+      673.94
+    ]
+  },
+  "raw_coefficient_table": [
+    [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0,
+      11.0,
+      12.0
+    ],
+    [
+      16784800000.0,
+      16319200000.0,
+      16740500000.0,
+      16648500000.0,
+      17073000000.0,
+      18590500000.0,
+      18843000000.0,
+      18062000000.0,
+      17859000000.0,
+      17835500000.0,
+      17698000000.0,
+      17133500000.0
+    ],
+    [
+      22488550000.0,
+      22004700000.0,
+      22547000000.0,
+      22789000000.0,
+      23573000000.0,
+      24969000000.0,
+      25677000000.0,
+      25570000000.0,
+      24257000000.0,
+      24205000000.0,
+      23422000000.0,
+      22901000000.0
+    ],
+    [
+      24004250000.0,
+      23693000000.0,
+      24670000000.0,
+      24938000000.0,
+      25648000000.0,
+      27400000000.0,
+      27628000000.0,
+      27006000000.0,
+      26486000000.0,
+      26050000000.0,
+      25311000000.0,
+      24574000000.0
+    ],
+    [
+      557.842,
+      558.41,
+      355.375,
+      339.805,
+      409.18,
+      430.415,
+      495.545,
+      511.115,
+      375.2,
+      293.08,
+      321.395,
+      516.785
+    ],
+    [
+      675.926,
+      748.131,
+      549.35,
+      495.54,
+      543.68,
+      588.99,
+      622.97,
+      645.62,
+      546.52,
+      484.22,
+      538.02,
+      591.82
+    ],
+    [
+      790.746,
+      825.719,
+      750.4,
+      784.38,
+      1010.91,
+      1030.73,
+      1033.56,
+      883.49,
+      920.3,
+      804.2,
+      835.35,
+      673.94
+    ],
+    [
+      532.784,
+      390.345,
+      339.8,
+      300.16,
+      356.79,
+      396.44,
+      419.09,
+      458.73,
+      319.98,
+      283.17,
+      311.49,
+      489.88
+    ],
+    [
+      630.336,
+      649.022,
+      495.545,
+      465.815,
+      485.63,
+      542.265,
+      545.1,
+      559.26,
+      470.055,
+      378.03,
+      433.245,
+      552.18
+    ],
+    [
+      746.996,
+      810.992,
+      710.75,
+      566.34,
+      713.585,
+      811.28,
+      750.395,
+      763.14,
+      658.365,
+      664.03,
+      696.595,
+      625.805
+    ],
+    [
+      623.678,
+      597.49,
+      458.73,
+      458.73,
+      472.89,
+      526.69,
+      540.85,
+      521.03,
+      444.57,
+      368.12,
+      402.1,
+      538.02
+    ],
+    [
+      738.08,
+      796.836,
+      705.09,
+      549.35,
+      682.44,
+      727.74,
+      739.07,
+      741.9,
+      642.79,
+      628.63,
+      685.27,
+      617.31
+    ],
+    [
+      856.584,
+      889.291,
+      795.7,
+      982.59,
+      1076.04,
+      1135.51,
+      1622.56,
+      1413.01,
+      1053.39,
+      1016.57,
+      940.12,
+      690.93
+    ],
+    [
+      15756800000.0,
+      15387500000.0,
+      16202000000.0,
+      16264000000.0,
+      16256000000.0,
+      17423000000.0,
+      17921000000.0,
+      17365000000.0,
+      16923000000.0,
+      16946000000.0,
+      17037000000.0,
+      16359000000.0
+    ],
+    [
+      21549800000.0,
+      20788600000.0,
+      21306000000.0,
+      21950500000.0,
+      22360000000.0,
+      23579000000.0,
+      23552500000.0,
+      23070500000.0,
+      22761500000.0,
+      22697000000.0,
+      22260000000.0,
+      21966500000.0
+    ],
+    [
+      23634800000.0,
+      23197000000.0,
+      23809000000.0,
+      24212000000.0,
+      24565500000.0,
+      26542500000.0,
+      27323000000.0,
+      26568500000.0,
+      25852000000.0,
+      25237500000.0,
+      24905500000.0,
+      24291000000.0
+    ],
+    [
+      20806750000.0,
+      19893250000.0,
+      20470000000.0,
+      21386000000.0,
+      21640000000.0,
+      22753000000.0,
+      22405000000.0,
+      22183000000.0,
+      22123000000.0,
+      22240000000.0,
+      21850000000.0,
+      21127000000.0
+    ],
+    [
+      23353500000.0,
+      23081850000.0,
+      23399000000.0,
+      23610000000.0,
+      24506000000.0,
+      26390000000.0,
+      27074000000.0,
+      26303000000.0,
+      25662000000.0,
+      25208000000.0,
+      24743000000.0,
+      24071000000.0
+    ],
+    [
+      24321600000.0,
+      24140750000.0,
+      25168000000.0,
+      26372000000.0,
+      26260000000.0,
+      28525000000.0,
+      28528000000.0,
+      27453000000.0,
+      27024000000.0,
+      26439000000.0,
+      25850000000.0,
+      25013000000.0
+    ]
+  ],
+  "raw_bounds": {
+    "lower_storage_critical_m3": [
+      15756800000.0,
+      15387500000.0,
+      16202000000.0,
+      16264000000.0,
+      16256000000.0,
+      17423000000.0,
+      17921000000.0,
+      17365000000.0,
+      16923000000.0,
+      16946000000.0,
+      17037000000.0,
+      16359000000.0
+    ],
+    "lower_storage_normal_m3": [
+      21549800000.0,
+      20788600000.0,
+      21306000000.0,
+      21950500000.0,
+      22360000000.0,
+      23579000000.0,
+      23552500000.0,
+      23070500000.0,
+      22761500000.0,
+      22697000000.0,
+      22260000000.0,
+      21966500000.0
+    ],
+    "lower_storage_flood_m3": [
+      23634800000.0,
+      23197000000.0,
+      23809000000.0,
+      24212000000.0,
+      24565500000.0,
+      26542500000.0,
+      27323000000.0,
+      26568500000.0,
+      25852000000.0,
+      25237500000.0,
+      24905500000.0,
+      24291000000.0
+    ],
+    "lower_release_critical_m3s": [
+      532.784,
+      390.345,
+      339.8,
+      300.16,
+      356.79,
+      396.44,
+      419.09,
+      458.73,
+      319.98,
+      283.17,
+      311.49,
+      489.88
+    ],
+    "lower_release_normal_m3s": [
+      630.336,
+      649.022,
+      495.545,
+      465.815,
+      485.63,
+      542.265,
+      545.1,
+      559.26,
+      470.055,
+      378.03,
+      433.245,
+      552.18
+    ],
+    "lower_release_flood_m3s": [
+      746.996,
+      810.992,
+      710.75,
+      566.34,
+      713.585,
+      811.28,
+      750.395,
+      763.14,
+      658.365,
+      664.03,
+      696.595,
+      625.805
+    ],
+    "upper_storage_critical_m3": [
+      20806750000.0,
+      19893250000.0,
+      20470000000.0,
+      21386000000.0,
+      21640000000.0,
+      22753000000.0,
+      22405000000.0,
+      22183000000.0,
+      22123000000.0,
+      22240000000.0,
+      21850000000.0,
+      21127000000.0
+    ],
+    "upper_storage_normal_m3": [
+      23353500000.0,
+      23081850000.0,
+      23399000000.0,
+      23610000000.0,
+      24506000000.0,
+      26390000000.0,
+      27074000000.0,
+      26303000000.0,
+      25662000000.0,
+      25208000000.0,
+      24743000000.0,
+      24071000000.0
+    ],
+    "upper_storage_flood_m3": [
+      24321600000.0,
+      24140750000.0,
+      25168000000.0,
+      26372000000.0,
+      26260000000.0,
+      28525000000.0,
+      28528000000.0,
+      27453000000.0,
+      27024000000.0,
+      26439000000.0,
+      25850000000.0,
+      25013000000.0
+    ],
+    "upper_release_critical_m3s": [
+      623.678,
+      597.49,
+      458.73,
+      458.73,
+      472.89,
+      526.69,
+      540.85,
+      521.03,
+      444.57,
+      368.12,
+      402.1,
+      538.02
+    ],
+    "upper_release_normal_m3s": [
+      738.08,
+      796.836,
+      705.09,
+      549.35,
+      682.44,
+      727.74,
+      739.07,
+      741.9,
+      642.79,
+      628.63,
+      685.27,
+      617.31
+    ],
+    "upper_release_flood_m3s": [
+      856.584,
+      889.291,
+      795.7,
+      982.59,
+      1076.04,
+      1135.51,
+      1622.56,
+      1413.01,
+      1053.39,
+      1016.57,
+      940.12,
+      690.93
+    ]
+  },
+  "fixed_point_iterations": 1000,
+  "inflow_preprocessing": {
+    "factor": 1.0,
+    "offset_m3s": 0.0
+  },
+  "inflow_source": "observed",
+  "overflow_mode": "matlab",
+  "writer_candidates": [
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex5_Garrison\\garrisonRES_fit.m"
+  ],
+  "observation_mapping": {
+    "storage_column": 4,
+    "inflow_column": 5,
+    "release_column": 6,
+    "storage_factor": 1000000.0,
+    "measurement_columns": [
+      4,
+      5,
+      6
+    ],
+    "date_column_order": null,
+    "year_column": null,
+    "month_column": null,
+    "day_column": null,
+    "year_offset": null,
+    "aggregation": "none",
+    "date_mode": "synthetic_row_order",
+    "calendar_source": "workbook_month_labels",
+    "workbook_legacy_start": "1970-01-01",
+    "writer_start": "1970-01-01",
+    "writer_end": "1999-12-31",
+    "source_start": "1970-01-01",
+    "source_end": "1999-12-31"
+  }
+}

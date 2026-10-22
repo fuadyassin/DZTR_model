@@ -1,0 +1,26 @@
+{
+  "kind": "dztr_run_manager_v6",
+  "schema_version": 6,
+  "description": "Verify automatic data-availability application and an explicit no-observation comparison on inflow-only Gardiner forcing. Two fixed-profile replays; no optimization.",
+  "stages": [
+    {
+      "id": "automatic",
+      "type": "simulate",
+      "config": {
+        "registry": "../outputs/managed_availability_paper_v1_20261020_final/stages/comparison/campaign/route_registry.json",
+        "forcing_csv": "../outputs/managed_availability_paper_v1_20261020/stages/no_observations/campaign/prepared/ex14_Gardiner/forcing_si.csv",
+        "reservoir_id": "ex14_Gardiner"
+      }
+    },
+    {
+      "id": "no_observation_comparison",
+      "type": "simulate",
+      "config": {
+        "registry": "../outputs/managed_availability_paper_v1_20261020_final/stages/comparison/campaign/route_registry.json",
+        "forcing_csv": "../outputs/managed_availability_paper_v1_20261020/stages/no_observations/campaign/prepared/ex14_Gardiner/forcing_si.csv",
+        "reservoir_id": "ex14_Gardiner",
+        "method": "ungauged_mean_flow"
+      }
+    }
+  ]
+}

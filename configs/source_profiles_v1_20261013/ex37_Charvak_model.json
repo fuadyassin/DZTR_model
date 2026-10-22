@@ -1,0 +1,22 @@
+{
+  "physical_constants": {
+    "capacity_m3": 2006000000,
+    "initial_storage_m3": 684333333.3333334,
+    "initial_release_m3s": 70.0,
+    "channel_capacity_m3s": 600.0,
+    "dead_storage_fraction": 0.1,
+    "inflow_correction": 1.0,
+    "flood_mode": "inflow"
+  },
+  "sampling": {
+    "frequency": "monthly",
+    "fixed_step_days": 30.5,
+    "month_clock": "observed",
+    "legacy_start": null,
+    "allow_signed_inflow": false
+  },
+  "root_policy": "nearest_previous_storage",
+  "atol_storage_m3": 0.0001,
+  "source_preprocessing_already_applied": true,
+  "quantile_method": "hazen"
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "paired_extension_source_review_v1",
+  "base_catalog": "data/catalogs/reservoir_collection_v5_20261021.json",
+  "base_inventory": "data/catalogs/reservoir_inventory_v5_20261021.csv",
+  "output": "outputs/paired_source_review_v1_20261022",
+  "usgs_appleton_method_id": 226683,
+  "candidate_flow_alignment": "same_daily_mean_date_label_no_routing_certified",
+  "cases": [
+    {
+      "reservoir_id": "etienne_Aishihik",
+      "priority": 2,
+      "level_stations": ["08AA005", "08AA012"],
+      "release_terms": [
+        {"station": "08AA010", "coefficient": 1.0, "evidence": "Yukon Energy hydrotechnical study 2024, printed page 45, equation 2.8."},
+        {"station": "08AA009", "coefficient": -1.0, "evidence": "Subtract Giltana Creek, which joins before downstream gauge 08AA010; same study equation 2.8."}
+      ],
+      "source_gates": ["storage_curve_and_capacity_on_same_reference", "north_south_level_datum_alignment", "historical_flow_timing_and_reach_routing", "independent_inflow_or_declared_conditional_forcing"],
+      "next_action": "Resolve the storage reference using the two lake gauges and a documented curve, then use downstream river minus Giltana Creek as a declared daily-mean lake-outflow approximation. Do not evaluate the published polynomial until its level variable and units are clarified."
+    },
+    {
+      "reservoir_id": "etienne_Nechako",
+      "priority": 1,
+      "level_stations": ["08JA023"],
+      "release_terms": [
+        {"station": "08JA013", "coefficient": 1.0, "evidence": "ECCC identifies this as Skins Lake Spillway, Nechako Reservoir."},
+        {"station": "08FE002", "coefficient": 1.0, "evidence": "ECCC Kemano Powerhouse record; federal assessment Marine Physical Environment Table C-1 identifies its flow as diverted, separately from the natural Kemano River gauge."}
+      ],
+      "source_gates": ["storage_curve_and_capacity_on_same_reference", "two_outlet_clock_and_tunnel_alignment", "historical_all_outlet_coverage", "independent_inflow_or_declared_conditional_forcing"],
+      "next_action": "Prioritize a datum-compatible stage-storage curve for 08JA023. Use Skins Lake plus Kemano as the candidate total-outlet boundary; retain historical timing and residual-negative net flux flags. The archive 0.9-scaled downstream river flow is not total reservoir release."
+    },
+    {
+      "reservoir_id": "etienne_Seton",
+      "priority": 4,
+      "level_stations": ["08ME017"],
+      "release_terms": [],
+      "source_gates": ["storage_curve_and_capacity_on_same_reference", "missing_canal_powerhouse_discharge", "historical_observation_timing", "independent_inflow_or_declared_conditional_forcing"],
+      "next_action": "Obtain Seton Canal/powerhouse discharge in addition to river gauge 08ME003. Replace or establish the archived storage coordinate using the lake level and a compatible curve; the later BC Hydro total/live volumes cannot simply replace a capacity field for the 1958-1978 archive."
+    },
+    {
+      "reservoir_id": "etienne_Winnebago",
+      "priority": 3,
+      "level_stations": [],
+      "release_terms": [],
+      "source_gates": ["lake_vs_connected_pool_boundary", "gauge_datum_and_stage_storage_reference", "downstream_outlet_routing_and_scaling", "independent_inflow_or_declared_conditional_forcing"],
+      "next_action": "Establish whether storage represents Lake Winnebago or the connected regulated pool. Verify historical gauge datums and a matching stage-storage curve, and evaluate the Appleton downstream flow/routing approximation. Do not adopt the inferred 3.7112 m archive offset as a surveyed lake depth."
+    }
+  ]
+}

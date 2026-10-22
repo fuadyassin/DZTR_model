@@ -1,0 +1,95 @@
+{
+  "kind": "conditional_extension_cohort_v1",
+  "base_catalog": "data/catalogs/reservoir_collection_v3_20261021.json",
+  "base_inventory": "outputs/hungry_horse_completion_v1_20261021/reservoir_parameterization_all_62_by_GRAND_ID.csv",
+  "cases": [
+    {
+      "reservoir_id": "etienne_Hugh_Keenleyside",
+      "GRAND_ID": null,
+      "unverified_GRAND_candidate": 282,
+      "observations_csv": "data/reservoirs_etienne_v1_20261021/etienne_Hugh_Keenleyside/observations_si.csv",
+      "start": "1973-01-01",
+      "end": "2019-12-31",
+      "selection": "mixed_whole_years",
+      "restart_warmup_days": 30,
+      "allow_feasible_initialization": true,
+      "physical_constants": {
+        "capacity_m3": 11300000000.0,
+        "dead_storage_fraction": 0.0,
+        "initial_storage_m3": 5650000000.0,
+        "initial_release_m3s": 0.0,
+        "inflow_correction": 1.0,
+        "flood_mode": "storage"
+      },
+      "source_decision": "Conditional sensitivity only: original storage coordinate retained, catalog capacity unverified, zero dead-storage reference assumed. Net inflow reconstructed from storage changes and observed release, including assessment responses. No independent validation claim.",
+      "source_reconciliation_pending": "Reconcile archived storage with live versus total Arrow Lakes storage and confirm total outlet discharge and storage/flow timing.",
+      "channel_capacity": "Calibration-only Hazen Q99 benchmark; not outlet design capacity.",
+      "timing": "Nominal 86400-second interval ending at storage row, with current-day Q assumed interval mean; provider clock not certified.",
+      "capacity_evidence": "GRAND candidate 282, CAP_MCM=11300; sensitivity only, not adopted. Official live storage is 8800 million m3 and is not the same coordinate.",
+      "no_record_clipping_or_offsets": true
+    },
+    {
+      "reservoir_id": "etienne_Revelstoke",
+      "GRAND_ID": null,
+      "unverified_GRAND_candidate": 257,
+      "observations_csv": "data/reservoirs_etienne_v1_20261021/etienne_Revelstoke/observations_si.csv",
+      "start": "2018-05-03",
+      "end": "2019-12-31",
+      "selection": "short_record_chronological",
+      "restart_warmup_days": 30,
+      "allow_feasible_initialization": true,
+      "physical_constants": {
+        "capacity_m3": 5180000000.0,
+        "dead_storage_fraction": 0.0,
+        "initial_storage_m3": 2590000000.0,
+        "initial_release_m3s": 0.0,
+        "inflow_correction": 1.0,
+        "flood_mode": "storage"
+      },
+      "source_decision": "Conditional sensitivity only: original storage coordinate retained, catalog capacity unverified, zero dead-storage reference assumed. Net inflow reconstructed from storage changes and observed release, including assessment responses. No independent validation claim.",
+      "source_reconciliation_pending": "Verify capacity, total outflow and observation clock. Extend the 2018-2019 storage record, or use a separately labelled short-record experiment without claiming normal multi-regime assessment.",
+      "channel_capacity": "Calibration-only Hazen Q99 benchmark; not outlet design capacity.",
+      "timing": "Nominal 86400-second interval ending at storage row, with current-day Q assumed interval mean; provider clock not certified.",
+      "capacity_evidence": "GRAND candidate 257, CAP_MCM=5180; sensitivity only, not adopted physical metadata",
+      "no_record_clipping_or_offsets": true
+    }
+  ],
+  "decisions": {
+    "etienne_Aishihik": "Confirm which of Sekulmun, Aishihik and Canyon lakes the storage represents, and whether release includes every outlet/diversion; obtain capacity on that same boundary.",
+    "etienne_Baskatong": "Verify Mercier/Baskatong identity and total/active storage coordinate, then supply time-varying inflow and an explicit release prior or observations.",
+    "etienne_Carry_Falls": "Verify station identity, all-outlet release coverage and physical capacity; obtain time-varying inflow before the fixed-storage-fraction flow-only route.",
+    "etienne_Corra_Linn": "Verify Kootenay/Corra Linn identity and whether recorded flow is powerplant-only or total lake outflow; supply inflow and compatible capacity.",
+    "etienne_Dozois": "Confirm storage datum/definition and catalog identity, then obtain inflow and declare a release prior; preserve declared missing-value interpretation.",
+    "etienne_Duncan": "Verify Duncan dam capacity and total/active storage definition; supply time-varying inflow and an explicit release prior.",
+    "etienne_Hugh_Keenleyside": "Completed conditional sensitivity profile; retain original source gate: Reconcile archived storage with live versus total Arrow Lakes storage and confirm total outlet discharge and storage/flow timing.",
+    "etienne_Kipawa": "Establish dam/lake identity and storage coordinate before linking a GRAND ID; obtain inflow and a documented release prior.",
+    "etienne_Lake_Chelan": "Keep the already converted m3/s field; verify total versus powerplant-only release, capacity and independent inflow forcing.",
+    "etienne_Lake_of_the_Woods": "Identify the correct Lake of the Woods storage/control boundary; do not adopt the unrelated 17.5 million m3 name match. Supply inflow and a release prior.",
+    "etienne_Minidoka": "Resolve active versus total storage and negative MIN storage, and establish whether discharge includes both canals as well as the Snake River; do not clip or offset records yet.",
+    "etienne_Namakan": "Confirm the regulated lake-system boundary, datum and capacity; obtain inflow and a documented release prior.",
+    "etienne_Nechako": "Resolve Ootsa/Kenney storage coordinate: archived values around 30 billion m3 exceed the 23.8 billion m3 catalog candidate; confirm diverted and river outlet components.",
+    "etienne_Rainy": "Confirm Rainy Lake versus a different dam/system identity and storage datum; obtain inflow and an explicit release prior.",
+    "etienne_Revelstoke": "Completed conditional sensitivity profile; retain original source gate: Verify capacity, total outflow and observation clock. Extend the 2018-2019 storage record, or use a separately labelled short-record experiment without claiming normal multi-regime assessment.",
+    "etienne_Seton": "Resolve Seton storage capacity/datum and whether release includes canal/powerplant diversions and river outlet; preserve exceedances without clipping.",
+    "etienne_Waterbury": "Confirm storage definition and capacity on the same datum; obtain inflow and an explicit release prior.",
+    "etienne_Winnebago": "Establish the lake-system capacity/coordinate and all outlet components, including any connected-lake operations, before adopting the conditional net-flux route.",
+    "etienne_Winnipeg": "Resolve whether 5-6 billion m3 archived storage is an active/offset coordinate rather than catalog total storage; confirm Jenpeg/system boundary, inflow and release prior.",
+    "etienne_Wrightsville": "Retain the untimed arithmetic daily storage proxy label and original within-day ranges; verify measurement timing, datum/capacity, inflow and release prior."
+  },
+  "balance_tolerance_m3": 0.0001,
+  "objective_weights": {
+    "storage": 0.5,
+    "release": 0.5
+  },
+  "optimization": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "horizon": 512,
+    "evaluation_budget": 512,
+    "workers": 3,
+    "perturbation": 0.2
+  }
+}

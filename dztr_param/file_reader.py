@@ -1,18 +1,17 @@
-import os
+"""Raw file compatibility reader; validated readers live in ``dztr.data``."""
+
+import warnings
+
 import pandas as pd
 
-def check_and_read_files(grand_id, folder='ResDataInflowStorageRelease'):
-    files = os.listdir(folder)
-    matching_files = [file for file in files if f"_{grand_id}." in file]
-    
-    if len(matching_files) == 0:
-        print(f"No file exists for GRAND_ID {grand_id}.")
+from dztr.data import find_reservoir_file
+
+
+def check_and_read_files(grand_id, folder="ResDataInflowStorageRelease"):
+    """Read one matching CSV/workbook, warning if missing or ambiguous."""
+    try:
+        path = find_reservoir_file(folder, grand_id)
+    except (FileNotFoundError, ValueError) as error:
+        warnings.warn(str(error), UserWarning, stacklevel=2)
         return None
-    elif len(matching_files) > 1:
-        print(f"More than one file exists for GRAND_ID {grand_id}.")
-        return None
-    else:
-        file_path = os.path.join(folder, matching_files[0])
-        data = pd.read_excel(file_path)
-        print(f"File for GRAND_ID {grand_id} has been read successfully.")
-        return data
+    return pd.read_csv(path) if path.suffix.casefold() == ".csv" else pd.read_excel(path)

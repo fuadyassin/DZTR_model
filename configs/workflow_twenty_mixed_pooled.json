@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "year_selection": "mixed",
+  "scoring": "pooled",
+  "optimization": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "population": 32,
+    "evaluation_budget": 512,
+    "workers": 3
+  },
+  "archives": [
+    "../outputs/strategy_comparison_pilot_20261012",
+    "../outputs/strategy_comparison_fleet_v2_20261012"
+  ],
+  "reservoirs": [
+    {
+      "reservoir_id": "ex14_Gardiner",
+      "grand_id": 253,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex14_Gardiner/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex14_Gardiner/model_config.json"
+    },
+    {
+      "reservoir_id": "ex16_Yellowtail",
+      "grand_id": 355,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex16_Yellowtail/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex16_Yellowtail/model_config.json"
+    },
+    {
+      "reservoir_id": "ex17_Bhumibol",
+      "grand_id": 5146,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex17_Bhumibol/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex17_Bhumibol/model_config.json"
+    },
+    {
+      "reservoir_id": "ex18_High_aswan",
+      "grand_id": 4478,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex18_High_aswan/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex18_High_aswan/model_config.json"
+    },
+    {
+      "reservoir_id": "ex19_Sirikit",
+      "grand_id": 5140,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex19_Sirikit/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex19_Sirikit/model_config.json"
+    },
+    {
+      "reservoir_id": "ex1_Glen_canyon",
+      "grand_id": 597,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex1_Glen_canyon/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex1_Glen_canyon/model_config.json"
+    },
+    {
+      "reservoir_id": "ex20_St_marry",
+      "grand_id": 281,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex20_St_marry/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex20_St_marry/model_config.json"
+    },
+    {
+      "reservoir_id": "ex21_Travers",
+      "grand_id": 270,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex21_Travers/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex21_Travers/model_config.json"
+    },
+    {
+      "reservoir_id": "ex23_Waterton",
+      "grand_id": 284,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex23_Waterton/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex23_Waterton/model_config.json"
+    },
+    {
+      "reservoir_id": "ex24_Oldman",
+      "grand_id": 278,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex24_Oldman/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex24_Oldman/model_config.json"
+    },
+    {
+      "reservoir_id": "ex28_Dickson",
+      "grand_id": 251,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex28_Dickson/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex28_Dickson/model_config.json"
+    },
+    {
+      "reservoir_id": "ex29_EB_Campbell",
+      "grand_id": 710,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex29_EB_Campbell/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex29_EB_Campbell/model_config.json"
+    },
+    {
+      "reservoir_id": "ex2_Grand_coulee",
+      "grand_id": 310,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex2_Grand_coulee/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex2_Grand_coulee/model_config.json"
+    },
+    {
+      "reservoir_id": "ex32_Oroville",
+      "grand_id": 148,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex32_Oroville/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex32_Oroville/model_config.json"
+    },
+    {
+      "reservoir_id": "ex34_Andijan",
+      "grand_id": 4683,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex34_Andijan/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex34_Andijan/model_config.json"
+    },
+    {
+      "reservoir_id": "ex39_Nurek",
+      "grand_id": 4692,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex39_Nurek/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex39_Nurek/model_config.json"
+    },
+    {
+      "reservoir_id": "ex4_Fort_randall",
+      "grand_id": null,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex4_Fort_randall/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex4_Fort_randall/model_config.json"
+    },
+    {
+      "reservoir_id": "ex5_Garrison",
+      "grand_id": 753,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex5_Garrison/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex5_Garrison/model_config.json"
+    },
+    {
+      "reservoir_id": "ex6_Oahe",
+      "grand_id": 870,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex6_Oahe/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex6_Oahe/model_config.json"
+    },
+    {
+      "reservoir_id": "ex9_Amistad",
+      "grand_id": 1307,
+      "observations_csv": "../outputs/representative_years_v1_20261012/ex9_Amistad/observations_si.csv",
+      "model_config": "../outputs/representative_years_v1_20261012/ex9_Amistad/model_config.json"
+    }
+  ]
+}

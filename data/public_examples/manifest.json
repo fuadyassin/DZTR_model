@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "kind": "reservoir_collection",
+  "repository_root": "../..",
+  "paths_relative_to": "repository_root",
+  "units": {
+    "storage": "m3",
+    "flows": "m3/s"
+  },
+  "reservoir_count": 4,
+  "excluded_reservoirs": [
+    {
+      "reservoir_id": "ex43_TuyenQuang",
+      "name": "TuyenQuang",
+      "status": "intentionally_excluded",
+      "reason": "Excluded at user request; no storage-data resolution is required for the active collection.",
+      "audit_file": "outputs/world_reservoir_samples_final/reservoirs/ex43_TuyenQuang/observation_provenance.json"
+    }
+  ],
+  "counts": {
+    "frequency": {
+      "daily": 2,
+      "monthly": 2
+    },
+    "baseline_status": {
+      "completed": 4
+    },
+    "optimization_status": {
+      "ready": 4
+    },
+    "legacy_status": {
+      "completed": 4
+    }
+  },
+  "reservoirs": [
+    {
+      "reservoir_id": "ex14_Gardiner",
+      "name": "Gardiner",
+      "config_file": "configs/reservoirs/ex14_Gardiner.json",
+      "config_sha256": "5770f9a6c06da140ab094f28687085c38e7e14e934b71e9f0a027e219069f707",
+      "observations_file": "data/reservoirs/ex14_Gardiner/observations_si.csv",
+      "observations_sha256": "edde7a476b7e9099a81411db0a269d8e1cbad3dec8fb82ee096bf0538a9e7f51",
+      "frequency": "daily",
+      "rows": 11688,
+      "first_date": "1980-01-01",
+      "last_date": "2011-12-31",
+      "readiness": {
+        "baseline_status": "completed",
+        "optimization_status": "ready",
+        "legacy_status": "completed",
+        "reasons": []
+      },
+      "files_sha256": {
+        "data/reservoirs/ex14_Gardiner/observations_si.csv": "edde7a476b7e9099a81411db0a269d8e1cbad3dec8fb82ee096bf0538a9e7f51",
+        "data/reservoirs/ex14_Gardiner/observation_provenance.json": "d8d7de8f6251878959c4c114bae530212a76afe5508eb70c86d3c526223f6978",
+        "data/reservoirs/ex14_Gardiner/matlab_source.json": "33897d320ce40a026155167ea19a812da82ac02964046a4927f95edf855b7bf2",
+        "data/reservoirs/ex14_Gardiner/legacy_targets_si.csv": "89bdce16e7b1ee732da61e99461ad5104b90fa59b0af059a955a0deb9f522d0c",
+        "data/reservoirs/ex14_Gardiner/legacy_bounds_si.csv": "57a312f3694f48a32607fe9d7d96667640ac2ee2a9f4cfb92e923c7d0f0666a9",
+        "configs/reservoirs/ex14_Gardiner.json": "5770f9a6c06da140ab094f28687085c38e7e14e934b71e9f0a027e219069f707"
+      }
+    },
+    {
+      "reservoir_id": "ex12_Trinity",
+      "name": "Trinity",
+      "config_file": "configs/reservoirs/ex12_Trinity.json",
+      "config_sha256": "95bcb443984c31bbf9231adc83fe25e603c1ff63e0d2afe96289ae53029ae02f",
+      "observations_file": "data/reservoirs/ex12_Trinity/observations_si.csv",
+      "observations_sha256": "f70eec1687ed154dd31f274be5c6f5052f51eb4813a53a7e44eba7de9c79e3c7",
+      "frequency": "daily",
+      "rows": 11323,
+      "first_date": "1970-01-01",
+      "last_date": "2000-12-31",
+      "readiness": {
+        "baseline_status": "completed",
+        "optimization_status": "ready",
+        "legacy_status": "completed",
+        "reasons": []
+      },
+      "files_sha256": {
+        "data/reservoirs/ex12_Trinity/observations_si.csv": "f70eec1687ed154dd31f274be5c6f5052f51eb4813a53a7e44eba7de9c79e3c7",
+        "data/reservoirs/ex12_Trinity/observation_provenance.json": "1336c735428213da7977b553ab1a35e8afebe08a74b57b2e35ed69b187d36836",
+        "data/reservoirs/ex12_Trinity/matlab_source.json": "4f02fd3c3e61415f52326a14220c57ea3be3e7fb3abea9676c9d03f7a522664c",
+        "data/reservoirs/ex12_Trinity/legacy_targets_si.csv": "e08f5de7eab1fb449d8ab1c79c1483f41aa4b2389c19ea6bcf118413b4e42373",
+        "data/reservoirs/ex12_Trinity/legacy_bounds_si.csv": "cc07163f1f891283737067aa5c7c2a0d4af322462a4d26c73cc05adea49fe15f",
+        "configs/reservoirs/ex12_Trinity.json": "95bcb443984c31bbf9231adc83fe25e603c1ff63e0d2afe96289ae53029ae02f"
+      }
+    },
+    {
+      "reservoir_id": "ex6_Oahe",
+      "name": "Oahe",
+      "config_file": "configs/reservoirs/ex6_Oahe.json",
+      "config_sha256": "616574ab561c7910113c7ee82f111c169fa636985ac2898af596dcfed85c771c",
+      "observations_file": "data/reservoirs/ex6_Oahe/observations_si.csv",
+      "observations_sha256": "96e88984bf997d12ce8a1b5b88cdb16af17165c7e0f4a4f77327042569d18355",
+      "frequency": "monthly",
+      "rows": 360,
+      "first_date": "1970-01-01",
+      "last_date": "1999-12-01",
+      "readiness": {
+        "baseline_status": "completed",
+        "optimization_status": "ready",
+        "legacy_status": "completed",
+        "reasons": []
+      },
+      "files_sha256": {
+        "data/reservoirs/ex6_Oahe/observations_si.csv": "96e88984bf997d12ce8a1b5b88cdb16af17165c7e0f4a4f77327042569d18355",
+        "data/reservoirs/ex6_Oahe/observation_provenance.json": "1c5d999d2f5a1fbd27ad1d4a4da6362e920b2378a351b5cf1bf308060e49d9cc",
+        "data/reservoirs/ex6_Oahe/matlab_source.json": "7bf63262447d30ee1cfb1a7a852dfcbb26935470e8a57e648c32a8beec5f7fdb",
+        "data/reservoirs/ex6_Oahe/legacy_targets_si.csv": "d25af1b73373e0ac834930c5a66e3b31e3994ca8423430984586a122cb23539f",
+        "data/reservoirs/ex6_Oahe/legacy_bounds_si.csv": "6333b75699a75734a659573ef68ea83bbb339e303abadf79640f63811675f6ed",
+        "configs/reservoirs/ex6_Oahe.json": "616574ab561c7910113c7ee82f111c169fa636985ac2898af596dcfed85c771c"
+      }
+    },
+    {
+      "reservoir_id": "ex5_Garrison",
+      "name": "Garrison",
+      "config_file": "configs/reservoirs/ex5_Garrison.json",
+      "config_sha256": "8a71f472560c104e4a553d84bab18c2dcbf6b83263309c233b5f43122b51a24d",
+      "observations_file": "data/reservoirs/ex5_Garrison/observations_si.csv",
+      "observations_sha256": "528171593932379030659742e535c58023ddf7e896eccb651ea306e9bb53986b",
+      "frequency": "monthly",
+      "rows": 360,
+      "first_date": "1970-01-01",
+      "last_date": "1999-12-01",
+      "readiness": {
+        "baseline_status": "completed",
+        "optimization_status": "ready",
+        "legacy_status": "completed",
+        "reasons": []
+      },
+      "files_sha256": {
+        "data/reservoirs/ex5_Garrison/observations_si.csv": "528171593932379030659742e535c58023ddf7e896eccb651ea306e9bb53986b",
+        "data/reservoirs/ex5_Garrison/observation_provenance.json": "a0c09c065a1665ecaac048c4aba72a008defaee7a8bb5ee922df451f4b1575d4",
+        "data/reservoirs/ex5_Garrison/matlab_source.json": "c7afe3ac53aac060d9be5dc68e831d0385a177b4d1250ccdd5fe4423c6a17de1",
+        "data/reservoirs/ex5_Garrison/legacy_targets_si.csv": "055de8f5a748252e10c84671a067d0f25f29520b00629d5edc4029594152b118",
+        "data/reservoirs/ex5_Garrison/legacy_bounds_si.csv": "bb51c6168dcbe58b613b51f3bd48a753c29f0f993675323300c3ae9bfe3b687a",
+        "configs/reservoirs/ex5_Garrison.json": "8a71f472560c104e4a553d84bab18c2dcbf6b83263309c233b5f43122b51a24d"
+      }
+    }
+  ],
+  "provenance": {
+    "scope_file": "configs/world_reservoir_scope.json",
+    "scope_sha256": "b2c969b8bff32163fac0f5e3aa39797dff1755edc904465d7befec9da459c402",
+    "catalog_file": "configs/world_reservoir_collection.json",
+    "catalog_sha256": "aacfaa40880bc60766808e7511c32a991808dd28c42b99fbb76847c3513b2b29",
+    "cohort_file": "outputs/world_reservoir_samples_final/cohort.json",
+    "cohort_sha256": "47f5782d37d879d6d667794ec8ac5180225ddb3c62351774ca784fdffb1cddec",
+    "package_receipt_file": "data/reservoirs/package_receipt.json"
+  },
+  "sharing_scope": {
+    "kind": "paper_reservoir_demonstration_allowlist_v1",
+    "selected_reservoirs": [
+      "ex14_Gardiner",
+      "ex12_Trinity",
+      "ex6_Oahe",
+      "ex5_Garrison"
+    ],
+    "legacy_workbooks": [
+      "ResDataInflowStorageRelease/Gardiner_253.xlsx",
+      "ResDataInflowStorageRelease/Trinity_131.xlsx"
+    ],
+    "selection_reason": "Four paper examples for managed parameterization, MATLAB comparison and mixed-year calibration explanations.",
+    "historical_readiness_preserved": true,
+    "full_local_collection_is_not_distributed": true,
+    "source_manifest_sha256": "b815fe0508f6ac38ffa28ab5c1945ae41ddb2c017bb832ef549c05adf9763ad2",
+    "supplementary_example_files": [
+      "data/gardiner_levels_v1_20261017/acquisition/levels_si.csv",
+      "data/gardiner_levels_v1_20261017/acquisition/observations_si.csv",
+      "data/gardiner_levels_v1_20261017/acquisition/station_components_si.csv",
+      "data/gardiner_levels_v1_20261017/acquisition/provenance.json",
+      "data/geometry_profiles_v1_20261017/253/curve_si.csv",
+      "data/geometry_profiles_v1_20261017/253/source_regeom.csv"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "dztr_data_availability_v1",
+  "schema_version": 1,
+  "catalog": "../outputs/calibrated_paper_cohort_v1_20261017_final/catalog.json",
+  "geometry_index": "../data/geometry_profiles_v1_20261017/index.json",
+  "methods": ["observed_monthly", "level_geometry_monthly", "flow_only", "storage_only", "ungauged_cr1"],
+  "quantile_method": "hazen",
+  "channel_policy": "source_defined",
+  "supplemental_inputs": {}
+}

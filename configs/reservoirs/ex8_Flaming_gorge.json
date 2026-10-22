@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "kind": "world_reservoir_sample",
+  "reservoir": {
+    "id": "ex8_Flaming_gorge",
+    "name": "Flaming gorge"
+  },
+  "observations_file": "../../data/reservoirs/ex8_Flaming_gorge/observations_si.csv",
+  "observations_sha256": "6b554cbe3f0463db1709c282be66dc495b648ce56e95cb96d6867c32a109ba1e",
+  "units": {
+    "storage": "m3",
+    "flows": "m3/s"
+  },
+  "sampling": {
+    "frequency": "daily",
+    "fixed_step_days": 1.0,
+    "month_clock": "observed",
+    "legacy_start": null,
+    "allow_signed_inflow": false
+  },
+  "periods": {
+    "simulation_start": "1971-01-01",
+    "calibration": {
+      "start": "1972-01-01",
+      "end": "1994-12-31"
+    },
+    "validation": {
+      "start": "1995-01-01",
+      "end": "2017-12-31"
+    },
+    "warmup_rows": 365
+  },
+  "model": {
+    "capacity_m3": 4674000000.0,
+    "initial_storage_m3": 2172230711.7066727,
+    "initial_release_m3s": 50.0,
+    "channel_capacity_m3s": 400.0,
+    "dead_storage_fraction": 0.1,
+    "inflow_correction": 1.0,
+    "flood_mode": "inflow"
+  },
+  "inflow_preprocessing": {
+    "factor": 1.0,
+    "offset_m3s": 0.0
+  },
+  "simulation_supported": true,
+  "simulation_unsupported_reason": null,
+  "target_percentiles": [
+    10,
+    45,
+    85
+  ],
+  "quantile_method": "hazen",
+  "atol_storage_m3": 0.0001,
+  "legacy": {
+    "sampling": {
+      "frequency": "daily",
+      "timestep_days": 1.0,
+      "legacy_start": "1971-01-01",
+      "month_clock": "legacy_synthetic"
+    },
+    "warmup_rows": 365,
+    "overflow_mode": "matlab",
+    "fixed_point_iterations": 1000,
+    "release_shift_rows": 0,
+    "storage_shift_rows": 0
+  },
+  "protocol": {
+    "split_policy": "first calendar year warmup; remaining years divided chronologically",
+    "estimation_policy": "calibration observations only; validation excluded from fitting/search",
+    "paper_reproduction": false,
+    "fixed_settings": "source-selected MATLAB model constants, initial-state assignment and inflow preprocessing",
+    "monthly_clock": "fixed source duration; operating targets use verified observation calendar months",
+    "legacy_targets": "unmodified full-record MATLAB tables are retained separately, never used as calibration estimates"
+  },
+  "provenance_file": "../../data/reservoirs/ex8_Flaming_gorge/observation_provenance.json",
+  "matlab_source_file": "../../data/reservoirs/ex8_Flaming_gorge/matlab_source.json",
+  "legacy_targets_file": "../../data/reservoirs/ex8_Flaming_gorge/legacy_targets_si.csv",
+  "legacy_bounds_file": "../../data/reservoirs/ex8_Flaming_gorge/legacy_bounds_si.csv"
+}

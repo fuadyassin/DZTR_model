@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "experiment_id": "bull_lake_interval_calibration_pilot_v1",
+  "date": "2026-10-09",
+  "policy_file": "bull_lake_interval_policy.json",
+  "baseline_verification": "../../outputs/bull_lake_interval_baseline_20261009/verification.json",
+  "optimization": {
+    "seeds": [42, 43],
+    "population_size": 16,
+    "evaluation_budget_per_seed": 128,
+    "crossover_probability": 0.9,
+    "crossover_eta": 15.0,
+    "mutation_eta": 20.0,
+    "local_initialization_fraction": 0.5,
+    "local_initialization_scale": 0.05
+  },
+  "evaluation_checkpoints": [16, 32, 64, 96, 128],
+  "root_policy": "reject",
+  "initial_storage_offset_capacity_fraction": 0.0,
+  "stopping": {
+    "population_size": 16,
+    "check_interval": 16,
+    "window_evaluations": 64,
+    "minimum_evaluations": 96,
+    "patience": 2,
+    "max_evaluations": 128,
+    "hypervolume_reference": [1.0, 1.0],
+    "normalized_hv_tolerance": 0.0025,
+    "front_tolerance": 0.01,
+    "extrema_tolerance": 0.005
+  },
+  "stopping_application": "Diagnostic only. Run the complete fixed budget per seed; no online early stopping or tolerance adjustment from scores.",
+  "selection": {
+    "source": "Pooled feasible nondominated calibration archive from both final seed prefixes.",
+    "roles": ["generalized_baseline", "best_release", "best_storage", "balanced"],
+    "baseline": "Keep the original nominal generalized candidate as a comparison, even if it becomes dominated.",
+    "balanced": "Existing Pareto-range-scaled distance to calibration ideal, with deterministic objective and pooled-ID tie breaking.",
+    "freeze_before_validation": true,
+    "validation_use": "Descriptive held-out evaluation after pooled representative identities and vectors are written and hashed; never used to rank or change them."
+  },
+  "budget_interpretation": "A small feasibility and progress pilot; neither a guaranteed adequate budget nor global convergence evidence.",
+  "validation_label": "segmented conditional hindcast",
+  "source_policy_changed": false,
+  "optimization_scope": "Only the 72 monthly targets. Physics, quarantine, mean-volume convention, signed-net interpretation, inflow scale and provisional initialization remain fixed."
+}

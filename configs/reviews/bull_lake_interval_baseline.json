@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "kind": "interval_mean_conditional_baseline",
+  "experiment_id": "bull_lake_interval_baseline_v1",
+  "date": "2026-10-09",
+  "policy_file": "bull_lake_interval_policy.json",
+  "root_policy": "reject",
+  "initial_storage_offset_capacity_fractions": [0.0, -0.01, 0.01],
+  "root_policy_interpretation": "Strict rejection of multiple physical roots; do not select a policy based on calibration or validation fit.",
+  "release_integration": "One trapezoid of modeled endpoint release per nominal daily interval; input mean uses the current interval's full signed volume.",
+  "overflow": "Explicit interval spill volume at capacity; operating endpoint release remains rule-consistent and spill is not carried as an endpoint-rate increment.",
+  "release_scoring": "Daily observed total discharge versus modeled interval mean operating release plus interval spill volume divided by duration.",
+  "parameterization": "Calibration-only masked storage and release percentiles using existing target_percentiles and quantile_method in the packaged reservoir configuration.",
+  "scores": "Pooled eligible pairs within each phase; exclude warmup and provisional anchors.",
+  "validation_label": "segmented conditional hindcast",
+  "atol_storage_m3": 0.0001,
+  "optimization_evaluations": 0,
+  "not_a_continuous_prediction_validation": true
+}

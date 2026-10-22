@@ -1,0 +1,19 @@
+{
+  "kind": "dztr_run_manager_v5",
+  "schema_version": 5,
+  "description": "Storage-only DDS; observed release hidden from fitting. Primary: user-authorized GRAND-mean/donor shape relationship, with explicit calibration-inflow fallback. Secondary: direct Etienne naturalized priors restricted to overlapping calibration years. Both are conditional exploratory benchmarks; preserve original masks, fixed channel/capacity/dead storage, and all 37 inventory rows.",
+  "stages": [
+    {
+      "id": "mean_flow_calibration",
+      "type": "calibrate",
+      "backend": "prepared_storage_v1",
+      "config": "storage_only_mean_flow_paper_v1.json"
+    },
+    {
+      "id": "naturalized_overlap",
+      "type": "calibrate",
+      "backend": "prepared_storage_v1",
+      "config": "storage_only_naturalized_overlap_v1.json"
+    }
+  ]
+}

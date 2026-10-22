@@ -1,0 +1,11 @@
+{
+  "kind": "dztr_run_manager_v1",
+  "schema_version": 1,
+  "description": "Explicit native calibration example. Running it starts configured optimizer jobs; plan alone performs no evaluations.",
+  "stages": [{
+    "id": "calibration",
+    "type": "calibrate",
+    "backend": "v1",
+    "config": "workflow_twenty_mixed_pooled.json"
+  }]
+}

@@ -1,0 +1,10 @@
+{
+  "coefficient_file": "coefficents21Dec19-02-59.txt",
+  "full_precision_coefficient_file": "coefficentsm28Apr18-03-06.txt",
+  "observations_file": "res_info.xlsx",
+  "inflow_correction": 0.92,
+  "dead_storage_fraction": 0.1,
+  "flood_mode": "storage",
+  "warmup_steps": 365,
+  "reference_member_indices": [0, 49, 99]
+}

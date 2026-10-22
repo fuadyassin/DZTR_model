@@ -1,0 +1,76 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.pytest_tmp*/
+.venv/
+*.egg-info/
+build/
+dist/
+
+# Local analysis and experiment artifacts: reports, figures, simulation results,
+# calibrated profiles, checkpoints, audit receipts, logs and temporary test runs.
+outputs/
+
+# Local presentation work: both decks, PDFs, workbooks, bundles, rendered slides,
+# copied analysis evidence, speaker notes and presentation build scripts.
+presentations/
+
+# Observation workbooks are local by default. Keep only the two legacy examples
+# required by the documented Gardiner and Trinity workflows.
+/ResDataInflowStorageRelease/*
+!/ResDataInflowStorageRelease/Gardiner_253.xlsx
+!/ResDataInflowStorageRelease/Trinity_131.xlsx
+
+# Local data default to private. Explicit exceptions below form the public
+# demonstration set; adding another reservoir requires reviewing this list.
+/data/*
+!/data/README.md
+!/data/public_examples/
+/data/public_examples/*
+!/data/public_examples/README.md
+!/data/public_examples/manifest.json
+
+# Four paper-reservoir examples, with their original provenance and targets.
+!/data/reservoirs/
+/data/reservoirs/*
+!/data/reservoirs/README.md
+!/data/reservoirs/ex14_Gardiner/
+!/data/reservoirs/ex12_Trinity/
+!/data/reservoirs/ex6_Oahe/
+!/data/reservoirs/ex5_Garrison/
+/data/reservoirs/*/*
+!/data/reservoirs/*/observations_si.csv
+!/data/reservoirs/*/observation_provenance.json
+!/data/reservoirs/*/matlab_source.json
+!/data/reservoirs/*/legacy_targets_si.csv
+!/data/reservoirs/*/legacy_bounds_si.csv
+
+# Gardiner alone also demonstrates level-to-storage conversion. Raw station
+# downloads and unlisted acquisition files remain private.
+!/data/gardiner_levels_v1_20261017/
+/data/gardiner_levels_v1_20261017/*
+!/data/gardiner_levels_v1_20261017/README.md
+!/data/gardiner_levels_v1_20261017/acquisition/
+/data/gardiner_levels_v1_20261017/acquisition/*
+!/data/gardiner_levels_v1_20261017/acquisition/levels_si.csv
+!/data/gardiner_levels_v1_20261017/acquisition/observations_si.csv
+!/data/gardiner_levels_v1_20261017/acquisition/station_components_si.csv
+!/data/gardiner_levels_v1_20261017/acquisition/provenance.json
+!/data/geometry_profiles_v1_20261017/
+/data/geometry_profiles_v1_20261017/*
+!/data/geometry_profiles_v1_20261017/253/
+/data/geometry_profiles_v1_20261017/253/*
+!/data/geometry_profiles_v1_20261017/253/curve_si.csv
+!/data/geometry_profiles_v1_20261017/253/source_regeom.csv
+
+# Basic GRanD identity/capacity/coordinate metadata, without observation series.
+!/data/catalogs/
+/data/catalogs/*
+!/data/catalogs/grand_v1_1_reference.csv
+!/data/catalogs/grand_v1_1_reference.provenance.json
+
+.coverage
+htmlcov/
+.cache/
+.env

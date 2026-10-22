@@ -1,0 +1,12 @@
+{
+  "population_size": 16,
+  "check_interval": 128,
+  "window_evaluations": 128,
+  "minimum_evaluations": 512,
+  "patience": 3,
+  "max_evaluations": 4096,
+  "hypervolume_reference": [1.0, 1.0],
+  "normalized_hv_tolerance": 0.002,
+  "front_tolerance": 0.005,
+  "extrema_tolerance": 0.005
+}

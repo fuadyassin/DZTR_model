@@ -1,0 +1,100 @@
+{
+  "kind": "dztr_run_manager_v3",
+  "schema_version": 3,
+  "description": "Shared datum-aware geometry estimator, explicit residual-spread band objective, small checkpointed integration verification, assessment/export and native replay. Sixteen evaluations verify the handoff; they do not establish calibration convergence.",
+  "stages": [
+    {
+      "id": "targets",
+      "type": "parameterize",
+      "config": {
+        "kind": "dztr_data_availability_v2",
+        "schema_version": 2,
+        "methods": [
+          "level_geometry_monthly"
+        ],
+        "quantile_method": "hazen",
+        "channel_policy": "source_defined",
+        "reservoirs": [
+          {
+            "reservoir_id": "ex14_Gardiner",
+            "name": "Gardiner",
+            "GRAND_ID": 253,
+            "observations_csv": "../outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/observations_si.csv",
+            "selection_json": "../outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/selection.json",
+            "model_config": "run_manager/gardiner_model_v1.json",
+            "forcing_stage": "prepared",
+            "source_gates": []
+          }
+        ],
+        "supplemental_inputs": {
+          "ex14_Gardiner": {
+            "geometry_csv": "../data/geometry_profiles_v1_20261017/253/source_regeom.csv",
+            "geometry_format": "regeom",
+            "geometry_grand_id": 253,
+            "geometry_evidence": "Existing verified Gardiner GRAND 253 mapping; archived Yigzaw ReGeom approximation",
+            "levels_csv": "../data/gardiner_levels_v1_20261017/acquisition/levels_si.csv",
+            "level_time_basis": "daily_mean_level",
+            "allow_mean_level_proxy": true,
+            "level_provenance_json": "../data/gardiner_levels_v1_20261017/acquisition/provenance.json",
+            "datum_metadata_json": "../data/gardiner_levels_v1_20261017/station_metadata.json",
+            "level_reference": {
+              "method": "calibration_storage_alignment",
+              "level_datum": "PRAIRIE FARM REHABILITATION ADMINISTRATION DATUM",
+              "min_pairs": 30
+            },
+            "storage_uncertainty": {
+              "kind": "calibration_offset_quantiles",
+              "probabilities": [
+                0.05,
+                0.95
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "baseline",
+      "type": "baseline",
+      "config": {
+        "campaign": "@targets.campaign"
+      }
+    },
+    {
+      "id": "calibration",
+      "type": "calibrate",
+      "backend": "prepared_geometry_v1",
+      "config": {
+        "kind": "dztr_geometry_calibration_v1",
+        "schema_version": 1,
+        "campaign": "@targets.campaign",
+        "profiles": [
+          {
+            "reservoir_id": "ex14_Gardiner",
+            "method": "level_geometry_monthly"
+          }
+        ],
+        "scoring": "pooled",
+        "storage_objective": "reference_band_nse",
+        "optimization": {
+          "seeds": [
+            42
+          ],
+          "population": 8,
+          "evaluation_budget": 16,
+          "workers": 1
+        }
+      }
+    },
+    {
+      "id": "replay",
+      "type": "simulate",
+      "backend": "v2",
+      "config": {
+        "registry": "@calibration.registry",
+        "forcing_csv": "@calibration.forcing_csv",
+        "grand_id": 253
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "kind": "world_reservoir_sample",
+  "reservoir": {
+    "id": "ex16_Yellowtail",
+    "name": "Yellowtail"
+  },
+  "observations_file": "../../data/reservoirs/ex16_Yellowtail/observations_si.csv",
+  "observations_sha256": "d43edaf32d21eedd5b1616e7aa5cdb2e8e6c6bfbab5b80a7fd41e908807d23ee",
+  "units": {
+    "storage": "m3",
+    "flows": "m3/s"
+  },
+  "sampling": {
+    "frequency": "monthly",
+    "fixed_step_days": 30.5,
+    "month_clock": "observed",
+    "legacy_start": null,
+    "allow_signed_inflow": false
+  },
+  "periods": {
+    "simulation_start": "1970-01-01",
+    "calibration": {
+      "start": "1971-01-01",
+      "end": "1985-12-01"
+    },
+    "validation": {
+      "start": "1986-01-01",
+      "end": "2000-12-01"
+    },
+    "warmup_rows": 12
+  },
+  "model": {
+    "capacity_m3": 1500000000.0,
+    "initial_storage_m3": 1088676966.1845121,
+    "initial_release_m3s": 100.0,
+    "channel_capacity_m3s": 350.0,
+    "dead_storage_fraction": 0.5335603092,
+    "inflow_correction": 1.0,
+    "flood_mode": "inflow"
+  },
+  "inflow_preprocessing": {
+    "factor": 1.0,
+    "offset_m3s": 0.0
+  },
+  "simulation_supported": true,
+  "simulation_unsupported_reason": null,
+  "target_percentiles": [
+    10,
+    45,
+    85
+  ],
+  "quantile_method": "hazen",
+  "atol_storage_m3": 0.0001,
+  "legacy": {
+    "sampling": {
+      "frequency": "monthly",
+      "timestep_days": 30.5,
+      "legacy_start": "1970-01-01",
+      "month_clock": "legacy_synthetic"
+    },
+    "warmup_rows": 12,
+    "overflow_mode": "matlab",
+    "fixed_point_iterations": 1000,
+    "release_shift_rows": 0,
+    "storage_shift_rows": 0
+  },
+  "protocol": {
+    "split_policy": "first calendar year warmup; remaining years divided chronologically",
+    "estimation_policy": "calibration observations only; validation excluded from fitting/search",
+    "paper_reproduction": false,
+    "fixed_settings": "source-selected MATLAB model constants, initial-state assignment and inflow preprocessing",
+    "monthly_clock": "fixed source duration; operating targets use verified observation calendar months",
+    "legacy_targets": "unmodified full-record MATLAB tables are retained separately, never used as calibration estimates"
+  },
+  "provenance_file": "../../data/reservoirs/ex16_Yellowtail/observation_provenance.json",
+  "matlab_source_file": "../../data/reservoirs/ex16_Yellowtail/matlab_source.json",
+  "legacy_targets_file": "../../data/reservoirs/ex16_Yellowtail/legacy_targets_si.csv",
+  "legacy_bounds_file": "../../data/reservoirs/ex16_Yellowtail/legacy_bounds_si.csv"
+}

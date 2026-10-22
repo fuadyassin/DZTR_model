@@ -1,0 +1,407 @@
+{
+  "kind": "dztr_storage_calibration_v1",
+  "schema_version": 1,
+  "campaign": "../outputs/data_availability_paper_v1_20261017",
+  "profiles": [
+    {
+      "reservoir_id": "ex13_American_falls",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex34_Andijan",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex17_Bhumibol",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex30_Big_horn",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex36_Chardara",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex37_Charvak",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex28_Dickson",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex29_EB_Campbell",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex8_Flaming_gorge",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex3_Fort_peck",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex4_Fort_randall",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex14_Gardiner",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex5_Garrison",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex1_Glen_canyon",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex2_Grand_coulee",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex18_High_aswan",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex9_Amistad",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex10_Falcon",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex38_Kayrakkum",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex33_Navajo",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex39_Nurek",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex6_Oahe",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex24_Oldman",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex32_Oroville",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex11_Palisades",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex40_Semione",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex19_Sirikit",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex20_St_marry",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex41_Toktogul",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex42_Tyuyamuyun",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex23_Waterton",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    },
+    {
+      "reservoir_id": "ex16_Yellowtail",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    }
+  ],
+  "objectives": [
+    "storage_nse"
+  ],
+  "scoring": "pooled",
+  "bounds_policy": "monthly",
+  "optimization": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "horizon": 512,
+    "evaluation_budget": 64,
+    "perturbation": 0.2,
+    "workers": 4
+  }
+}

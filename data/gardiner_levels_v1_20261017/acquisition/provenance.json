@@ -1,0 +1,50 @@
+{
+  "configuration": {
+    "start": "1980-01-01",
+    "end": "2011-12-31",
+    "level_stations": [
+      "05HF003"
+    ],
+    "evidence": "Gardiner / Lake Diefenbaker level gauge, verified station metadata and prior archive mapping; historical daily mean levels, no datum or geometry alignment inferred."
+  },
+  "sources": {
+    "05HF003": {
+      "endpoint": "https://api.weather.gc.ca/collections/hydrometric-daily-mean/items",
+      "query": {
+        "STATION_NUMBER": "05HF003",
+        "datetime": "1980-01-01/2011-12-31",
+        "limit": 1000,
+        "f": "json",
+        "sortby": "DATE"
+      },
+      "page_sha256": {
+        "page_000000000.json": "9fd1dfa650d3827dc52433623ae34fb8278bc17ff5c0a97f0acfdc297e30dc3d",
+        "page_000001000.json": "325c7dd7da12fe54a175bd4a632dfa9e65a860ab1303762d09fe29f85992399f",
+        "page_000002000.json": "0164718178c5edb85cd0e09c6b69f03b6d62173ab9226123ea27d327df2ec859",
+        "page_000003000.json": "192f8d79d893153beb5da82f623afcdade2e8edfa581c8ea93f8247b9c98bc1e",
+        "page_000004000.json": "da12cbba9a6760e496e3c9d3a060b79f3b8f2e0c525121b186737a94f6a59eca",
+        "page_000005000.json": "74679a34df8eaa3799e8aa89055bb2198d0cb216fe92242092ae5190cc4f9aa5",
+        "page_000006000.json": "ee53027cba3b4693c965f1f74fc195191284498b02ba6aa4b78ca813646093c4",
+        "page_000007000.json": "48067e2e67b764cdb03523fef0c08fb1d161c6e36d1507a1385df1adfd592312",
+        "page_000008000.json": "7ee8a6c282ffea50894ee8be3b07649573c4f1e83f2710d55dedd0ac08854fed",
+        "page_000009000.json": "102a2eeef96de101ee2c64bb0df640b5e5b561c95596576262e60fab2fc174ef",
+        "page_000010000.json": "cd1ef45941d73af5908ff8db2f36e05186e645433dc330ee2825bb821e848493",
+        "page_000011000.json": "76daaec996b4c89538128e3b001782157fcb39532e926e6730d9e4d91a703057"
+      },
+      "retrieved_utc": "2026-10-18T05:28:37.255280+00:00"
+    }
+  },
+  "flow_units": "m3/s",
+  "level_units": "m",
+  "time_basis": "daily_mean",
+  "flow_sum_requires_all_components": true,
+  "levels_summed": false,
+  "storage_derived": false,
+  "ungauged_lateral_inflow_inferred": false,
+  "station_topology_verified": false,
+  "available_days": {
+    "inflow_m3s": 0,
+    "release_m3s": 0,
+    "storage_m3": 0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "stopping_policy_file": "configs/stopping_policy.example.json",
+  "description": "Exploratory two-reservoir input audit; this is not an independent diverse-cohort validation of stopping thresholds or evaluation budgets.",
+  "jobs": [
+    {
+      "reservoir_id": "grand_131",
+      "configuration_file": "configs/trinity_adaptive.json",
+      "observation_units": {
+        "storage": "mcm",
+        "flow": "m3/s"
+      }
+    },
+    {
+      "reservoir_id": "grand_253",
+      "configuration_file": "configs/gardiner_adaptive.json",
+      "observation_units": {
+        "storage": "mcm",
+        "flow": "m3/s"
+      }
+    }
+  ]
+}

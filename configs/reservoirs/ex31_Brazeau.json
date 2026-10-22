@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "kind": "world_reservoir_sample",
+  "reservoir": {
+    "id": "ex31_Brazeau",
+    "name": "Brazeau"
+  },
+  "observations_file": "../../data/reservoirs/ex31_Brazeau/observations_si.csv",
+  "observations_sha256": "0f479ad7d83db60bb32ccdafc919b384f6daf1776bd50124f062e0c2ecab5973",
+  "units": {
+    "storage": "m3",
+    "flows": "m3/s"
+  },
+  "sampling": {
+    "frequency": "daily",
+    "fixed_step_days": 1.0,
+    "month_clock": "observed",
+    "legacy_start": null,
+    "allow_signed_inflow": false
+  },
+  "periods": {
+    "simulation_start": "2002-01-01",
+    "calibration": {
+      "start": "2003-01-01",
+      "end": "2006-12-31"
+    },
+    "validation": {
+      "start": "2007-01-01",
+      "end": "2011-12-31"
+    },
+    "warmup_rows": 365
+  },
+  "model": {
+    "capacity_m3": 490000000.0,
+    "initial_storage_m3": 329394000.0,
+    "initial_release_m3s": 5.0,
+    "channel_capacity_m3s": 500.0,
+    "dead_storage_fraction": 0.1,
+    "inflow_correction": 1.0,
+    "flood_mode": "inflow"
+  },
+  "inflow_preprocessing": null,
+  "simulation_supported": false,
+  "simulation_unsupported_reason": "Base script replaces observations with external forcing; an explicit external-inflow adapter is required.",
+  "target_percentiles": [
+    10,
+    45,
+    85
+  ],
+  "quantile_method": "hazen",
+  "atol_storage_m3": 0.0001,
+  "legacy": {
+    "sampling": {
+      "frequency": "daily",
+      "timestep_days": 1.0,
+      "legacy_start": "2002-01-01",
+      "month_clock": "legacy_synthetic"
+    },
+    "warmup_rows": 365,
+    "overflow_mode": "matlab",
+    "fixed_point_iterations": 1000,
+    "release_shift_rows": 0,
+    "storage_shift_rows": 0
+  },
+  "protocol": {
+    "split_policy": "first calendar year warmup; remaining years divided chronologically",
+    "estimation_policy": "calibration observations only; validation excluded from fitting/search",
+    "paper_reproduction": false,
+    "fixed_settings": "source-selected MATLAB model constants, initial-state assignment and inflow preprocessing",
+    "monthly_clock": "fixed source duration; operating targets use verified observation calendar months",
+    "legacy_targets": "unmodified full-record MATLAB tables are retained separately, never used as calibration estimates"
+  },
+  "provenance_file": "../../data/reservoirs/ex31_Brazeau/observation_provenance.json",
+  "matlab_source_file": "../../data/reservoirs/ex31_Brazeau/matlab_source.json",
+  "legacy_targets_file": "../../data/reservoirs/ex31_Brazeau/legacy_targets_si.csv",
+  "legacy_bounds_file": "../../data/reservoirs/ex31_Brazeau/legacy_bounds_si.csv"
+}

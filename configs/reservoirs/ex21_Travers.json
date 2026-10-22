@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "kind": "world_reservoir_sample",
+  "reservoir": {
+    "id": "ex21_Travers",
+    "name": "Travers"
+  },
+  "observations_file": "../../data/reservoirs/ex21_Travers/observations_si.csv",
+  "observations_sha256": "a48b256f9cfdb16979d5bab12a976e52d0254c1090e92d6b8df72c4ab2f34ad9",
+  "units": {
+    "storage": "m3",
+    "flows": "m3/s"
+  },
+  "sampling": {
+    "frequency": "daily",
+    "fixed_step_days": 1.0,
+    "month_clock": "observed",
+    "legacy_start": null,
+    "allow_signed_inflow": false
+  },
+  "periods": {
+    "simulation_start": "1998-01-01",
+    "calibration": {
+      "start": "1999-01-01",
+      "end": "2002-12-31"
+    },
+    "validation": {
+      "start": "2003-01-01",
+      "end": "2007-12-31"
+    },
+    "warmup_rows": 365
+  },
+  "model": {
+    "capacity_m3": 394304000.0,
+    "initial_storage_m3": 296712000.0,
+    "initial_release_m3s": 5.0,
+    "channel_capacity_m3s": 80.0,
+    "dead_storage_fraction": 0.1,
+    "inflow_correction": 0.96,
+    "flood_mode": "inflow"
+  },
+  "inflow_preprocessing": {
+    "factor": 1.0,
+    "offset_m3s": 0.0
+  },
+  "simulation_supported": true,
+  "simulation_unsupported_reason": null,
+  "target_percentiles": [
+    10,
+    45,
+    85
+  ],
+  "quantile_method": "hazen",
+  "atol_storage_m3": 0.0001,
+  "legacy": {
+    "sampling": {
+      "frequency": "daily",
+      "timestep_days": 1.0,
+      "legacy_start": "1998-01-01",
+      "month_clock": "legacy_synthetic"
+    },
+    "warmup_rows": 365,
+    "overflow_mode": "matlab",
+    "fixed_point_iterations": 1000,
+    "release_shift_rows": 0,
+    "storage_shift_rows": 0
+  },
+  "protocol": {
+    "split_policy": "first calendar year warmup; remaining years divided chronologically",
+    "estimation_policy": "calibration observations only; validation excluded from fitting/search",
+    "paper_reproduction": false,
+    "fixed_settings": "source-selected MATLAB model constants, initial-state assignment and inflow preprocessing",
+    "monthly_clock": "fixed source duration; operating targets use verified observation calendar months",
+    "legacy_targets": "unmodified full-record MATLAB tables are retained separately, never used as calibration estimates"
+  },
+  "provenance_file": "../../data/reservoirs/ex21_Travers/observation_provenance.json",
+  "matlab_source_file": "../../data/reservoirs/ex21_Travers/matlab_source.json",
+  "legacy_targets_file": "../../data/reservoirs/ex21_Travers/legacy_targets_si.csv",
+  "legacy_bounds_file": "../../data/reservoirs/ex21_Travers/legacy_bounds_si.csv"
+}

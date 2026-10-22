@@ -1,0 +1,76 @@
+{
+  "kind": "dztr_run_manager_v2",
+  "schema_version": 2,
+  "description": "Gardiner end-to-end: exact prepared targets/year mask, fixed baseline, checkpointed calibration, held-out assessment, GRAND export and selected-profile replay.",
+  "stages": [
+    {
+      "id": "targets",
+      "type": "parameterize",
+      "config": {
+        "kind": "dztr_data_availability_v1",
+        "schema_version": 1,
+        "methods": [
+          "observed_monthly"
+        ],
+        "quantile_method": "hazen",
+        "channel_policy": "source_defined",
+        "reservoirs": [
+          {
+            "reservoir_id": "ex14_Gardiner",
+            "name": "Gardiner",
+            "GRAND_ID": 253,
+            "observations_csv": "../outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/observations_si.csv",
+            "selection_json": "../outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/selection.json",
+            "model_config": "run_manager/gardiner_model_v1.json",
+            "forcing_stage": "prepared",
+            "source_gates": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "baseline",
+      "type": "baseline",
+      "config": {
+        "campaign": "@targets.campaign"
+      }
+    },
+    {
+      "id": "calibration",
+      "type": "calibrate",
+      "backend": "prepared_v1",
+      "config": {
+        "kind": "dztr_prepared_calibration_v1",
+        "schema_version": 1,
+        "campaign": "@targets.campaign",
+        "profiles": [
+          {
+            "reservoir_id": "ex14_Gardiner",
+            "method": "observed_monthly"
+          }
+        ],
+        "scoring": "pooled",
+        "optimization": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "population": 32,
+          "evaluation_budget": 512,
+          "workers": 3
+        }
+      }
+    },
+    {
+      "id": "replay",
+      "type": "simulate",
+      "backend": "v2",
+      "config": {
+        "registry": "@calibration.registry",
+        "forcing_csv": "@calibration.forcing_csv",
+        "grand_id": 253
+      }
+    }
+  ]
+}

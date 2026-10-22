@@ -1,0 +1,52 @@
+{
+  "kind": "calibration_selected_twenty",
+  "parameter_status": "exploratory",
+  "selection_rule": "outputs\\twenty_reservoir_workflow_20261012\\selection_rule.json",
+  "profiles_by_GRAND_ID": {
+    "253": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex14_Gardiner\\parameters.json",
+    "355": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex16_Yellowtail\\parameters.json",
+    "5146": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex17_Bhumibol\\parameters.json",
+    "4478": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex18_High_aswan\\parameters.json",
+    "5140": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex19_Sirikit\\parameters.json",
+    "597": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex1_Glen_canyon\\parameters.json",
+    "281": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex20_St_marry\\parameters.json",
+    "270": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex21_Travers\\parameters.json",
+    "284": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex23_Waterton\\parameters.json",
+    "278": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex24_Oldman\\parameters.json",
+    "251": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex28_Dickson\\parameters.json",
+    "710": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex29_EB_Campbell\\parameters.json",
+    "310": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex2_Grand_coulee\\parameters.json",
+    "148": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex32_Oroville\\parameters.json",
+    "4683": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex34_Andijan\\parameters.json",
+    "4692": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex39_Nurek\\parameters.json",
+    "753": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex5_Garrison\\parameters.json",
+    "870": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex6_Oahe\\parameters.json",
+    "1307": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex9_Amistad\\parameters.json"
+  },
+  "profiles_by_reservoir_id": {
+    "ex14_Gardiner": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex14_Gardiner\\parameters.json",
+    "ex16_Yellowtail": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex16_Yellowtail\\parameters.json",
+    "ex17_Bhumibol": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex17_Bhumibol\\parameters.json",
+    "ex18_High_aswan": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex18_High_aswan\\parameters.json",
+    "ex19_Sirikit": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex19_Sirikit\\parameters.json",
+    "ex1_Glen_canyon": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex1_Glen_canyon\\parameters.json",
+    "ex20_St_marry": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex20_St_marry\\parameters.json",
+    "ex21_Travers": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex21_Travers\\parameters.json",
+    "ex23_Waterton": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex23_Waterton\\parameters.json",
+    "ex24_Oldman": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex24_Oldman\\parameters.json",
+    "ex28_Dickson": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex28_Dickson\\parameters.json",
+    "ex29_EB_Campbell": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex29_EB_Campbell\\parameters.json",
+    "ex2_Grand_coulee": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex2_Grand_coulee\\parameters.json",
+    "ex32_Oroville": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex32_Oroville\\parameters.json",
+    "ex34_Andijan": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex34_Andijan\\parameters.json",
+    "ex39_Nurek": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex39_Nurek\\parameters.json",
+    "ex4_Fort_randall": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex4_Fort_randall\\parameters.json",
+    "ex5_Garrison": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex5_Garrison\\parameters.json",
+    "ex6_Oahe": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex6_Oahe\\parameters.json",
+    "ex9_Amistad": "outputs\\twenty_reservoir_workflow_20261012\\selected\\ex9_Amistad\\parameters.json"
+  },
+  "table": "outputs\\twenty_reservoir_workflow_20261012\\reservoir_parameterization_by_GRAND_ID.csv",
+  "unresolved_GRAND_ID": [
+    "ex4_Fort_randall"
+  ]
+}

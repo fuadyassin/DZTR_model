@@ -1,0 +1,564 @@
+{
+  "kind": "dztr_etienne_collection_v1",
+  "schema_version": 1,
+  "archive": "D:\\2_CodeProjects\\DZTR_params_Eteiene",
+  "base_collection": "../data/reservoirs/manifest.json",
+  "base_catalog": "../outputs/calibrated_paper_cohort_v1_20261017_final/catalog.json",
+  "grand_reference": "../data/catalogs/grand_v1_1_reference.csv",
+  "quantile_method": "hazen",
+  "existing_aliases": [
+    {
+      "alias": "American Falls",
+      "reservoir_id": "ex13_American_falls"
+    },
+    {
+      "alias": "Williston",
+      "reservoir_id": "ex15_Bennett"
+    },
+    {
+      "alias": "Bennett",
+      "reservoir_id": "ex15_Bennett"
+    },
+    {
+      "alias": "Ghost",
+      "reservoir_id": "ex26_Ghost"
+    },
+    {
+      "alias": "Dickson",
+      "reservoir_id": "ex28_Dickson"
+    },
+    {
+      "alias": "StMary",
+      "reservoir_id": "ex20_St_marry"
+    }
+  ],
+  "reservoirs": [
+    {
+      "reservoir_id": "etienne_Aishihik",
+      "name": "Aishihik",
+      "catalog_terms": [
+        "Aishihik"
+      ],
+      "storage": {
+        "file": "Aishihik_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "Aishihik_stor_gnrl.txt"
+        ],
+        "missing_tokens": []
+      },
+      "release": {
+        "file": "Aishihik_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified.",
+        "statistics": [
+          "Aishihik_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Baskatong",
+      "name": "Baskatong",
+      "catalog_terms": [
+        "Baskatong"
+      ],
+      "storage": {
+        "file": "Baskatong_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [
+          -1.0
+        ],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved. Declared negative numeric placeholders become missing; this is an explicit, uncertified archive interpretation.",
+        "statistics": [
+          "Baskatong_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Carry_Falls",
+      "name": "Carry Falls",
+      "catalog_terms": [
+        "Carry Falls"
+      ],
+      "release": {
+        "file": "Carry_Falls_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified.",
+        "statistics": [
+          "Carry_Falls_outflow_stats_gnrl_1960.txt",
+          "Carry_Falls_outflow_stats_gnrl_1990.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Corra_Linn",
+      "name": "Corra Linn / Kootenay Lake",
+      "catalog_terms": [
+        "Corra Linn",
+        "Kootenay"
+      ],
+      "release": {
+        "file": "CorraLinn_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified.",
+        "statistics": [
+          "CorraLinn_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Dozois",
+      "name": "Dozois",
+      "catalog_terms": [
+        "Dozois"
+      ],
+      "storage": {
+        "file": "Dozois_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [
+          -1.0
+        ],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved. Declared negative numeric placeholders become missing; this is an explicit, uncertified archive interpretation.",
+        "statistics": [
+          "Dozois_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Duncan",
+      "name": "Duncan",
+      "catalog_terms": [
+        "Duncan"
+      ],
+      "storage": {
+        "file": "Duncan_stor.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "Duncan_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Hugh_Keenleyside",
+      "name": "Hugh Keenleyside / Arrow Lakes",
+      "catalog_terms": [
+        "Hugh Keenleyside"
+      ],
+      "storage": {
+        "file": "HughKeenley_stor.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "HughKeenley_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": [
+          "#VALEUR!"
+        ]
+      },
+      "release": {
+        "file": "HughKeenley_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified.",
+        "statistics": [
+          "HughKeenley_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Hungry_Horse",
+      "name": "Hungry Horse",
+      "catalog_terms": [
+        "Hungry Horse"
+      ],
+      "release": {
+        "file": "HungryHorse_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified. Preserve input rates without the separate 0.993 calibration/statistics experiment adjustment.",
+        "statistics": [
+          "HungryHorse_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Kipawa",
+      "name": "Kipawa",
+      "catalog_terms": [
+        "Kipawa"
+      ],
+      "storage": {
+        "file": "Kipawa_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [
+          -1.0
+        ],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved. Declared negative numeric placeholders become missing; this is an explicit, uncertified archive interpretation.",
+        "statistics": [
+          "Kipawa_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Lake_Chelan",
+      "name": "Lake Chelan",
+      "catalog_terms": [
+        "Lake Chelan"
+      ],
+      "release": {
+        "file": "LakeChelan_outflow.txt",
+        "value_column": 2,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "The source contains date, cfs, and a preconverted m3/s field; select the third column. Its monthly values agree in scale with the archived CMS statistics; preserve both source columns.",
+        "statistics": [
+          "LakeChelan_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Lake_of_the_Woods",
+      "name": "Lake of the Woods",
+      "catalog_terms": [
+        "Lake of the Woods"
+      ],
+      "storage": {
+        "file": "LotW_Storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "LotW_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Minidoka",
+      "name": "Minidoka / Lake Walcott",
+      "catalog_terms": [
+        "Minidoka"
+      ],
+      "storage": {
+        "file": "Minidoka_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [
+          -99.99
+        ],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved. Declared negative numeric placeholders become missing; this is an explicit, uncertified archive interpretation.",
+        "statistics": [
+          "Minidoka_stor_gnrl.txt"
+        ],
+        "missing_tokens": []
+      },
+      "release": {
+        "file": "Minidoka_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified.",
+        "statistics": [
+          "Minidoka_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Namakan",
+      "name": "Namakan",
+      "catalog_terms": [
+        "Namakan"
+      ],
+      "storage": {
+        "file": "Namakan_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "Namakan_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Nechako",
+      "name": "Nechako",
+      "catalog_terms": [
+        "Nechako"
+      ],
+      "storage": {
+        "file": "Nechako_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "Nechako_stor_gnrl.txt"
+        ],
+        "missing_tokens": []
+      },
+      "release": {
+        "file": "Nechako_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified.",
+        "statistics": [
+          "Nechako_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Rainy",
+      "name": "Rainy Lake",
+      "catalog_terms": [
+        "Rainy"
+      ],
+      "storage": {
+        "file": "Rainy_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "Rainy_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Revelstoke",
+      "name": "Revelstoke",
+      "catalog_terms": [
+        "Revelstoke"
+      ],
+      "storage": {
+        "file": "Revelstoke_stor.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "Revelstoke_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      },
+      "release": {
+        "file": "Revelstoke_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified.",
+        "statistics": [
+          "Revelstoke_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Seton",
+      "name": "Seton",
+      "catalog_terms": [
+        "Seton"
+      ],
+      "storage": {
+        "file": "Seton_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "Seton_stor_gnrl.txt"
+        ],
+        "missing_tokens": []
+      },
+      "release": {
+        "file": "Seton_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified.",
+        "statistics": [
+          "Seton_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Waterbury",
+      "name": "Waterbury",
+      "catalog_terms": [
+        "Waterbury"
+      ],
+      "storage": {
+        "file": "Waterbury_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [
+          -1.0
+        ],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved. Declared negative numeric placeholders become missing; this is an explicit, uncertified archive interpretation.",
+        "statistics": [
+          "Waterbury_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Winnebago",
+      "name": "Winnebago",
+      "catalog_terms": [
+        "Winnebago"
+      ],
+      "storage": {
+        "file": "Winnebago_Storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "Winnebago_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      },
+      "release": {
+        "file": "Winnebago_outflow.txt",
+        "value_column": 1,
+        "factor": 1.0,
+        "source_units": "m3/s_selected_archive_field",
+        "missing_values": [
+          -1.0
+        ],
+        "duplicate_policy": "reject",
+        "evidence": "Selected observed discharge field is treated as m3/s consistently with the archived CMS statistics; station identity and daily timing remain unverified. Declared negative numeric placeholders become missing; this is an explicit, uncertified archive interpretation.",
+        "statistics": [
+          "Winnebago_outflow_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Winnipeg",
+      "name": "Lake Winnipeg",
+      "catalog_terms": [
+        "Lake Winnipeg"
+      ],
+      "storage": {
+        "file": "Winnipeg_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "reject",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved.",
+        "statistics": [
+          "Winnipeg_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    },
+    {
+      "reservoir_id": "etienne_Wrightsville",
+      "name": "Wrightsville",
+      "catalog_terms": [
+        "Wrightsville"
+      ],
+      "storage": {
+        "file": "Wrightsville_storage.txt",
+        "value_column": 1,
+        "factor": 1000000.0,
+        "source_units": "million_m3_from_archive_reader",
+        "missing_values": [],
+        "duplicate_policy": "daily_arithmetic_mean_proxy",
+        "evidence": "Storage scaling follows the archived compute_storstats reader (input multiplied by 1e6); geometry, datum and total/active storage definition are unresolved. Repeated dates lack times: use an arithmetic mean of valid within-day samples as a labeled proxy, retain counts and extrema.",
+        "statistics": [
+          "Wrightsville_stor_stats_gnrl.txt"
+        ],
+        "missing_tokens": []
+      }
+    }
+  ]
+}

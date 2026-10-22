@@ -1,0 +1,22 @@
+{
+  "kind": "dztr_run_manager_v6",
+  "schema_version": 6,
+  "description": "Reuse the 32 completed no-observation fixed-profile jobs and regenerate the four-route report with the annotated-trajectory reader. No model or optimizer reruns.",
+  "stages": [
+    {
+      "id": "comparison",
+      "type": "compare_routes",
+      "config": {
+        "kind": "dztr_availability_comparison_v1",
+        "schema_version": 1,
+        "no_observations_campaign": "D:\\2_CodeProjects\\GitHub\\Repos\\DZTR_model\\outputs\\managed_availability_paper_v1_20261020\\stages\\no_observations\\campaign",
+        "observed_catalog": "D:\\2_CodeProjects\\GitHub\\Repos\\DZTR_model\\outputs\\calibrated_paper_cohort_v1_20261017_final\\catalog.json",
+        "diagnostic_cache": "D:\\2_CodeProjects\\GitHub\\Repos\\DZTR_model\\outputs\\cohort_diagnostic_cache_v1_20261017",
+        "flow_campaign": "D:\\2_CodeProjects\\GitHub\\Repos\\DZTR_model\\outputs\\managed_flow_only_paper_v1_20261020\\stages\\flow_calibration\\campaign",
+        "storage_campaign": "D:\\2_CodeProjects\\GitHub\\Repos\\DZTR_model\\outputs\\managed_storage_only_paper_v1_20261020\\stages\\mean_flow_calibration\\campaign",
+        "flow_objective": "sqrt_release_nse",
+        "budget": 64
+      }
+    }
+  ]
+}

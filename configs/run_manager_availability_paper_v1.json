@@ -1,0 +1,173 @@
+{
+  "kind": "dztr_run_manager_v6",
+  "schema_version": 6,
+  "description": "Complete four-route comparison: fixed no-observation mean-flow profiles, saved calibrated profiles, automatic data-availability recommendations and all 37 paper rows. No new optimization.",
+  "stages": [
+    {
+      "id": "no_observations",
+      "type": "no_observations",
+      "config": {
+        "kind": "dztr_no_observations_v1",
+        "schema_version": 1,
+        "campaign": "../outputs/data_availability_paper_v1_20261017",
+        "profiles": [
+          {
+            "reservoir_id": "ex13_American_falls",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex34_Andijan",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex17_Bhumibol",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex30_Big_horn",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex36_Chardara",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex37_Charvak",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex28_Dickson",
+            "storage_basis": "active_capacity",
+            "assumption_evidence": "Exploratory adaptation: dead storage reaches/exceeds 20% of total capacity; apply 20/30/97% to storage above adopted dead storage. Capacity and dead storage remain fixed."
+          },
+          {
+            "reservoir_id": "ex29_EB_Campbell",
+            "storage_basis": "active_capacity",
+            "assumption_evidence": "Exploratory adaptation: dead storage reaches/exceeds 20% of total capacity; apply 20/30/97% to storage above adopted dead storage. Capacity and dead storage remain fixed."
+          },
+          {
+            "reservoir_id": "ex8_Flaming_gorge",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex3_Fort_peck",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex4_Fort_randall",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex14_Gardiner",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex5_Garrison",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex1_Glen_canyon",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex2_Grand_coulee",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex18_High_aswan",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex9_Amistad",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex10_Falcon",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex38_Kayrakkum",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex33_Navajo",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex39_Nurek",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex6_Oahe",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex24_Oldman",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex32_Oroville",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex11_Palisades",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex40_Semione",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex19_Sirikit",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex20_St_marry",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex41_Toktogul",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex42_Tyuyamuyun",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex23_Waterton",
+            "storage_basis": "total_capacity"
+          },
+          {
+            "reservoir_id": "ex16_Yellowtail",
+            "storage_basis": "active_capacity",
+            "assumption_evidence": "Exploratory adaptation: dead storage reaches/exceeds 20% of total capacity; apply 20/30/97% to storage above adopted dead storage. Capacity and dead storage remain fixed."
+          }
+        ],
+        "release_prior": {
+          "source_kind": "mean_flow_scaled_donor_prior",
+          "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+          "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+          "mean_policy": "grand_then_calibration_inflow",
+          "minimum_donors": 3,
+          "release_target_limit": "source_channel",
+          "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+        }
+      }
+    },
+    {
+      "id": "comparison",
+      "type": "compare_routes",
+      "config": {
+        "kind": "dztr_availability_comparison_v1",
+        "schema_version": 1,
+        "no_observations_campaign": "@no_observations.campaign",
+        "observed_catalog": "../outputs/calibrated_paper_cohort_v1_20261017_final/catalog.json",
+        "diagnostic_cache": "../outputs/cohort_diagnostic_cache_v1_20261017",
+        "flow_campaign": "../outputs/managed_flow_only_paper_v1_20261020/stages/flow_calibration/campaign",
+        "storage_campaign": "../outputs/managed_storage_only_paper_v1_20261020/stages/mean_flow_calibration/campaign",
+        "flow_objective": "sqrt_release_nse",
+        "budget": 64
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": "v1.1",
+  "catalog_file": "data/catalogs/grand_v1_1_reference.csv",
+  "ids": {
+    "ex1_Glen_canyon": 597,
+    "ex2_Grand_coulee": 310,
+    "ex4_Fort_randall": null,
+    "ex5_Garrison": 753,
+    "ex6_Oahe": 870,
+    "ex9_Amistad": 1307,
+    "ex14_Gardiner": 253,
+    "ex16_Yellowtail": 355,
+    "ex17_Bhumibol": 5146,
+    "ex18_High_aswan": 4478,
+    "ex19_Sirikit": 5140,
+    "ex20_St_marry": 281,
+    "ex21_Travers": 270,
+    "ex23_Waterton": 284,
+    "ex24_Oldman": 278,
+    "ex28_Dickson": 251,
+    "ex29_EB_Campbell": 710,
+    "ex32_Oroville": 148,
+    "ex34_Andijan": 4683,
+    "ex39_Nurek": 4692
+  },
+  "unresolved": [
+    "ex4_Fort_randall"
+  ],
+  "note": "Do not assign Canadian same-name GRAND_ID2356 to US Fort Randall."
+}

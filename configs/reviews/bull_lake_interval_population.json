@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "experiment_id": "bull_lake_interval_population_v1",
+  "policy_file": "bull_lake_interval_policy.json",
+  "cached_population16": "../../outputs/bull_lake_interval_three_seed_20261009",
+  "population_sizes": [16, 32, 64],
+  "seeds": [42, 43, 44],
+  "evaluation_budget": 512,
+  "workers": 3,
+  "evaluation_checkpoints": [64, 128, 192, 256, 320, 384, 448, 512],
+  "optimization": {"crossover_probability": 0.9, "crossover_eta": 15.0, "mutation_eta": 20.0, "local_initialization_fraction": 0.5, "local_initialization_scale": 0.05},
+  "common_stopping": {"check_interval": 64, "window_evaluations": 128, "minimum_evaluations": 192, "patience": 2, "max_evaluations": 512, "hypervolume_reference": [1.0, 1.0], "normalized_hv_tolerance": 0.0025, "front_tolerance": 0.01, "extrema_tolerance": 0.005},
+  "stopping_application": "Diagnostic only; every new job completes512 attempts. Reassess cached P16 records under the same new common evaluation clock without rewriting their original stopping reports. Earliest possible common-policy suggestion256.",
+  "comparison": {"raw_front_distance_tolerance_nse": 0.01, "hypervolume_reference": [1.0, 1.0], "hypervolume_normalization_area": 4.0, "population_summary": "median/min/max calibration hypervolume, objective extrema, rejection counts and all3 within-population seed-front distances", "coverage_reference": "Feasible nondominated union of all9 completed calibration archives, an empirical searched reference rather than the true Pareto front.", "selection_uses_validation": false, "production_population_recommendation": null},
+  "cached_code_exception": {"module": "calibration/interval_resume.py", "old_sha256": "36fffb0f5778691820ede5136e3fa7b15e24b7576425f77f903c48d663618934", "reason": "Reviewed checkpoint-identity compatibility fix only. This adapter is not invoked in fresh search objective/optimizer calculations. All58 other production modules, inputs, software and nonpopulation settings must match cached jobs."},
+  "compatibility_demonstration": {"seed": 44, "population_size": 16, "previous_evaluations": 512, "total_evaluations": 528, "new_evaluations": 16, "included_in_population_comparison": false},
+  "scope": "Reuse1536 cached P16 attempts; run3072 fresh attempts in six P32/P64 jobs.4608 comparison attempts plus16 separate compatibility evaluations. No held-out evaluations, no changes to hydrological equations, source data, masks, or numerical solver. Population affects initial diversity and available generations at equal budget.",
+  "validation_label": "calibration-only population diversity experiment"
+}

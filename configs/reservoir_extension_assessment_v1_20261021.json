@@ -1,0 +1,130 @@
+{
+  "kind": "reservoir_extension_assessment_v1",
+  "collection": "data/reservoirs_etienne_v1_20261021",
+  "profile_catalog": "outputs/calibrated_paper_cohort_v1_20261017_final/catalog.json",
+  "identity_crosswalk": "E:/1_DataHub/E_Reservoir_data/Z_ReservoirDataNew/ReservoirCollected.xlsx",
+  "budget_flag_capacity_fraction": 0.02,
+  "supplementary_sources": [
+    {
+      "key": "horizon_usbr_hgh",
+      "reservoir_id": "etienne_Hungry_Horse",
+      "file": "E:/1_DataHub/E_Reservoir_data/Z_ReservoirDataNew/horizon-master/inst/extdata/usbr/processed/hgh.csv",
+      "provider": "Local HORIZON archive, USBR processed HGH record; provider computation of inflow not independently verified",
+      "source_units": {"s_af": "acre-feet", "i_cfs": "cubic feet per second", "r_cfs": "cubic feet per second"},
+      "clock_assumption": "daily mean inflow/release assigned to nominal interval ending at current storage row; actual provider clock needs confirmation",
+      "capacity_reference_m3": 4277715012.614799,
+      "capacity_reference_evidence": "USBR Hungry Horse Project total capacity 3,468,000 acre-feet; not automatically maximum permitted flood storage",
+      "capacity_source": "https://www.usbr.gov/projects/index.php?id=337",
+      "verified_GRAND_ID": 299,
+      "crosswalk_station_id": "usbr_hgh",
+      "official_lon": -114.0135345,
+      "official_lat": 48.3410759,
+      "position_source": "https://catalog.data.gov/dataset/hungry-horse-reservoir-dam-and-powerplant-hgh-daily-instant-lake-reservoir-storage-time-se",
+      "baseline_probe": true
+    },
+    {
+      "key": "horizon_usbrpn_min",
+      "reservoir_id": "etienne_Minidoka",
+      "file": "E:/1_DataHub/E_Reservoir_data/Z_ReservoirDataNew/horizon-master/inst/extdata/usbrpn/processed/min.csv",
+      "provider": "Local HORIZON archive, USBRPN processed MIN record; storage coordinate and outlet coverage unresolved",
+      "source_units": {"s_af": "acre-feet", "i_cfs": "cubic feet per second", "r_cfs": "cubic feet per second"},
+      "clock_assumption": "nominal current-day daily means; storage timing requires confirmation",
+      "capacity_reference_m3": 117427470.9345239,
+      "capacity_reference_evidence": "95,200 acre-feet used only as active-storage screening reference; official total/active descriptions conflict",
+      "capacity_source": "https://usbr.gov/projects/pdf.php?id=137",
+      "baseline_probe": false
+    }
+  ],
+  "decisions": {
+    "etienne_Aishihik": {
+      "decision": "conditional_net_flux_diagnostic_only; multi-lake boundary and capacity unresolved",
+      "next_action": "Confirm which of Sekulmun, Aishihik and Canyon lakes the storage represents, and whether release includes every outlet/diversion; obtain capacity on that same boundary."
+    },
+    "etienne_Baskatong": {
+      "decision": "storage_only_source_gated",
+      "next_action": "Verify Mercier/Baskatong identity and total/active storage coordinate, then supply time-varying inflow and an explicit release prior or observations."
+    },
+    "etienne_Carry_Falls": {
+      "decision": "flow_only_source_gated",
+      "next_action": "Verify station identity, all-outlet release coverage and physical capacity; obtain time-varying inflow before the fixed-storage-fraction flow-only route."
+    },
+    "etienne_Corra_Linn": {
+      "decision": "flow_only_source_gated",
+      "next_action": "Verify Kootenay/Corra Linn identity and whether recorded flow is powerplant-only or total lake outflow; supply inflow and compatible capacity."
+    },
+    "etienne_Dozois": {
+      "decision": "storage_only_source_gated",
+      "next_action": "Confirm storage datum/definition and catalog identity, then obtain inflow and declare a release prior; preserve declared missing-value interpretation."
+    },
+    "etienne_Duncan": {
+      "decision": "storage_only_source_gated",
+      "next_action": "Verify Duncan dam capacity and total/active storage definition; supply time-varying inflow and an explicit release prior."
+    },
+    "etienne_Hugh_Keenleyside": {
+      "decision": "conditional_net_flux_diagnostic_and_catalog_capacity_sensitivity_only",
+      "probe_capacity_reference_m3": 11300000000,
+      "capacity_reference_evidence": "GRAND candidate 282, CAP_MCM=11300; sensitivity only, not adopted. Official live storage is 8800 million m3 and is not the same coordinate.",
+      "next_action": "Reconcile archived storage with live versus total Arrow Lakes storage and confirm total outlet discharge and storage/flow timing."
+    },
+    "etienne_Hungry_Horse": {
+      "decision": "supplementary_reported_inflow_found; source_quality_review_before_calibration",
+      "next_action": "Reconcile the packaged largest storage-budget residuals with USBR records, including 1994-1995 storage jumps and the 2006 inflow spike; confirm clock and capacity reference."
+    },
+    "etienne_Kipawa": {
+      "decision": "storage_only_source_gated",
+      "next_action": "Establish dam/lake identity and storage coordinate before linking a GRAND ID; obtain inflow and a documented release prior."
+    },
+    "etienne_Lake_Chelan": {
+      "decision": "flow_only_source_gated",
+      "next_action": "Keep the already converted m3/s field; verify total versus powerplant-only release, capacity and independent inflow forcing."
+    },
+    "etienne_Lake_of_the_Woods": {
+      "decision": "storage_only_source_gated; reject unverified small-capacity name match",
+      "next_action": "Identify the correct Lake of the Woods storage/control boundary; do not adopt the unrelated 17.5 million m3 name match. Supply inflow and a release prior."
+    },
+    "etienne_Minidoka": {
+      "decision": "supplementary_reported_inflow_found; negative_storage_and_outlet_definition_unresolved",
+      "next_action": "Resolve active versus total storage and negative MIN storage, and establish whether discharge includes both canals as well as the Snake River; do not clip or offset records yet."
+    },
+    "etienne_Namakan": {
+      "decision": "storage_only_source_gated",
+      "next_action": "Confirm the regulated lake-system boundary, datum and capacity; obtain inflow and a documented release prior."
+    },
+    "etienne_Nechako": {
+      "decision": "conditional_net_flux_diagnostic_only; capacity_coordinate_conflict",
+      "next_action": "Resolve Ootsa/Kenney storage coordinate: archived values around 30 billion m3 exceed the 23.8 billion m3 catalog candidate; confirm diverted and river outlet components."
+    },
+    "etienne_Rainy": {
+      "decision": "storage_only_source_gated",
+      "next_action": "Confirm Rainy Lake versus a different dam/system identity and storage datum; obtain inflow and an explicit release prior."
+    },
+    "etienne_Revelstoke": {
+      "decision": "short_record_conditional_net_flux_and_catalog_capacity_sensitivity_only",
+      "probe_capacity_reference_m3": 5180000000,
+      "capacity_reference_evidence": "GRAND candidate 257, CAP_MCM=5180; sensitivity only, not adopted physical metadata",
+      "next_action": "Verify capacity, total outflow and observation clock. Extend the 2018-2019 storage record, or use a separately labelled short-record experiment without claiming normal multi-regime assessment."
+    },
+    "etienne_Seton": {
+      "decision": "conditional_net_flux_diagnostic_and_catalog_capacity_sensitivity_only",
+      "probe_capacity_reference_m3": 148300000,
+      "capacity_reference_evidence": "GRAND candidate 21, CAP_MCM=148.3; sensitivity only; observed storage exceeds this reference",
+      "next_action": "Resolve Seton storage capacity/datum and whether release includes canal/powerplant diversions and river outlet; preserve exceedances without clipping."
+    },
+    "etienne_Waterbury": {
+      "decision": "storage_only_source_gated",
+      "next_action": "Confirm storage definition and capacity on the same datum; obtain inflow and an explicit release prior."
+    },
+    "etienne_Winnebago": {
+      "decision": "conditional_net_flux_diagnostic_only; regulated_system_identity_unresolved",
+      "next_action": "Establish the lake-system capacity/coordinate and all outlet components, including any connected-lake operations, before adopting the conditional net-flux route."
+    },
+    "etienne_Winnipeg": {
+      "decision": "storage_only_source_gated; active_storage_coordinate_review",
+      "next_action": "Resolve whether 5-6 billion m3 archived storage is an active/offset coordinate rather than catalog total storage; confirm Jenpeg/system boundary, inflow and release prior."
+    },
+    "etienne_Wrightsville": {
+      "decision": "storage_only_daily_proxy_source_gated",
+      "next_action": "Retain the untimed arithmetic daily storage proxy label and original within-day ranges; verify measurement timing, datum/capacity, inflow and release prior."
+    }
+  }
+}

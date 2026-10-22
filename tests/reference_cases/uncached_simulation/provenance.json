@@ -1,0 +1,14 @@
+{
+  "description": "Byte-for-byte local simulation source before the prepared-monthly-values refactor. Original modular source was uncommitted; baseline_git_revision does not identify these file contents. SHA256 identifies each reference file.",
+  "baseline_git_revision": "a3f175169c15f63052e731074ea84bc84544b974",
+  "source_paths": {
+    "release.py": "src/dztr/model/release.py",
+    "balance.py": "src/dztr/model/balance.py",
+    "runner.py": "src/dztr/simulation/runner.py"
+  },
+  "sha256": {
+    "release.py": "892dbc436df69ee0fe041e00f9664a12cea487a3b5bff66672567ed4e94e6f46",
+    "balance.py": "8351389e2207d4c5ae48cfa99595e75f38dca6efb909bc9f3d666b4dbc4bfcce",
+    "runner.py": "a9d7ae79724cc500e211566baf47bf357116cfa5f2470215db1fc7c438116e5e"
+  }
+}

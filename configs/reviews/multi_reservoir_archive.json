@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "kind": "multi_reservoir_archive_worklist",
+  "execution_mode": "archive_export_only",
+  "paths_relative_to": "repository_root",
+  "prior_export_directory": "outputs/archive_workflow_20261010",
+  "cohort_directory": "outputs/ready_cohort_20261008",
+  "pinned_files_sha256": {
+    "outputs/archive_workflow_20261010/workflow_verification.json": "81de48fb9e8a25528edbaae01b09a26d9af6455914aaafd18c0033960b412d2a",
+    "outputs/ready_cohort_20261008/final_verification.json": "08f07a55a81d8b5fb3aae2784e8bab9c623f655b140192e8fc308c9ec681caab"
+  },
+  "pilots": [
+    {
+      "reservoir_id": "ex14_Gardiner",
+      "seed": 42,
+      "population_size": 16,
+      "evaluation_budget": 128,
+      "archive_directory": "outputs/ready_cohort_20261008/pilots/ex14_Gardiner/seed_42"
+    },
+    {
+      "reservoir_id": "ex14_Gardiner",
+      "seed": 43,
+      "population_size": 16,
+      "evaluation_budget": 128,
+      "archive_directory": "outputs/ready_cohort_20261008/pilots/ex14_Gardiner/seed_43"
+    },
+    {
+      "reservoir_id": "ex6_Oahe",
+      "seed": 42,
+      "population_size": 16,
+      "evaluation_budget": 128,
+      "archive_directory": "outputs/ready_cohort_20261008/pilots/ex6_Oahe/seed_42"
+    },
+    {
+      "reservoir_id": "ex6_Oahe",
+      "seed": 43,
+      "population_size": 16,
+      "evaluation_budget": 128,
+      "archive_directory": "outputs/ready_cohort_20261008/pilots/ex6_Oahe/seed_43"
+    },
+    {
+      "reservoir_id": "ex18_High_aswan",
+      "seed": 42,
+      "population_size": 16,
+      "evaluation_budget": 128,
+      "archive_directory": "outputs/ready_cohort_20261008/pilots/ex18_High_aswan/seed_42"
+    },
+    {
+      "reservoir_id": "ex18_High_aswan",
+      "seed": 43,
+      "population_size": 16,
+      "evaluation_budget": 128,
+      "archive_directory": "outputs/ready_cohort_20261008/pilots/ex18_High_aswan/seed_43"
+    }
+  ],
+  "limitations": {
+    "ex14_Gardiner": [
+      "Inherited source clock and storage definitions are not independently certified.",
+      "The128-evaluation pilots do not establish convergence; validation is historical reporting."
+    ],
+    "ex6_Oahe": [
+      "Monthly30.5-day integration retained; physical measurement clock and storage definitions remain unverified.",
+      "Archived balanced storage validation NSE is negative for both seeds and below the generalized baseline; calibration improvement did not transfer."
+    ],
+    "ex18_High_aswan": [
+      "Monthly30.5-day integration retained; residual interpretation depends on clock assumptions.",
+      "Inherited50000 m3/s channel limit and storage definitions are not independently certified."
+    ],
+    "ex35_Bull_Lake": [
+      "Signed computed-net inflow and provisional daily forcing clock; observed clean-block anchors condition the hindcast.",
+      "No held-out validation was scored for these population32 archives; seed-front agreement did not meet tolerance."
+    ]
+  },
+  "scope": "Reuse six sampled pilot archives and three existing Bull Lake interval exports. No new model calls, validation selection, source repairs, or reinterpretation of historical settings."
+}

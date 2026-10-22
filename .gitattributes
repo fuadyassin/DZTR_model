@@ -1,0 +1,5 @@
+# These scientific inputs and reference fixtures carry SHA256 byte identities.
+# Preserve their stored line endings across operating systems and Git settings.
+data/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
+configs/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
+tests/reference_cases/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol

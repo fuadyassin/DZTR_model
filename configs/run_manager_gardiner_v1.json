@@ -1,0 +1,29 @@
+{
+  "kind": "dztr_run_manager_v1",
+  "schema_version": 1,
+  "description": "Gardiner: local observations, existing mixed-year mask, observed monthly targets and fixed baseline. No optimization.",
+  "stages": [
+    {
+      "id": "targets",
+      "type": "parameterize",
+      "config": {
+        "kind": "dztr_data_availability_v1",
+        "schema_version": 1,
+        "methods": ["observed_monthly"],
+        "quantile_method": "hazen",
+        "channel_policy": "source_defined",
+        "reservoirs": [{
+          "reservoir_id": "ex14_Gardiner",
+          "name": "Gardiner",
+          "GRAND_ID": 253,
+          "observations_csv": "../outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/observations_si.csv",
+          "selection_json": "../outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/selection.json",
+          "model_config": "run_manager/gardiner_model_v1.json",
+          "forcing_stage": "prepared",
+          "source_gates": []
+        }]
+      }
+    },
+    {"id": "baseline", "type": "baseline", "config": {"campaign": "@targets.campaign"}}
+  ]
+}

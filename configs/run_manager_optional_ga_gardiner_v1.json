@@ -1,0 +1,31 @@
+{
+  "kind": "dztr_run_manager_v7",
+  "schema_version": 7,
+  "description": "Explicit optional scalar GA and default DDS for the same Gardiner objectives, bounds, seed and 64-evaluation checkpoint. This is a smoke comparison, not a convergence or optimizer-ranking study.",
+  "stages": [
+    {
+      "id": "flow_dds",
+      "type": "calibrate",
+      "backend": "prepared_flow_v2",
+      "config": "flow_dds_gardiner_v2.json"
+    },
+    {
+      "id": "flow_ga",
+      "type": "calibrate",
+      "backend": "prepared_flow_v2",
+      "config": "flow_ga_gardiner_v2.json"
+    },
+    {
+      "id": "storage_dds",
+      "type": "calibrate",
+      "backend": "prepared_storage_v2",
+      "config": "storage_dds_gardiner_v2.json"
+    },
+    {
+      "id": "storage_ga",
+      "type": "calibrate",
+      "backend": "prepared_storage_v2",
+      "config": "storage_ga_gardiner_v2.json"
+    }
+  ]
+}

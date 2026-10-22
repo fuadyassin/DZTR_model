@@ -1,0 +1,13 @@
+{
+  "kind": "dztr_run_manager_v8",
+  "schema_version": 8,
+  "description": "Matched full-data Gardiner GA/DDS comparison: release-only and weighted joint NSE.",
+  "stages": [
+    {
+      "id": "comparison",
+      "type": "calibrate",
+      "backend": "prepared_full_data_v1",
+      "config": "full_data_ga_dds_gardiner_v1.json"
+    }
+  ]
+}

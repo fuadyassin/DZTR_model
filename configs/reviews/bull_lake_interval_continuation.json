@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "experiment_id": "bull_lake_interval_continuation_v1",
+  "date": "2026-10-09",
+  "policy_file": "bull_lake_interval_policy.json",
+  "previous_pilot": "../../outputs/bull_lake_interval_pilot_20261009",
+  "optimization": {
+    "seeds": [42, 43],
+    "population_size": 16,
+    "evaluation_budget_per_seed": 256,
+    "inherited_evaluations_per_seed": 128,
+    "new_evaluations_per_seed": 128,
+    "crossover_probability": 0.9,
+    "crossover_eta": 15.0,
+    "mutation_eta": 20.0,
+    "local_initialization_fraction": 0.5,
+    "local_initialization_scale": 0.05
+  },
+  "evaluation_checkpoints": [16, 32, 64, 96, 128, 160, 192, 224, 256],
+  "root_policy": "reject",
+  "initial_storage_offset_capacity_fraction": 0.0,
+  "approved_new_resume_module": "calibration/interval_resume.py",
+  "identity_policy": "Verify all original numerical-module hashes and immutable parent evidence. Allow only the explicitly named new resume adapter as an added source module. Preserve saved trial costs, survivor order, RNG state and all non-budget settings.",
+  "stopping": {
+    "population_size": 16,
+    "check_interval": 16,
+    "window_evaluations": 64,
+    "minimum_evaluations": 96,
+    "patience": 2,
+    "max_evaluations": 256,
+    "hypervolume_reference": [1.0, 1.0],
+    "normalized_hv_tolerance": 0.0025,
+    "front_tolerance": 0.01,
+    "extrema_tolerance": 0.005
+  },
+  "stopping_application": "Diagnostic only. Complete the fixed total budget and audit any early provisional suggestion using later windows; do not reset patience at the checkpoint boundary.",
+  "selection": {
+    "source": "Pooled feasible nondominated calibration archive from both 256-attempt seed histories.",
+    "roles": ["generalized_baseline", "best_release", "best_storage", "balanced"],
+    "baseline": "Retain original generalized trial as comparison; do not reevaluate it within the continuation search budget.",
+    "balanced": "Existing Pareto-range-scaled distance to calibration ideal with deterministic objective and pooled-ID tie breaking.",
+    "freeze_before_validation": true,
+    "origin_tracking": "Preserve the pilot's pooled IDs 0-255 for both inherited prefixes. Append seed42 new trials as IDs256-383 and seed43 new trials as IDs384-511. Track source seed/local evaluation ID as primary provenance.",
+    "validation_use": "Held-out reporting after selected identities/vectors are frozen; never alter search, stopping or selection from validation results."
+  },
+  "next_budget_rule": {
+    "uses_validation": false,
+    "pairwise_front_difference_threshold_nse": 0.01,
+    "if_either_seed_unstable_or_pairwise_fronts_differ": "Recommend a further calibration-only budget experiment, potentially 512 total attempts per seed, using verified continuation; do not declare convergence.",
+    "if_both_have_sustained_stopping_candidates_and_pairwise_fronts_close": "Recommend a planned third seed and extension audit before stronger reproducibility claims.",
+    "high_rejection_handling": "Review reported failure reasons before increasing budget; do not relax the frozen source or strict-root policies based on performance."
+  },
+  "validation_label": "segmented conditional hindcast",
+  "scope": "Only 128 additional search evaluations per seed. Keep source policy, physics, 72-coordinate bounds and nominal provisional anchors fixed. Reporting replays are counted separately."
+}

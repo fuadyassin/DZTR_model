@@ -1,0 +1,24 @@
+{
+  "kind": "dztr_flow_calibration_v2",
+  "schema_version": 2,
+  "campaign": "../outputs/data_availability_paper_v1_20261017",
+  "profiles": [
+    {
+      "reservoir_id": "ex14_Gardiner",
+      "storage_basis": "total_capacity"
+    }
+  ],
+  "objectives": [
+    "sqrt_release_nse"
+  ],
+  "scoring": "pooled",
+  "bounds_policy": "monthly",
+  "optimization": {
+    "seeds": [
+      42
+    ],
+    "horizon": 512,
+    "evaluation_budget": 64,
+    "workers": 1
+  }
+}

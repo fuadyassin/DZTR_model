@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "kind": "world_reservoir_sample",
+  "reservoir": {
+    "id": "ex20_St_marry",
+    "name": "St marry"
+  },
+  "observations_file": "../../data/reservoirs/ex20_St_marry/observations_si.csv",
+  "observations_sha256": "f5013032c8abd2802946861f12b39e275153a89a9b49f1624a66d074ebe29f9d",
+  "units": {
+    "storage": "m3",
+    "flows": "m3/s"
+  },
+  "sampling": {
+    "frequency": "daily",
+    "fixed_step_days": 1.0,
+    "month_clock": "observed",
+    "legacy_start": null,
+    "allow_signed_inflow": false
+  },
+  "periods": {
+    "simulation_start": "2000-01-01",
+    "calibration": {
+      "start": "2001-01-01",
+      "end": "2005-12-31"
+    },
+    "validation": {
+      "start": "2006-01-01",
+      "end": "2011-12-31"
+    },
+    "warmup_rows": 366
+  },
+  "model": {
+    "capacity_m3": 394304000.0,
+    "initial_storage_m3": 136786354.25,
+    "initial_release_m3s": 40.0,
+    "channel_capacity_m3s": 1000.0,
+    "dead_storage_fraction": 0.1,
+    "inflow_correction": 1.0,
+    "flood_mode": "inflow"
+  },
+  "inflow_preprocessing": {
+    "factor": 1.0,
+    "offset_m3s": 0.0
+  },
+  "simulation_supported": true,
+  "simulation_unsupported_reason": null,
+  "target_percentiles": [
+    10,
+    45,
+    85
+  ],
+  "quantile_method": "hazen",
+  "atol_storage_m3": 0.0001,
+  "legacy": {
+    "sampling": {
+      "frequency": "daily",
+      "timestep_days": 1.0,
+      "legacy_start": "2000-01-01",
+      "month_clock": "legacy_synthetic"
+    },
+    "warmup_rows": 365,
+    "overflow_mode": "matlab",
+    "fixed_point_iterations": 1000,
+    "release_shift_rows": 0,
+    "storage_shift_rows": 0
+  },
+  "protocol": {
+    "split_policy": "first calendar year warmup; remaining years divided chronologically",
+    "estimation_policy": "calibration observations only; validation excluded from fitting/search",
+    "paper_reproduction": false,
+    "fixed_settings": "source-selected MATLAB model constants, initial-state assignment and inflow preprocessing",
+    "monthly_clock": "fixed source duration; operating targets use verified observation calendar months",
+    "legacy_targets": "unmodified full-record MATLAB tables are retained separately, never used as calibration estimates"
+  },
+  "provenance_file": "../../data/reservoirs/ex20_St_marry/observation_provenance.json",
+  "matlab_source_file": "../../data/reservoirs/ex20_St_marry/matlab_source.json",
+  "legacy_targets_file": "../../data/reservoirs/ex20_St_marry/legacy_targets_si.csv",
+  "legacy_bounds_file": "../../data/reservoirs/ex20_St_marry/legacy_bounds_si.csv"
+}

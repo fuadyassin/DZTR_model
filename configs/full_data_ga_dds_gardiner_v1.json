@@ -1,0 +1,21 @@
+{
+  "kind": "dztr_full_data_comparison_v1",
+  "schema_version": 1,
+  "campaign": "../outputs/data_availability_paper_v1_20261017",
+  "profiles": [{"reservoir_id": "ex14_Gardiner"}],
+  "objectives": [
+    {"id": "release_only", "weights": {"storage": 0, "release": 1}},
+    {"id": "weighted_joint", "weights": {"storage": 0.5, "release": 0.5}}
+  ],
+  "scoring": "pooled",
+  "optimization": {
+    "seeds": [42, 43, 44],
+    "horizon": 512,
+    "evaluation_budget": 512,
+    "workers": 3,
+    "algorithms": [
+      {"optimizer": "dds", "perturbation": 0.2},
+      {"optimizer": "ga", "ga": {"population_size": 32}}
+    ]
+  }
+}

@@ -1,13 +1,14 @@
-def create_extended_columns():
-    columns = ['GRAND_ID', 'RES_NAME', 'DAM_NAME']
-    metrics = ['Q', 'S', 'I']
-    percentiles = ['5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60', '70', '75', '80', '85', '90', '95', '99']
-    months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+"""Column layout for the historical GRanD parameter workbooks."""
 
-    for metric in metrics:
+from dztr.parameterization import DEFAULT_PERCENTILES, MONTH_NAMES
+
+
+def create_extended_columns(percentiles=DEFAULT_PERCENTILES):
+    """Return the legacy schema, including P65, P99, and P100 consistently."""
+    columns = ["GRAND_ID", "RES_NAME", "DAM_NAME"]
+    for metric in ("Q", "S", "I"):
         for percentile in percentiles:
-            columns.append(f"{metric}{percentile}")
-            for month in months:
-                columns.append(f"{metric}{percentile}_{month}")
-
+            label = f"{metric}{percentile:g}"
+            columns.append(label)
+            columns.extend(f"{label}_{month}" for month in MONTH_NAMES)
     return columns

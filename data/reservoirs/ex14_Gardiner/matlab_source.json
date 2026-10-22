@@ -1,0 +1,873 @@
+{
+  "reservoir_id": "ex14_Gardiner",
+  "folder": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner",
+  "name": "Gardiner",
+  "base_script": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+  "coefficient_file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\coefficents28Apr18-17-04.txt",
+  "operating_rule_file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\S2Q1JAN.m",
+  "writer_file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m",
+  "source_sha256": {
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m": "48ba12eaa22aeacc626cc1e4dc3010d0f2ad9961f34fef6529d5e7bc2dd80709",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\coefficents28Apr18-17-04.txt": "4e519c09ee02cef2cd3fc4f3efe23fbbe57774d4376e667fa729845226e35299",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\S2Q1JAN.m": "5d7f47d2a2ab3abceed5d75d7e78ff319996b273e4f3e16b17b857d400af8e0c",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m": "c94420ebab92daf03b609be7d8e8ffe91a9d23ce70382fbb0f7aaf1ce30f4a8d",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\res_info.xlsx": "b90f562b3e07c175a2961b4857ac178cb3e07f8245d1fbecf50a15a157f23243",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\res_info_out.mat": "2b3d5005032a3a6782aa9b91f1511c8c55d2081b3d8f1e51c7d13dcc25b0f682"
+  },
+  "model": {
+    "capacity_m3": 9400000000.0,
+    "initial_release_m3s": 171.0,
+    "initial_storage_m3": 6733399841.0,
+    "channel_capacity_m3s": 2500.0,
+    "channel_capacity_mode": "finite",
+    "dead_storage_fraction": 0.1,
+    "dead_storage_expression": "0.1",
+    "inflow_correction": 1.0,
+    "flood_mode": "storage"
+  },
+  "sampling": {
+    "frequency": "daily",
+    "timestep_days": 1.0,
+    "legacy_start": "1980-01-01",
+    "month_clock": "legacy_synthetic"
+  },
+  "selection": {
+    "start": "1980-01-01",
+    "end": "2011-12-31",
+    "t1": null,
+    "t2": null,
+    "t1_variable": "t1",
+    "t2_variable": "t2"
+  },
+  "initial_storage_source": "observed",
+  "initial_release_source": "coefficient",
+  "warmup_rows": 365,
+  "legacy_release_shift_rows": 0,
+  "legacy_storage_shift_rows": 0,
+  "status": "ready",
+  "warnings": [
+    "Static base-script selection does not establish which script last produced saved artifacts."
+  ],
+  "evidence": [
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 4,
+      "field": "filename",
+      "code": "filename = [my_dir,'\\','coefficents28Apr18-17-04.txt'];    delimiterIn = ' ';     headerlinesIn = 0;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\coefficents28Apr18-17-04.txt",
+      "line": 1,
+      "field": "coefficient_constants",
+      "code": "9400000000"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\coefficents28Apr18-17-04.txt",
+      "line": 2,
+      "field": "coefficient_constants",
+      "code": "171.000"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\coefficents28Apr18-17-04.txt",
+      "line": 3,
+      "field": "coefficient_constants",
+      "code": "6733399841"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\coefficents28Apr18-17-04.txt",
+      "line": 4,
+      "field": "coefficient_constants",
+      "code": "2500.000"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 7,
+      "field": "Ld",
+      "code": "Ld      = 0.1;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 5,
+      "field": "icor",
+      "code": "icor    = 1.00;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 6,
+      "field": "cse",
+      "code": "cse     = 1;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 35,
+      "field": "stoSIM(1,1)",
+      "code": "stoSIM(1,1) = stoObs(1,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 33,
+      "field": "flowSIM(1,1)",
+      "code": "flowSIM(1,1)= Intflow(1,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 12,
+      "field": "tinterval",
+      "code": "tinterval   = 1;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 14,
+      "field": "date1",
+      "code": "date1 = datenum(1980,1,1);       date2 = datenum(2011,12,31);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 14,
+      "field": "date2",
+      "code": "date1 = datenum(1980,1,1);       date2 = datenum(2011,12,31);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 13,
+      "field": "strtime",
+      "code": "formatOuttime = 'yyyy/mm/dd';  strtime = '1980/01/01';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 16,
+      "field": "t1",
+      "code": "t1      = find(res_info_out.timed(:,1)==date1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 17,
+      "field": "t2",
+      "code": "t2      = find(res_info_out.timed(:,1)==date2);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 19,
+      "field": "stoObs",
+      "code": "stoObs  = res_info_out.stoobs(t1:t2,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 20,
+      "field": "flowObs",
+      "code": "flowObs = res_info_out.outflow(t1:t2,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 53,
+      "field": "wrmp",
+      "code": "wrmp = 366;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 8,
+      "field": "niter",
+      "code": "niter   = 1000;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 21,
+      "field": "flowI",
+      "code": "flowI   = res_info_out.inflow(t1:t2,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 53,
+      "field": "wrmp",
+      "code": "wrmp = 366;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 9,
+      "field": "coeff",
+      "code": "coeff    = importdata(filename,delimiterIn,headerlinesIn);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 10,
+      "field": "coeff2",
+      "code": "coeff2   = reshape(coeff(5:end,1),12,19)';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 22,
+      "field": "smax",
+      "code": "smax    = coeff(1,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 23,
+      "field": "Intflow",
+      "code": "Intflow = coeff(2,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 24,
+      "field": "Intstor1",
+      "code": "Intstor1= coeff(3,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 25,
+      "field": "qds",
+      "code": "qds     = coeff(4,1);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 26,
+      "field": "Lc",
+      "code": "Lc      = coeff2(2,:)./smax;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 27,
+      "field": "Ln",
+      "code": "Ln      = coeff2(3,:)./smax;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 28,
+      "field": "Lf",
+      "code": "Lf      = coeff2(4,:)./smax;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 29,
+      "field": "qmin",
+      "code": "qmin    =  coeff2(5,:); qnorm   =  coeff2(6,:); qnd   =  coeff2(7,:);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 29,
+      "field": "qnorm",
+      "code": "qmin    =  coeff2(5,:); qnorm   =  coeff2(6,:); qnd   =  coeff2(7,:);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 29,
+      "field": "qnd",
+      "code": "qmin    =  coeff2(5,:); qnorm   =  coeff2(6,:); qnd   =  coeff2(7,:);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m",
+      "line": 30,
+      "field": "dt",
+      "code": "dt          = 60*60*(tinterval*24);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m",
+      "line": 15,
+      "field": "res_info_out.stoobs",
+      "code": "res_info_out.stoobs  = resdata(k1:k2,4).*1000000;"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m",
+      "line": 16,
+      "field": "res_info_out.inflow",
+      "code": "res_info_out.inflow  = resdata(k1:k2,5);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m",
+      "line": 17,
+      "field": "res_info_out.outflow",
+      "code": "res_info_out.outflow = resdata(k1:k2,6);"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m",
+      "line": 8,
+      "field": "strdate2",
+      "code": "strdate2 = '1980/01/01';  enddate2 = '2011/12/31';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m",
+      "line": 9,
+      "field": "strdate",
+      "code": "strdate = '1980/01/01';  enddate = '2011/12/31';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m",
+      "line": 9,
+      "field": "enddate",
+      "code": "strdate = '1980/01/01';  enddate = '2011/12/31';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m",
+      "line": 8,
+      "field": "strdate2",
+      "code": "strdate2 = '1980/01/01';  enddate2 = '2011/12/31';"
+    },
+    {
+      "file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m",
+      "line": 8,
+      "field": "enddate2",
+      "code": "strdate2 = '1980/01/01';  enddate2 = '2011/12/31';"
+    }
+  ],
+  "base_script_candidates": [
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\SimRISM14.m"
+  ],
+  "simulation_supported": true,
+  "raw_monthly_targets": {
+    "storage_critical_m3": [
+      6956209442.0,
+      6723206914.0,
+      6619227371.0,
+      6730734706.0,
+      6921157110.0,
+      7235748396.0,
+      7652556279.0,
+      7813985537.0,
+      7837538108.0,
+      7686321254.0,
+      7592405209.0,
+      7357073430.0
+    ],
+    "storage_normal_m3": [
+      7696321696.0,
+      7227018306.0,
+      7031676199.0,
+      7246983507.0,
+      7385741617.0,
+      7886227226.0,
+      8815051091.0,
+      8965071557.0,
+      8902195522.0,
+      8797252802.0,
+      8598814328.0,
+      8179921028.0
+    ],
+    "storage_flood_m3": [
+      8262834060.0,
+      7869747812.0,
+      7554517704.0,
+      7887740317.0,
+      8018385171.0,
+      8873847709.0,
+      9260175016.0,
+      9311589635.0,
+      9257005155.0,
+      9131412800.0,
+      8960112807.0,
+      8604638003.0
+    ],
+    "release_critical_m3s": [
+      124.344,
+      99.029,
+      65.06,
+      65.105,
+      59.916,
+      57.59,
+      58.117,
+      59.587,
+      58.325,
+      58.711,
+      114.15,
+      157.449
+    ],
+    "release_normal_m3s": [
+      249.968,
+      252.758,
+      182.68,
+      105.099,
+      98.185,
+      121.44,
+      121.306,
+      126.824,
+      124.025,
+      153.972,
+      211.215,
+      230.554
+    ],
+    "release_flood_m3s": [
+      346.179,
+      343.148,
+      295.12,
+      218.541,
+      277.041,
+      421.45,
+      441.697,
+      282.046,
+      246.915,
+      275.405,
+      281.965,
+      274.998
+    ]
+  },
+  "raw_coefficient_table": [
+    [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0,
+      11.0,
+      12.0
+    ],
+    [
+      6956209442.0,
+      6723206914.0,
+      6619227371.0,
+      6730734706.0,
+      6921157110.0,
+      7235748396.0,
+      7652556279.0,
+      7813985537.0,
+      7837538108.0,
+      7686321254.0,
+      7592405209.0,
+      7357073430.0
+    ],
+    [
+      7696321696.0,
+      7227018306.0,
+      7031676199.0,
+      7246983507.0,
+      7385741617.0,
+      7886227226.0,
+      8815051091.0,
+      8965071557.0,
+      8902195522.0,
+      8797252802.0,
+      8598814328.0,
+      8179921028.0
+    ],
+    [
+      8262834060.0,
+      7869747812.0,
+      7554517704.0,
+      7887740317.0,
+      8018385171.0,
+      8873847709.0,
+      9260175016.0,
+      9311589635.0,
+      9257005155.0,
+      9131412800.0,
+      8960112807.0,
+      8604638003.0
+    ],
+    [
+      124.344,
+      99.029,
+      65.06,
+      65.105,
+      59.916,
+      57.59,
+      58.117,
+      59.587,
+      58.325,
+      58.711,
+      114.15,
+      157.449
+    ],
+    [
+      249.968,
+      252.758,
+      182.68,
+      105.099,
+      98.185,
+      121.44,
+      121.306,
+      126.824,
+      124.025,
+      153.972,
+      211.215,
+      230.554
+    ],
+    [
+      346.179,
+      343.148,
+      295.12,
+      218.541,
+      277.041,
+      421.45,
+      441.697,
+      282.046,
+      246.915,
+      275.405,
+      281.965,
+      274.998
+    ],
+    [
+      71.563,
+      71.58,
+      59.479,
+      60.925,
+      56.564,
+      54.115,
+      54.381,
+      56.871,
+      52.11,
+      51.426,
+      81.36,
+      135.534
+    ],
+    [
+      221.452,
+      216.36,
+      115.104,
+      85.081,
+      79.0,
+      76.35,
+      75.617,
+      76.41,
+      94.12,
+      121.316,
+      174.815,
+      208.64
+    ],
+    [
+      295.58,
+      294.73,
+      255.734,
+      164.93,
+      155.18,
+      352.055,
+      331.799,
+      196.228,
+      168.195,
+      217.301,
+      254.965,
+      255.322
+    ],
+    [
+      213.605,
+      184.63,
+      101.9,
+      80.045,
+      75.18,
+      71.485,
+      69.827,
+      70.465,
+      78.39,
+      112.35,
+      163.185,
+      201.375
+    ],
+    [
+      291.503,
+      287.365,
+      248.22,
+      154.063,
+      139.138,
+      277.185,
+      281.968,
+      180.157,
+      156.05,
+      203.502,
+      246.995,
+      250.308
+    ],
+    [
+      367.762,
+      365.46,
+      326.284,
+      298.161,
+      405.473,
+      882.5,
+      799.114,
+      416.249,
+      391.375,
+      384.099,
+      349.57,
+      297.64
+    ],
+    [
+      6800726014.0,
+      6658443905.0,
+      6490708095.0,
+      6589627683.0,
+      6747370672.0,
+      7131993539.0,
+      7414885153.0,
+      7438002816.0,
+      7385271545.0,
+      7285809646.0,
+      7149656438.0,
+      7015156205.0
+    ],
+    [
+      7480045233.0,
+      7025002089.0,
+      6838445129.0,
+      7076726371.0,
+      7216551690.0,
+      7655594485.0,
+      8110187593.0,
+      8351637319.0,
+      8587175238.0,
+      8584848701.0,
+      8411125552.0,
+      7953980923.0
+    ],
+    [
+      8028796552.0,
+      7525912946.0,
+      7280438470.0,
+      7553783321.0,
+      7774739869.0,
+      8527546140.0,
+      9156595390.0,
+      9212032035.0,
+      9114093591.0,
+      9000623523.0,
+      8802842656.0,
+      8453393592.0
+    ],
+    [
+      7366849530.0,
+      6933785500.0,
+      6755358829.0,
+      7017564441.0,
+      7162746373.0,
+      7565907167.0,
+      7992626150.0,
+      8179649497.0,
+      8317371412.0,
+      8387556484.0,
+      8270570840.0,
+      7812895637.0
+    ],
+    [
+      7953372151.0,
+      7454472615.0,
+      7221854881.0,
+      7497565483.0,
+      7700264946.0,
+      8417058789.0,
+      9111627264.0,
+      9122792144.0,
+      9086321916.0,
+      8965567559.0,
+      8760876766.0,
+      8399267749.0
+    ],
+    [
+      8546644145.0,
+      8220487973.0,
+      7856272303.0,
+      8073072374.0,
+      8325850191.0,
+      9106570642.0,
+      9311377467.0,
+      9332185358.0,
+      9311632064.0,
+      9297848432.0,
+      9151563400.0,
+      8833242392.0
+    ]
+  ],
+  "raw_bounds": {
+    "lower_storage_critical_m3": [
+      6800726014.0,
+      6658443905.0,
+      6490708095.0,
+      6589627683.0,
+      6747370672.0,
+      7131993539.0,
+      7414885153.0,
+      7438002816.0,
+      7385271545.0,
+      7285809646.0,
+      7149656438.0,
+      7015156205.0
+    ],
+    "lower_storage_normal_m3": [
+      7480045233.0,
+      7025002089.0,
+      6838445129.0,
+      7076726371.0,
+      7216551690.0,
+      7655594485.0,
+      8110187593.0,
+      8351637319.0,
+      8587175238.0,
+      8584848701.0,
+      8411125552.0,
+      7953980923.0
+    ],
+    "lower_storage_flood_m3": [
+      8028796552.0,
+      7525912946.0,
+      7280438470.0,
+      7553783321.0,
+      7774739869.0,
+      8527546140.0,
+      9156595390.0,
+      9212032035.0,
+      9114093591.0,
+      9000623523.0,
+      8802842656.0,
+      8453393592.0
+    ],
+    "lower_release_critical_m3s": [
+      71.563,
+      71.58,
+      59.479,
+      60.925,
+      56.564,
+      54.115,
+      54.381,
+      56.871,
+      52.11,
+      51.426,
+      81.36,
+      135.534
+    ],
+    "lower_release_normal_m3s": [
+      221.452,
+      216.36,
+      115.104,
+      85.081,
+      79.0,
+      76.35,
+      75.617,
+      76.41,
+      94.12,
+      121.316,
+      174.815,
+      208.64
+    ],
+    "lower_release_flood_m3s": [
+      295.58,
+      294.73,
+      255.734,
+      164.93,
+      155.18,
+      352.055,
+      331.799,
+      196.228,
+      168.195,
+      217.301,
+      254.965,
+      255.322
+    ],
+    "upper_storage_critical_m3": [
+      7366849530.0,
+      6933785500.0,
+      6755358829.0,
+      7017564441.0,
+      7162746373.0,
+      7565907167.0,
+      7992626150.0,
+      8179649497.0,
+      8317371412.0,
+      8387556484.0,
+      8270570840.0,
+      7812895637.0
+    ],
+    "upper_storage_normal_m3": [
+      7953372151.0,
+      7454472615.0,
+      7221854881.0,
+      7497565483.0,
+      7700264946.0,
+      8417058789.0,
+      9111627264.0,
+      9122792144.0,
+      9086321916.0,
+      8965567559.0,
+      8760876766.0,
+      8399267749.0
+    ],
+    "upper_storage_flood_m3": [
+      8546644145.0,
+      8220487973.0,
+      7856272303.0,
+      8073072374.0,
+      8325850191.0,
+      9106570642.0,
+      9311377467.0,
+      9332185358.0,
+      9311632064.0,
+      9297848432.0,
+      9151563400.0,
+      8833242392.0
+    ],
+    "upper_release_critical_m3s": [
+      213.605,
+      184.63,
+      101.9,
+      80.045,
+      75.18,
+      71.485,
+      69.827,
+      70.465,
+      78.39,
+      112.35,
+      163.185,
+      201.375
+    ],
+    "upper_release_normal_m3s": [
+      291.503,
+      287.365,
+      248.22,
+      154.063,
+      139.138,
+      277.185,
+      281.968,
+      180.157,
+      156.05,
+      203.502,
+      246.995,
+      250.308
+    ],
+    "upper_release_flood_m3s": [
+      367.762,
+      365.46,
+      326.284,
+      298.161,
+      405.473,
+      882.5,
+      799.114,
+      416.249,
+      391.375,
+      384.099,
+      349.57,
+      297.64
+    ]
+  },
+  "fixed_point_iterations": 1000,
+  "inflow_preprocessing": {
+    "factor": 1.0,
+    "offset_m3s": 0.0
+  },
+  "inflow_source": "observed",
+  "overflow_mode": "matlab",
+  "writer_candidates": [
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex14_Gardiner\\diefenbakerRES_fit.m"
+  ],
+  "observation_mapping": {
+    "storage_column": 4,
+    "inflow_column": 5,
+    "release_column": 6,
+    "storage_factor": 1000000.0,
+    "measurement_columns": [
+      4,
+      5,
+      6
+    ],
+    "date_column_order": null,
+    "year_column": null,
+    "month_column": null,
+    "day_column": null,
+    "year_offset": null,
+    "aggregation": "none",
+    "date_mode": "synthetic_row_order",
+    "calendar_source": "writer_generated_row_order",
+    "workbook_legacy_start": "1980-01-01",
+    "writer_start": "1980-01-01",
+    "writer_end": "2011-12-31",
+    "source_start": "1980-01-01",
+    "source_end": "2011-12-31"
+  }
+}

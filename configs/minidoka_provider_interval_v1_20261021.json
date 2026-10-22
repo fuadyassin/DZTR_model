@@ -1,0 +1,36 @@
+{
+  "kind": "provider_endpoint_interval_calibration_v1",
+  "reservoir_id": "etienne_Minidoka",
+  "GRAND_ID": null,
+  "observations_csv": "outputs\\minidoka_source_reconciliation_v1_20261021\\observations_gross_storage_si.csv",
+  "source_review": "outputs\\minidoka_source_reconciliation_v1_20261021\\source_decisions.json",
+  "base_inventory": "data/catalogs/reservoir_inventory_v4_20261021.csv",
+  "base_catalog": "data/catalogs/reservoir_collection_v4_20261021.json",
+  "start": "1985-01-01",
+  "end": "2017-12-31",
+  "balance_tolerance_m3": 0.0001,
+  "restart_warmup_days": 30,
+  "physical_constants": {
+    "capacity_m3": 274129003.57656085,
+    "dead_storage_fraction": 0.0,
+    "initial_storage_m3": 209691912.3830784,
+    "initial_release_m3s": 0.0,
+    "inflow_correction": 1.0,
+    "flood_mode": "storage"
+  },
+  "objective_weights": {
+    "storage": 1.0,
+    "release": 0.0
+  },
+  "optimization": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "horizon": 512,
+    "evaluation_budget": 512,
+    "workers": 3,
+    "perturbation": 0.2
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "dztr_storage_calibration_v2",
+  "schema_version": 2,
+  "campaign": "../outputs/data_availability_paper_v1_20261017",
+  "profiles": [
+    {
+      "reservoir_id": "ex14_Gardiner",
+      "release_prior": {
+        "source_kind": "mean_flow_scaled_donor_prior",
+        "donor_table": "../data/storage_release_priors_v1_20261020_final/naturalized_donor_shapes.csv",
+        "grand_table": "../data/storage_release_priors_v1_20261020_final/grand_mean_discharge.csv",
+        "mean_policy": "grand_then_calibration_inflow",
+        "minimum_donors": 3,
+        "release_target_limit": "source_channel",
+        "evidence": "User-authorized exploratory mean-discharge scaling. GRAND DIS_AVG_LS is converted from L/s; median normalized naturalized flow quantiles from external Etienne donors exclude the target. A separately identified calibration-effective-inflow scale is used only where the verified GRAND mean is unavailable."
+      }
+    }
+  ],
+  "objectives": [
+    "storage_nse"
+  ],
+  "scoring": "pooled",
+  "bounds_policy": "monthly",
+  "optimization": {
+    "seeds": [
+      42
+    ],
+    "horizon": 512,
+    "evaluation_budget": 64,
+    "workers": 1,
+    "optimizer": "ga",
+    "ga": {
+      "population_size": 32
+    }
+  }
+}

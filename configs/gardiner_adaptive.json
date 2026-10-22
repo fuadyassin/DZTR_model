@@ -1,0 +1,65 @@
+{
+  "reservoir": {
+    "name": "Gardiner",
+    "grand_id": 253
+  },
+  "observations_file": "ResDataInflowStorageRelease/Gardiner_253.xlsx",
+  "periods": {
+    "calibration": {
+      "start": "1981-01-01",
+      "end": "1995-12-31"
+    },
+    "validation": {
+      "start": "1996-01-01",
+      "end": "2011-12-31"
+    },
+    "warmup_steps": 366
+  },
+  "quantile_method": "hazen",
+  "target_percentiles": [10, 45, 85],
+  "model": {
+    "capacity_m3": 9870000000,
+    "initial_storage_m3": 7927529906.0127,
+    "initial_release_m3s": 165.26,
+    "channel_capacity_m3s": 2500,
+    "dead_storage_fraction": 0.1,
+    "inflow_correction": 1.0,
+    "flood_mode": "storage"
+  },
+  "simulation": {
+    "solver": "implicit",
+    "overflow_mode": "conservative",
+    "atol_storage_m3": 0.0001
+  },
+  "optimization": {
+    "seed": 42,
+    "population_size": 16,
+    "evaluation_budget": 512,
+    "crossover_probability": 0.9,
+    "crossover_eta": 15.0,
+    "mutation_eta": 20.0,
+    "local_initialization_fraction": 0.5,
+    "local_initialization_scale": 0.05
+  },
+  "adaptive": {
+    "checkpoint_interval": 128,
+    "stopping_policy_file": "configs/stopping_policy.example.json"
+  },
+  "protocol": {
+    "experiment_status": "Exploratory second-reservoir pilot; not a reproduction of the published Gardiner calibration and not an independent diverse-cohort validation.",
+    "date_interpretation": "Our explicit working split: leap-year 1980 warmup, 1981-1995 calibration and 1996-2011 validation. The 15/16-year split is not claimed as the paper's exact Gardiner protocol.",
+    "estimation_policy": "Estimate monthly targets and bounds from calibration observations only, excluding warmup and validation.",
+    "catalog_source": "GRanD_Dams_v1_1_DZTR.xlsx row GRAND_ID=253: SMAX=9870000000 agrees with CAP_MCM=9870; Q_DS_MAX=2500 and INFLOW_CORR=1.0. These are existing Gardiner catalog values, not independently verified physical metadata.",
+    "catalog_quality": "3: Fair",
+    "catalog_source_limitations": "The catalog DATA_INFO and URL fields are blank; individual physical constants lack per-value source citations.",
+    "initial_state_policy": "Initialize from normalized storage and release observed on the first warmup day, 1980-01-01. Storage(mil_m3) is multiplied by 1000000. The observation is excluded from calibration and validation scores.",
+    "catalog_initial_state_not_used": "Catalog SINIT=6733399841 and QINIT=171 differ from the first source observations; their intended date is undocumented.",
+    "generic_model_assumptions": "Dead-storage fraction 0.1, storage-driven flood mode, implicit solver and conservative overflow are explicit exploratory choices, not Gardiner-specific verified operating rules.",
+    "optimization_policy": "Checkpointed seeded NSGA-II; illustrative stopping diagnostics use calibration costs only. Validation is reported after representative selection."
+  },
+  "input_provenance": {
+    "catalog_file": "GRanD_Dams_v1_1_DZTR.xlsx",
+    "catalog_sha256": "a9e2a0ef3b8e163da70e0553e407d78659017fd6624578fa7a81cfc170d4e4f7",
+    "observations_sha256": "30d396f020d84ef08d7e00e7516682f1e5cbb01ce8bfb3b487152e77afbf8ea7"
+  }
+}

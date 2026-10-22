@@ -1,0 +1,38 @@
+{
+  "kind": "dztr_level_storage_pilot_v1",
+  "schema_version": 1,
+  "reservoir_id": "ex14_Gardiner",
+  "GRAND_ID": 253,
+  "station_number": "05HF003",
+  "level_datum": "PRAIRIE FARM REHABILITATION ADMINISTRATION DATUM",
+  "level_time_basis": "daily_mean_level",
+  "allow_mean_level_proxy": true,
+  "full_supply_level_m": 556.87,
+  "full_supply_evidence": "Water Security Agency Lake Diefenbaker page, archived operator_full_supply.html; page does not name the vertical datum or establish a ReGeom depth tie",
+  "preferred_reference": "calibration_storage_alignment",
+  "sensitivity_offsets_m": [-1.0, -0.5, -0.25, 0.0, 0.25, 0.5, 1.0],
+  "datum_metadata": {
+    "reported_datum": "PFRA",
+    "conversion_to": "CGVD2013:EPOCH2010",
+    "add_to_reported_level_m": -0.313,
+    "conversion_published": "2022-11-16",
+    "GNSS_occupation_year": 2021,
+    "historical_datum_consistency_verified": false,
+    "conversion_applied_by_pilot": false,
+    "evidence": "Archived ECCC station_datum.html: modern conversion is metadata, not evidence of historical datum continuity or a geometry-bottom reference"
+  },
+  "inputs": {
+    "observations": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/observations_si.csv",
+    "selection": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/selection.json",
+    "model": "configs/run_manager/gardiner_model_v1.json",
+    "geometry": "data/geometry_profiles_v1_20261017/253/source_regeom.csv",
+    "levels": "data/gardiner_levels_v1_20261017/acquisition/levels_si.csv",
+    "acquisition_provenance": "data/gardiner_levels_v1_20261017/acquisition/provenance.json",
+    "metadata_receipt": "data/gardiner_levels_v1_20261017/metadata_receipt.json",
+    "station_metadata": "data/gardiner_levels_v1_20261017/station_metadata.json",
+    "station_datum": "data/gardiner_levels_v1_20261017/station_datum.html",
+    "operator_full_supply": "data/gardiner_levels_v1_20261017/operator_full_supply.html",
+    "cached_baseline_receipt": "outputs/data_availability_paper_v1_20261017/jobs/ex14_Gardiner/observed_monthly_22295ca0f3730a35/receipt.json",
+    "cached_baseline_targets": "outputs/data_availability_paper_v1_20261017/prepared/ex14_Gardiner/observed_monthly_22295ca0f3730a35/monthly_targets_si.csv"
+  }
+}

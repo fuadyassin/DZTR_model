@@ -1,0 +1,9 @@
+{
+  "catalog": "GRanD_Dams_v1_1_DZTR.xlsx",
+  "reference_parameters": "Extended_GRanD_Dams_v1_1_DZTR.xlsx",
+  "observations_folder": "ResDataInflowStorageRelease",
+  "reservoirs": [
+    {"grand_id": 253, "name": "Gardiner"},
+    {"grand_id": 131, "name": "Trinity"}
+  ]
+}

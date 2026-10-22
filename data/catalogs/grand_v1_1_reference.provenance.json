@@ -1,0 +1,21 @@
+{
+  "source_file": "E:\\1_DataHub\\E_Reservoir_data\\Z_ReservoirDataNew\\GRAND_database.xlsx",
+  "source_sha256": "ca15ab4b8be97fd248ca261f520efd2e47cdee4d1d0d826c77cbab002a0b1c15",
+  "csv_sha256": "b3753dc49e17bd28861d6877c1a32b7716c5ad7fcc020c458e13a5cc49d1d81c",
+  "version": "v1.1",
+  "rows": 6862,
+  "columns": [
+    "GRAND_ID",
+    "RES_NAME",
+    "DAM_NAME",
+    "ALT_NAME",
+    "COUNTRY",
+    "ADMIN_UNIT",
+    "RIVER",
+    "CAP_MCM",
+    "LONG_DD",
+    "LAT_DD"
+  ],
+  "capacity_units": "million m3",
+  "metadata_changes": false
+}

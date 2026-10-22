@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "kind": "world_reservoir_sample",
+  "reservoir": {
+    "id": "ex41_Toktogul",
+    "name": "Toktogul"
+  },
+  "observations_file": "../../data/reservoirs/ex41_Toktogul/observations_si.csv",
+  "observations_sha256": "6ba87d8b7b9b3d9ef36675709acda5ba4f7c9141018d4614480e3c67e8a63ed7",
+  "units": {
+    "storage": "m3",
+    "flows": "m3/s"
+  },
+  "sampling": {
+    "frequency": "monthly",
+    "fixed_step_days": 30.5,
+    "month_clock": "observed",
+    "legacy_start": null,
+    "allow_signed_inflow": false
+  },
+  "periods": {
+    "simulation_start": "2001-01-01",
+    "calibration": {
+      "start": "2002-01-01",
+      "end": "2005-12-01"
+    },
+    "validation": {
+      "start": "2006-01-01",
+      "end": "2010-12-01"
+    },
+    "warmup_rows": 12
+  },
+  "model": {
+    "capacity_m3": 19500000000.0,
+    "initial_storage_m3": 11223000000.0,
+    "initial_release_m3s": 500.0,
+    "channel_capacity_m3s": 800.0,
+    "dead_storage_fraction": 0.1,
+    "inflow_correction": 1.0,
+    "flood_mode": "storage"
+  },
+  "inflow_preprocessing": {
+    "factor": 1.0,
+    "offset_m3s": 0.0
+  },
+  "simulation_supported": true,
+  "simulation_unsupported_reason": null,
+  "target_percentiles": [
+    10,
+    45,
+    85
+  ],
+  "quantile_method": "hazen",
+  "atol_storage_m3": 0.0001,
+  "legacy": {
+    "sampling": {
+      "frequency": "monthly",
+      "timestep_days": 30.5,
+      "legacy_start": "2001-01-01",
+      "month_clock": "legacy_synthetic"
+    },
+    "warmup_rows": 12,
+    "overflow_mode": "matlab",
+    "fixed_point_iterations": 1000,
+    "release_shift_rows": 0,
+    "storage_shift_rows": 0
+  },
+  "protocol": {
+    "split_policy": "first calendar year warmup; remaining years divided chronologically",
+    "estimation_policy": "calibration observations only; validation excluded from fitting/search",
+    "paper_reproduction": false,
+    "fixed_settings": "source-selected MATLAB model constants, initial-state assignment and inflow preprocessing",
+    "monthly_clock": "fixed source duration; operating targets use verified observation calendar months",
+    "legacy_targets": "unmodified full-record MATLAB tables are retained separately, never used as calibration estimates"
+  },
+  "provenance_file": "../../data/reservoirs/ex41_Toktogul/observation_provenance.json",
+  "matlab_source_file": "../../data/reservoirs/ex41_Toktogul/matlab_source.json",
+  "legacy_targets_file": "../../data/reservoirs/ex41_Toktogul/legacy_targets_si.csv",
+  "legacy_bounds_file": "../../data/reservoirs/ex41_Toktogul/legacy_bounds_si.csv"
+}

@@ -8,6 +8,11 @@ def create_date_range(start_date, end_date):
     return pd.date_range(start=start_date, end=end_date)
 
 def get_area_volume_from_csv(csv_id, depth, folder_path):
+    """Interpolate the legacy depth/area/storage table, retaining every row.
+
+    ``depth`` retains its legacy meaning: distance below full-reservoir level.
+    The CSV depth coordinate is obtained by subtracting it from dam height.
+    """
     file_path = f"{folder_path}/{csv_id}.csv"
 
     with open(file_path, 'r') as file:
@@ -27,15 +32,25 @@ def get_area_volume_from_csv(csv_id, depth, folder_path):
     if depth > dam_height or depth < 0:
         raise ValueError("Depth must be within the range of 0 to Dam Height.")
 
-    # Find the starting index of the actual data
-    data_start_idx = next(i for i, line in enumerate(lines) if line.startswith("Depth(m)"))
+    # Find the starting index of the actual data.
+    data_start_idx = next((i for i, line in enumerate(lines) if line.lstrip().startswith("Depth(m)")), None)
+    if data_start_idx is None:
+        raise ValueError("Depth(m) table header not found in the CSV file.")
     data_lines = lines[data_start_idx + 1:]  # Skip the header line
 
-    # Use comma as delimiter and handle whitespace issues
-    df = pd.read_csv(StringIO(''.join(data_lines)), delimiter=',', skipinitialspace=True)
-    
-    # Manually set the correct column names
-    df.columns = ['Depth(m)', 'Area(skm)', 'Storage(mcm)']
+    # The header has already been removed; header=None preserves the first point.
+    df = pd.read_csv(
+        StringIO(''.join(data_lines)),
+        delimiter=',',
+        skipinitialspace=True,
+        header=None,
+        names=['Depth(m)', 'Area(skm)', 'Storage(mcm)'],
+    )
+    df = df.apply(pd.to_numeric, errors='raise').sort_values('Depth(m)').reset_index(drop=True)
+    if df.empty or not np.isfinite(df.to_numpy(dtype=float)).all():
+        raise ValueError("Geometry must contain finite numeric depth, area, and storage values.")
+    if df['Depth(m)'].duplicated().any():
+        raise ValueError("Geometry depths must be unique.")
     
     # Append a row for dam height if it does not exist
     if dam_height not in df['Depth(m)'].values:
@@ -73,16 +88,41 @@ def get_area_volume_from_csv(csv_id, depth, folder_path):
     return area, volume
 
 def fetch_hydrometric_data_ca(station_numbers, start_date, end_date, data_type='discharge', limit=1000):
+    """Fetch daily means while preserving absent or incomplete measurements.
+
+    Discharge sums require all selected stations on a day. Level measurements
+    come from one station and are never summed. Repeated identical station/day
+    values are ignored, while conflicting nonmissing values are rejected.
+    """
     if data_type not in ['discharge', 'level']:
         raise ValueError("data_type must be either 'discharge' or 'level'")
 
+    if isinstance(station_numbers, (str, bytes)):
+        raise ValueError("station_numbers must be a nonempty sequence of station IDs.")
+    try:
+        station_numbers = list(station_numbers)
+    except TypeError as exc:
+        raise ValueError("station_numbers must be a nonempty sequence of station IDs.") from exc
+    if not station_numbers or any(not isinstance(station, str) or not station.strip() for station in station_numbers):
+        raise ValueError("Station IDs must be nonempty strings.")
+    station_numbers = [station.strip() for station in station_numbers]
+    if len(set(station_numbers)) != len(station_numbers):
+        raise ValueError("Station IDs must be unique.")
+    if data_type == 'level' and len(station_numbers) != 1:
+        raise ValueError("Level observations require exactly one station; levels cannot be summed.")
+    if isinstance(limit, bool) or not isinstance(limit, (int, np.integer)) or limit <= 0:
+        raise ValueError("limit must be a positive integer.")
+
     property_name = 'DISCHARGE' if data_type == 'discharge' else 'LEVEL'
 
-    if start_date is None or end_date is None:
+    if start_date is None:
         start_date = '1900-01-01'
+    if end_date is None:
         end_date = pd.Timestamp.today().strftime('%Y-%m-%d')
 
     dates = create_date_range(start_date, end_date)
+    if dates.empty:
+        raise ValueError("start_date must be on or before end_date.")
     combined_df = pd.DataFrame({'Date': dates})
 
     for station_number in station_numbers:
@@ -102,7 +142,8 @@ def fetch_hydrometric_data_ca(station_numbers, start_date, end_date, data_type='
                 'f': 'json'
             }
 
-            response = requests.get(url, params=params)
+            response = requests.get(url, params=params, timeout=30)
+            response.raise_for_status()
             response_data = response.json()
 
             if 'features' in response_data and response_data['features']:
@@ -117,7 +158,7 @@ def fetch_hydrometric_data_ca(station_numbers, start_date, end_date, data_type='
             data_list = [
                 {
                     'Date': feature['properties']['DATE'],
-                    'value': feature['properties'][property_name] if feature['properties'][property_name] is not None else np.nan
+                    'value': feature['properties'].get(property_name)
                 }
                 for feature in full_data
             ]
@@ -129,20 +170,33 @@ def fetch_hydrometric_data_ca(station_numbers, start_date, end_date, data_type='
             for date, value in zip(data_df['Date'], data_df['value']):
                 if date in date_index_dict:
                     date_index = date_index_dict[date]
-                    if np.isnan(data_dict[station_number][date_index]):
+                    existing_value = data_dict[station_number][date_index]
+                    if pd.isna(value):
+                        continue
+                    if pd.isna(existing_value):
                         data_dict[station_number][date_index] = value
-                    else:
-                        data_dict[station_number][date_index] += value
+                    elif existing_value != value:
+                        raise ValueError(f"Conflicting {data_type} values for station {station_number} on {date}.")
 
-            station_df = pd.DataFrame(data_dict)
-            combined_df = pd.merge(combined_df, station_df, on='Date', how='outer')
+        # Add every station, including those with no returned observations.
+        combined_df[station_number] = data_dict[station_number]
 
-    combined_df['value'] = combined_df.iloc[:, 1:].sum(axis=1)
+    if data_type == 'level':
+        combined_df['value'] = combined_df[station_numbers[0]]
+    else:
+        combined_df['value'] = combined_df[station_numbers].sum(axis=1, min_count=len(station_numbers))
     combined_df = combined_df[['Date', 'value']]
 
     return combined_df
 
 def merge_hydrometric_data(level_station_number, inflow_station_numbers, outflow_station_numbers, start_date, end_date, csv_id, folder_path, output_path):
+    """Write observations using the historical level-to-storage alignment.
+
+    The conversion still assumes the maximum observed level corresponds to full
+    reservoir level (dam height). Verify the gauge and geometry vertical datums
+    physically before relying on these storage estimates; this function does
+    not establish that alignment from surveyed elevations.
+    """
     storage_df = fetch_hydrometric_data_ca([level_station_number], start_date, end_date, data_type='level')
     storage_df = storage_df.rename(columns={'value': 'Storage(mcm)'})
 

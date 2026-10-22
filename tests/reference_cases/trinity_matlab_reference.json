@@ -1,0 +1,152 @@
+{
+  "reservoir": "Trinity",
+  "source_folder": "E:\\1_DataHub\\E_Reservoir_data\\ex12_Trinity",
+  "reference_kind": "Saved MATLAB evaluation outputs; no rerun of MATLAB was required.",
+  "dates": {
+    "start": "1970-01-01",
+    "end": "1971-12-31",
+    "count": 730,
+    "calendar": "actual daily observation dates"
+  },
+  "member_indices_zero_based": [
+    0,
+    49,
+    99
+  ],
+  "npz_arrays": {
+    "dates": {
+      "shape": [
+        730
+      ],
+      "dtype": "<U10"
+    },
+    "inflow_m3s": {
+      "shape": [
+        730
+      ],
+      "dtype": "float64"
+    },
+    "observed_storage_m3": {
+      "shape": [
+        730
+      ],
+      "dtype": "float64"
+    },
+    "observed_release_m3s": {
+      "shape": [
+        730
+      ],
+      "dtype": "float64"
+    },
+    "member_indices": {
+      "shape": [
+        3
+      ],
+      "dtype": "int64"
+    },
+    "parameter_vectors": {
+      "shape": [
+        3,
+        72
+      ],
+      "dtype": "float64"
+    },
+    "storage_m3": {
+      "shape": [
+        730,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "release_m3s": {
+      "shape": [
+        730,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "coefficients": {
+      "shape": [
+        232
+      ],
+      "dtype": "float64"
+    },
+    "capacity_m3": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "initial_release_m3s": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "initial_storage_m3": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "channel_capacity_m3s": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "dead_storage_fraction": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "inflow_correction": {
+      "shape": [],
+      "dtype": "float64"
+    }
+  },
+  "parameter_vector_order": [
+    "12 critical storage fractions",
+    "12 normal storage fractions",
+    "12 flood storage fractions",
+    "12 critical releases in m3/s",
+    "12 normal releases in m3/s",
+    "12 flood releases in m3/s"
+  ],
+  "simulation_settings": {
+    "dt_seconds": 86400,
+    "fixed_point_iterations": 1000,
+    "inflow_correction": 0.92,
+    "dead_storage_fraction": 0.1,
+    "flood_mode": "storage",
+    "cse": 1,
+    "overflow_correction": "legacy excess/dt",
+    "evaluation_warmup_steps": 365
+  },
+  "sources": {
+    "res_info.xlsx": {
+      "sha256": "44446a3e1f7815577dc1d52fa2e719b76b6072c6d4ab907ff4ae17f4230b3aac"
+    },
+    "res_info_out.mat": {
+      "sha256": "6e6029283243eaaf0858a4c277c33fbd160b9389cfb575b7005c3e83c2226222"
+    },
+    "coefficentsm28Apr18-03-06.txt": {
+      "sha256": "a4e0cb530042f061490c07a8cf175d3ac9d27cefed9972371319b8ef57823518"
+    },
+    "amalgam_out.mat": {
+      "sha256": "7a4feec7f48bb9867c3fe835aca26a1cf0c001ddf9d5c70241ffcdd554d8f1bb"
+    },
+    "flowSIM_eval.mat": {
+      "sha256": "9f1e463806cf9b5ce4754af3b5cbbba39d2366a0c9e4dc681ce33ea1c81febec"
+    },
+    "stoSIM_eval.mat": {
+      "sha256": "4d109704a9beefc0e6f315c6f0155618ca84a2897b22ff4b2ab552cf0abba664"
+    },
+    "SimRISM14_eval.m": {
+      "sha256": "686a1c736a1c9b215e534426a87c23d00d15aa7ee19fc7fc7b7be31e3e887d10"
+    },
+    "DZTR.m": {
+      "sha256": "a56d90d923309ac7519a29f701732ed713eff4e8fae8e4d2df75dde0a8ce15a6"
+    }
+  },
+  "provenance_notes": [
+    "SimRISM14_eval.m calls S2Q1JAN, whose source is absent from the supplied folder. The supplied DZTR.m equation was empirically verified against all 1,132,200 saved postinitial ensemble releases: maximum difference 4.362732397567015e-12 m3/s.",
+    "Direct transcription of the legacy 1000-iteration daily loop for the first 366 days of member 0 reproduces saved storage exactly and release within 2.842170943040401e-14 m3/s.",
+    "Across all 100 evaluation members and the complete 11323-day record, the maximum absolute trapezoidal water-balance residual is 1.0361254680901766e-06 m3.",
+    "The amalgam_out.mat sim/F arrays represent a different calendar from *_eval.mat. Reconstructed simulation states satisfy DZTR using a leap-year-start calendar rather than the actual 1970-start calendar. This supports an inferred calendar defect in the unavailable SimRISM12 calibration implementation; the specific leap start year cannot be established.",
+    "This fixture uses *_eval.mat outputs and their actual observation calendar, not the calendar-shifted amalgam_out.mat sim array. The candidate vectors come from amalgam_out.mat X.",
+    "The full-precision 2018 coefficient file is included only as the physical-configuration template. Each selected X vector supplies its own monthly targets.",
+    "Initial storage and release are coefficient-file constants rather than first observed values. Workbook observations use million m3; MAT observations and fixture storage use m3."
+  ]
+}

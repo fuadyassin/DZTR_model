@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dztr_param"
+version = "0.2.0"
+description = "Modular DZTR reservoir parameterization, simulation and calibration"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Fuad Yassin", email = "fuad.yassin@usask.ca"}]
+dependencies = ["numpy>=1.22", "pandas>=1.5", "openpyxl>=3.0", "requests>=2.25"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+matlab = ["scipy>=1.8"]
+plots = ["matplotlib>=3.5"]
+
+[project.urls]
+Repository = "https://github.com/fuadyassin/DZTR_model"
+Paper = "https://doi.org/10.5194/hess-23-3735-2019"
+
+[project.scripts]
+dztr-parameterization-check = "dztr.parameterization.benchmark:main"
+dztr-trinity-check = "dztr.simulation.benchmark:main"
+dztr-baseline = "dztr.calibration.benchmark:main"
+dztr-calibration-check = "dztr.calibration.review:main"
+dztr-optimize = "dztr.calibration.search:main"
+dztr-study = "dztr.calibration.study:main"
+dztr-budget-review = "dztr.calibration.budget_review:main"
+dztr-fleet-preflight = "dztr.calibration.fleet:main"
+dztr-adaptive = "dztr.calibration.adaptive:main"
+dztr-population-study = "dztr.calibration.population_study:main"
+dztr-world = "dztr.integrations.world_reservoirs:main"
+dztr-collection = "dztr.integrations.collection:main"
+dztr-root-policy-review = "dztr.integrations.root_policy_review:main"
+dztr-substep-review = "dztr.integrations.substep_review:main"
+dztr-storage-review = "dztr.integrations.storage_review:main"
+
+[tool.setuptools]
+packages = ["dztr", "dztr.data", "dztr.parameterization", "dztr.model", "dztr.simulation", "dztr.evaluation", "dztr.calibration", "dztr.integrations", "dztr_param"]
+include-package-data = false
+
+[tool.setuptools.package-dir]
+dztr = "src/dztr"
+dztr_param = "dztr_param"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+filterwarnings = ["error::FutureWarning"]

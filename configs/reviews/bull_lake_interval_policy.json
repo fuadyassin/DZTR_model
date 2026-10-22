@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "reservoir_interval_review_policy",
+  "policy_id": "bull_lake_computed_net_interval_v1",
+  "decision_date": "2026-10-09",
+  "reservoir_id": "ex35_Bull_Lake",
+  "status": "selected_for_conditional_implementation",
+  "observations_file": "../../data/reservoirs/ex35_Bull_Lake/observations_si.csv",
+  "observations_sha256": "5ce0fd1ddd07fd8944ce0eabafd8fa440c5addfaffbcd751ef62fab77ea41c51",
+  "reservoir_config_file": "../reservoirs/ex35_Bull_Lake.json",
+  "evidence": {
+    "source_review": "../../outputs/bull_lake_inflow_source_20261008/verification.json",
+    "event_review": "../../outputs/bull_lake_negative_events_20261008/verification.json",
+    "clock_review": "../../outputs/bull_lake_clock_review_20261009/verification.json",
+    "negative_value_interpretation": "Provider-corresponding computed net boundary flux; neither measured negative river inflow nor an identified loss process.",
+    "historical_physical_clock_established": false,
+    "source_anomaly_cause_established": false,
+    "flags_reference": "Current provider-native storage/flow accounting; archival revision differences remain unresolved. Conservative review exclusions, not declarations of bad measurements."
+  },
+  "interval_inputs": {
+    "flow_semantics": "computed_net_inflow",
+    "flow_alignment": "interval_mean_end",
+    "nominal_step_seconds": 86400,
+    "date_policy": "Preserve canonical calendar labels; do not infer physical clock or DST durations from API timestamps.",
+    "inflow_correction": 1.0,
+    "inflow_offset_m3s": 0.0,
+    "negative_value_policy": "Preserve sign and daily volume under explicit computed-net semantics.",
+    "additional_loss_model": null,
+    "observation_version": "Packaged canonical legacy SI; current RISE records remain separate source evidence."
+  },
+  "quarantine": {
+    "interval_end_dates": [
+      "2002-02-24", "2002-02-28", "2004-04-16", "2004-10-11", "2006-07-23",
+      "2008-02-29", "2008-05-05", "2009-04-16", "2009-04-30"
+    ],
+    "storage_endpoint_policy": "Quarantine both endpoints of every flagged transition; neither endpoint is proven erroneous.",
+    "dependent_interval_policy": "Exclude every simulated interval touching a quarantined storage endpoint.",
+    "calendar_policy": "Keep every source row and value; use eligibility masks and contiguous clean blocks.",
+    "repair_policy": "No storage interpolation, flow replacement, invented correction, or residual-derived fitted loss."
+  },
+  "future_simulation": {
+    "flood_mode": "storage",
+    "inflow_dependent_mode_authorized": false,
+    "carry_state_across_protocol_period_boundaries": true,
+    "restart_storage": "First clean observed storage after quarantine, explicitly provisional and unscored.",
+    "first_block_storage": "First packaged observed storage, also an unscored provisional anchor.",
+    "restart_release": "Evaluate the operating rule at the restart storage; do not treat observed daily-mean QD as an endpoint rate.",
+    "release_comparison": "Observed daily mean versus modeled integrated interval-average release.",
+    "validation_label": "segmented conditional hindcast",
+    "metrics": "Pool eligible pairs within each protocol phase; report block support separately; do not average block NSE.",
+    "additional_restart_spinup_days": 0,
+    "spinup_interpretation": "Only model storage and rule-consistent endpoint release initialize a block. Initialization sensitivity must be reported; conditional restarts are not equivalent to a fresh free-running validation.",
+    "initial_storage_sensitivity_capacity_fractions": [0.0, -0.01, 0.01],
+    "sensitivity_interpretation": "Predeclared robustness perturbations, not measurement uncertainty bounds; do not choose a scenario using validation fit.",
+    "infeasible_input_policy": "Report infeasible storage/flux/root conditions; do not silently clip signed volume or repair targets.",
+    "ready_for_calibration": false,
+    "remaining_implementation": "Interval-volume solver and segmented pooled objective must consume this policy before any optimization."
+  }
+}

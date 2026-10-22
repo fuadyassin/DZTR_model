@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "reservoir_id": "ex6_Oahe",
+  "workbook_file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\res_info.xlsx",
+  "observation_file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\res_info_out.mat",
+  "writer_file": "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\oaheRES_fit.m",
+  "observation_writer_candidates": [
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\oaheRES_fit.m"
+  ],
+  "selection": {
+    "start": "1970-01-01",
+    "end": "1999-12-31",
+    "t1": 1,
+    "t2": 360,
+    "t1_variable": "t1",
+    "t2_variable": "t2"
+  },
+  "issues": [],
+  "inflow_preprocessing": {
+    "factor": 1.0,
+    "offset_m3s": 0.0
+  },
+  "inflow_preprocessing_applied": false,
+  "source_sha256": {
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\SimRISM14.m": "f897525112f7753b4227718d930eedfc76b9fe0d45edf3a3f4fb5643d1c14ce3",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\coefficentsm27Apr18-16-43.txt": "286bbb54b71da1d59438b89a40b6241d0465c3b13464a1475e1610803fdeaf88",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\S2Q1JAN.m": "ac390f7085308c149bce36d83cd2e94cf2326bd9aa734dfeca77208cca099563",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\oaheRES_fit.m": "747456c448dceca2b442e2ce076147499ed2329881a7c44d72b5521677f1ef3d",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\res_info.xlsx": "0f46041b1a4f39ce88e1c41dd595628d1550b6479486c9c4e3b3cfe483778366",
+    "E:\\1_DataHub\\E_Reservoir_data\\I_world_reservoir\\ex6_Oahe\\res_info_out.mat": "d142708389d27f42cf2d695fed74a33f7a862bb730bbf4de9a667619f0264800"
+  },
+  "workbook_row_count": 360,
+  "mat_row_count": 360,
+  "selected_row_count": 360,
+  "calendar_mapping": {
+    "date_column_order": [
+      "year",
+      "month",
+      "day"
+    ],
+    "year_offset": 0
+  },
+  "calendar_source": "workbook_month_labels",
+  "aggregation": "none",
+  "units": {
+    "storage_m3": "m3",
+    "inflow_m3s": "m3/s",
+    "release_m3s": "m3/s",
+    "workbook_storage_factor": 1000000.0
+  },
+  "unit_evidence": {
+    "storage": "Explicit source-writer storage factor; selected converted values match saved MAT.",
+    "flows": "Source writer retains columns 5/6 unchanged; base balance uses rates with timestep in seconds."
+  },
+  "monthly_calendar_convention": "Actual source year/month labels at month start; worksheet day placeholders are not dates.",
+  "monthly_measurement_convention": "Native workbook measurements retained; no duration weighting or flow-volume conversion.",
+  "workbook_mat_comparison": {
+    "storage_m3": {
+      "matching": true,
+      "mismatch_count": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "inflow_m3s": {
+      "matching": true,
+      "mismatch_count": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "release_m3s": {
+      "matching": true,
+      "mismatch_count": 0,
+      "maximum_absolute_difference": 0.0
+    }
+  },
+  "sampling": {
+    "frequency": "monthly",
+    "timestep_days": 30.5
+  },
+  "legacy_clock": {
+    "first": "1970-01-01T00:00:00",
+    "last": "1999-12-24T12:00:00",
+    "nonmidnight_count": 180,
+    "step_days": [
+      30.5
+    ]
+  },
+  "canonical_clock": {
+    "first": "1970-01-01T00:00:00",
+    "last": "1999-12-01T00:00:00"
+  },
+  "selected_mat_rows_1based": {
+    "first": 1,
+    "last": 360
+  },
+  "status": "verified",
+  "fields": {
+    "storage_m3": {
+      "missing_count": 0,
+      "infinite_count": 0,
+      "negative_count": 0,
+      "zero_count": 0,
+      "minimum": 14891000000.0,
+      "maximum": 27819000000.0,
+      "first": 23464000000.0
+    },
+    "inflow_m3s": {
+      "missing_count": 0,
+      "infinite_count": 0,
+      "negative_count": 0,
+      "zero_count": 0,
+      "minimum": 302.99,
+      "maximum": 1945.37,
+      "first": 685.27
+    },
+    "release_m3s": {
+      "missing_count": 0,
+      "infinite_count": 0,
+      "negative_count": 0,
+      "zero_count": 0,
+      "minimum": 53.8,
+      "maximum": 1599.9,
+      "first": 880.65
+    }
+  },
+  "missing_observation_periods": 0,
+  "values_source": "hash-pinned MAT, verified against converted source workbook"
+}

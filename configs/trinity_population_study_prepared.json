@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "base_config_file": "configs/trinity_adaptive.json",
+  "population_sizes": [16, 32, 64],
+  "seeds": [42, 43, 44],
+  "evaluation_checkpoints": [512, 1024, 2048],
+  "workers": 3,
+  "agreement_tolerance": 0.01,
+  "reuse_runs": []
+}

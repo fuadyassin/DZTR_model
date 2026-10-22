@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "year_selection": "mixed",
+  "scoring": "pooled",
+  "optimization": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "population": 32,
+    "evaluation_budget": 512,
+    "workers": 3
+  },
+  "reservoirs": [
+    {
+      "reservoir_id": "ex42_Tyuyamuyun",
+      "grand_id": null,
+      "observations_csv": "../data/workflow_extensions_v2/ex42_Tyuyamuyun/observations_model_input_si.csv",
+      "model_config": "../configs/workflow_extensions_v2/ex42_Tyuyamuyun_model.json",
+      "initializer": {
+        "csv": "../outputs/deferred_policy_preflight_20261013/ex42_Tyuyamuyun_proposed_initializer_si.csv",
+        "sha256": "4ceaf9a417efd513ceae8bf69e838f41cc0c6ee421b4407d5c04405579492608",
+        "basis": "calibration_only",
+        "selection_sha256": "b2d7b7e74d082fd3104c2863cbd26d432427bf501ae11a0beb6285f3958abff0",
+        "provenance": "Fixed sufficient-gap empirical witness; calibration-only preflight verified with nearest_previous_storage; outputs/deferred_policy_preflight_20261013/verification.json"
+      }
+    },
+    {
+      "reservoir_id": "ex22_Mcgregor",
+      "grand_id": null,
+      "observations_csv": "../data/workflow_extensions_v2/ex22_Mcgregor/observations_model_input_si.csv",
+      "model_config": "../configs/workflow_extensions_v2/ex22_Mcgregor_model.json",
+      "selection_protocol": "short_record_v1"
+    }
+  ]
+}

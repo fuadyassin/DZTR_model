@@ -1,0 +1,1828 @@
+{
+  "kind": "dztr_verified_batch_v1",
+  "schema_version": 1,
+  "path_base": "repository",
+  "catalog": "outputs/calibrated_paper_cohort_v1_20261017_final/catalog.json",
+  "assessment": "outputs/calibrated_paper_cohort_v1_20261017_final",
+  "scope": "all_paper",
+  "requirements": {
+    "scoring": "pooled",
+    "year_selection": "mixed",
+    "quantile_method": "hazen",
+    "minimum_calibration_fraction": 0.65,
+    "population": 32,
+    "evaluation_budget": 512,
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "reservoirs": [
+    {
+      "reservoir_id": "ex13_American_falls",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex13_American_falls/calibration/prepared/ex13_American_falls/observations_si.csv",
+          "sha256": "b4c7785dd2d34c042026973cc04564916f56bf52e9c9b6e459409606975734f3"
+        },
+        "selection_json": {
+          "path": "outputs/paper_exploration_v1_20261013/ex13_American_falls/calibration/prepared/ex13_American_falls/selection.json",
+          "sha256": "c26cc700b437a49f634751a4ab6592ef0aac6657ff1dc98024b2e126168398aa"
+        },
+        "model_config": {
+          "path": "outputs/paper_exploration_v1_20261013/ex13_American_falls/calibration/prepared/ex13_American_falls/model_config.json",
+          "sha256": "ca1e215fed9d509d2d30e65cef6a6ece45368cb898252bc4a4eb414f1e87f937"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex13_American_falls/calibration/prepared/ex13_American_falls/bounds_si.csv",
+          "sha256": "77a6d6b199598da7495e9e0724d66135415ea96fb0212533d3501ac9affa0414"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex13_American_falls/calibration/prepared/ex13_American_falls/initial_targets_si.csv",
+          "sha256": "67e7992f9de4985976f1c707d82c3691a42d6f0cfbaaa1a5fd286be0ce75f5f6"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 2061500000.0,
+          "initial_storage_m3": 870296214.6999999,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 900.0,
+          "dead_storage_fraction": 0.05,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex34_Andijan",
+      "GRAND_ID": 4683,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex34_Andijan/mixed_pooled/observations_si.csv",
+          "sha256": "ad058e51bad599c036f3adb9867d6b2061286cd939ccd079c1e0af33b231977e"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex34_Andijan/mixed_pooled/selection.json",
+          "sha256": "85e71fd46e917eabaad5e3d2208f852eb6c8bbb50e316112f36a2f37b68c529e"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex34_Andijan/mixed_pooled/config.json",
+          "sha256": "59575c206ee9e39789ae11108e0ef694ed702b6cabe3852bd96ce4c67d3861f1"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex34_Andijan/mixed_pooled/bounds_si.csv",
+          "sha256": "8866dd4d5be36c82cf5c528f2bb51504615d95095f6291adaeadee7d28076c7d"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex34_Andijan/mixed_pooled/initial_targets_si.csv",
+          "sha256": "35d560c848b68afaa80d93a9dcda987f3841cffec87f07d733ff33103e639caf"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 1900000000.0,
+          "initial_storage_m3": 1028500000.0,
+          "initial_release_m3s": 15.0,
+          "channel_capacity_m3s": 600.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex17_Bhumibol",
+      "GRAND_ID": 5146,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex17_Bhumibol/mixed_pooled/observations_si.csv",
+          "sha256": "9b7d2b0776c656caad84b0b32c4e614dabcb1c05fed4b331df9ac291a4d440e3"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex17_Bhumibol/mixed_pooled/selection.json",
+          "sha256": "0c7d22866bb19ce20ccaf1ad2b83850c0497e883426349155642d24fb46fefee"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex17_Bhumibol/mixed_pooled/config.json",
+          "sha256": "b919c277038c80df7289c21d243b168b54e77cd1a149ae1b203344c41af3a840"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex17_Bhumibol/mixed_pooled/bounds_si.csv",
+          "sha256": "a19b8fed41bd97556d26cff6a5a68c8df775d196b6346a8a806f120a0cc8d1f0"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex17_Bhumibol/mixed_pooled/initial_targets_si.csv",
+          "sha256": "ac1686573239812bf738b74d88cd8f5c18e5539eb9080a3febf42cb42b0719df"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 13462000000.0,
+          "initial_storage_m3": 5964770000.0,
+          "initial_release_m3s": 100.0,
+          "channel_capacity_m3s": 800.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "reject",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex30_Big_horn",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex30_Big_horn/calibration/prepared/ex30_Big_horn/observations_si.csv",
+          "sha256": "ee38d2c005ecce347c32e65a1ecb6fbf963926459dc6b5580df4e4264b4b5ede"
+        },
+        "selection_json": {
+          "path": "outputs/paper_exploration_v1_20261013/ex30_Big_horn/calibration/prepared/ex30_Big_horn/selection.json",
+          "sha256": "4dd3831802e9fd2c78d3fc6ca0f88a51accf3e04d62f55a77f65caa930483200"
+        },
+        "model_config": {
+          "path": "outputs/paper_exploration_v1_20261013/ex30_Big_horn/calibration/prepared/ex30_Big_horn/model_config.json",
+          "sha256": "8279a350bffb6d5d0527119c3ed670536302b30e0996232c06a0bac8c605216e"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex30_Big_horn/calibration/prepared/ex30_Big_horn/bounds_si.csv",
+          "sha256": "cb8b1fc46f106105bc4db66f7aa3f2301ace6df37ad18a54fbec6fe5704deeaf"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex30_Big_horn/calibration/prepared/ex30_Big_horn/initial_targets_si.csv",
+          "sha256": "1042b223857c75dbd02229c294c425789dfaa2a60bd5d13d3978cddd50df200c"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 1426000000.0,
+          "initial_storage_m3": 544146000.0,
+          "initial_release_m3s": 60.0,
+          "channel_capacity_m3s": 150.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.1,
+          "offset_m3s": 8.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex35_Bull_Lake",
+      "GRAND_ID": null,
+      "route": "segmented_conditional_interval_v1",
+      "action": "retain_deferred"
+    },
+    {
+      "reservoir_id": "ex7_CanyonFerry",
+      "GRAND_ID": null,
+      "route": "calendar_rate_source_v1",
+      "action": "retain_deferred"
+    },
+    {
+      "reservoir_id": "ex36_Chardara",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex36_Chardara/calibration/prepared/ex36_Chardara/observations_si.csv",
+          "sha256": "e1842739f6ab969d3ca8a4891af11cf5df2d918108420074158ebe0b0fe485c0"
+        },
+        "selection_json": {
+          "path": "outputs/paper_exploration_v1_20261013/ex36_Chardara/calibration/prepared/ex36_Chardara/selection.json",
+          "sha256": "edabb482dfc23841c883f656d9e1859437f599f32d014cf177dfe4ae9bca945e"
+        },
+        "model_config": {
+          "path": "outputs/paper_exploration_v1_20261013/ex36_Chardara/calibration/prepared/ex36_Chardara/model_config.json",
+          "sha256": "1d3cdb167ea3459529797a6379eeb2d0052c6d52dda3fef64d57de40e4607b51"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex36_Chardara/calibration/prepared/ex36_Chardara/bounds_si.csv",
+          "sha256": "d438d77e0d6130df380a0ce746d5c06e039b60dc9fc6a781aeeb41e4a5d4e133"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex36_Chardara/calibration/prepared/ex36_Chardara/initial_targets_si.csv",
+          "sha256": "0372063dafaea27daf9a1297c0f21125e290a31ccae19a71927771c2c676494e"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 6700000000.0,
+          "initial_storage_m3": 3724666666.0,
+          "initial_release_m3s": 800.0,
+          "channel_capacity_m3s": 1500.0,
+          "dead_storage_fraction": 0.05,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex37_Charvak",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/charvak_calibration_source_v2_20261013/prepared/ex37_Charvak/observations_si.csv",
+          "sha256": "079982224fb35fd98a1a8ca79ab6d37c7b6fae165ba456c4bb0f52b6dd0fabe7"
+        },
+        "selection_json": {
+          "path": "outputs/charvak_calibration_source_v2_20261013/prepared/ex37_Charvak/selection.json",
+          "sha256": "9eda73735c7bcf78678e60fa979a904dd125830735b3fe998b3dff96a0449922"
+        },
+        "model_config": {
+          "path": "outputs/charvak_calibration_source_v2_20261013/prepared/ex37_Charvak/model_config.json",
+          "sha256": "5cf3d401b274d48ed8a3e24649274fdca5211e42fa1611693539037fd97f8a6b"
+        },
+        "bounds_csv": {
+          "path": "outputs/charvak_calibration_source_v2_20261013/prepared/ex37_Charvak/bounds_si.csv",
+          "sha256": "2561b5bd98ae952cec41796b565c9baf6f9ba05509f78ab99aaadc1bd0f24e2d"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/charvak_calibration_source_v2_20261013/prepared/ex37_Charvak/initial_targets_si.csv",
+          "sha256": "7565b1eeb29c6b0851c9a9e5a3d2f202586e6cc5c7e06b890f7da1803c81c122"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 2006000000,
+          "initial_storage_m3": 684333333.3333334,
+          "initial_release_m3s": 70.0,
+          "channel_capacity_m3s": 600.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex28_Dickson",
+      "GRAND_ID": 251,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex28_Dickson/mixed_pooled/observations_si.csv",
+          "sha256": "81f2e2c69564cc83822047cb148ad974f9e7b63f3ab70554f31b8d1f3d12038f"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex28_Dickson/mixed_pooled/selection.json",
+          "sha256": "a027585fe6e101dffbfea7e06d002f8b7cdd63e8874cb538f1da63dce3e26226"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex28_Dickson/mixed_pooled/config.json",
+          "sha256": "ae16e45eca868efa8d18cf0257eeabe77295ff29b2c9703be6369d5af5c266a8"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex28_Dickson/mixed_pooled/bounds_si.csv",
+          "sha256": "ff59647540ec7de5fd3d1f521066d922b2fad62a71cec2f2627b613627a30667"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex28_Dickson/mixed_pooled/initial_targets_si.csv",
+          "sha256": "ce384d3eb80b3e329d554da959bd82b925fe7827ad64c813b7324e75575b195b"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 223000000.0,
+          "initial_storage_m3": 103000000.0,
+          "initial_release_m3s": 20.0,
+          "channel_capacity_m3s": 400.0,
+          "dead_storage_fraction": 0.3744599147982063,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 10.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex29_EB_Campbell",
+      "GRAND_ID": 710,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex29_EB_Campbell/mixed_pooled/observations_si.csv",
+          "sha256": "3cf238e4f0fbfdc746686ee0534f6ca879e7714105f8ac095c0ab13a9dd18ad0"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex29_EB_Campbell/mixed_pooled/selection.json",
+          "sha256": "200109dd35effe2608b9f0a3742048045987a900040deea5207119a66c6e35e3"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex29_EB_Campbell/mixed_pooled/config.json",
+          "sha256": "970390244b6b74df6bddf6cfd6d90391aed0625eecff497efed79728b7df0053"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex29_EB_Campbell/mixed_pooled/bounds_si.csv",
+          "sha256": "a6211efe39c2e9f3ea4c70d2049496e4fd42d71a0870aeb2f6b1c2927955bd24"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex29_EB_Campbell/mixed_pooled/initial_targets_si.csv",
+          "sha256": "1c92a0aab170b6d6adb37e0050a14938d2793ee86484aa30ba1d49aeb6a72362"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 2200000000.0,
+          "initial_storage_m3": 2040163235.66406,
+          "initial_release_m3s": 171.0,
+          "channel_capacity_m3s": 3700.0,
+          "dead_storage_fraction": 0.8433867863636364,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex8_Flaming_gorge",
+      "GRAND_ID": null,
+      "route": "signed_net_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex8_Flaming_gorge/observations_si.csv",
+          "sha256": "6b554cbe3f0463db1709c282be66dc495b648ce56e95cb96d6867c32a109ba1e"
+        },
+        "selection_json": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex8_Flaming_gorge/selection.json",
+          "sha256": "f4f73b78a86bc20b7415f7b7206fd9446591e1547fd86ddafcb44ed33af1655f"
+        },
+        "model_config": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex8_Flaming_gorge/model.json",
+          "sha256": "2c9e7ac3093e1cd347f9a3a42c65b066c663e4f82c13cf8247a07de85a5f7ff8"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex8_Flaming_gorge/bounds_si.csv",
+          "sha256": "ca45cbaa6a8c630aa546005362f5a67bb9695f1409d567c3e974361521838e24"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex8_Flaming_gorge/initial_targets_si.csv",
+          "sha256": "ccf094e43b0aee69055f581e2914fa26c7c2f6cbfa6a05c982645133ae7b8565"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 4674000000.0,
+          "initial_storage_m3": 2172230711.7066727,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 400.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": {
+          "interpretation": "exploratory_net_boundary_flux",
+          "clock": "native_endpoint_trapezoid",
+          "independent_forcing_verified": false,
+          "flood_rule_driver": "signed_net_proxy"
+        },
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex3_Fort_peck",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex3_Fort_peck/calibration/prepared/ex3_Fort_peck/observations_si.csv",
+          "sha256": "7bb6b5499a51aae7db2d725e6cf5bf1eedc2e3481b93f5bf5986175768d56a6c"
+        },
+        "selection_json": {
+          "path": "outputs/paper_exploration_v1_20261013/ex3_Fort_peck/calibration/prepared/ex3_Fort_peck/selection.json",
+          "sha256": "79bc696a562a7b17ddfc5b3de507c5601a31418cd2efd614104a881166a0a409"
+        },
+        "model_config": {
+          "path": "outputs/paper_exploration_v1_20261013/ex3_Fort_peck/calibration/prepared/ex3_Fort_peck/model_config.json",
+          "sha256": "5b7540002edf0ce38ab1019076335ef33abfeea64d8b5d072a9122b67bbc8692"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex3_Fort_peck/calibration/prepared/ex3_Fort_peck/bounds_si.csv",
+          "sha256": "1db6c8c3d5d6f6e8bb9beee0c997a40f15679200887114186adf124e552e190c"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex3_Fort_peck/calibration/prepared/ex3_Fort_peck/initial_targets_si.csv",
+          "sha256": "2ba1f0dadfa3b33fe139b14cb1198a75925019d5233e272bf97dac4619cafa75"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 23560000000.0,
+          "initial_storage_m3": 20175000000.0,
+          "initial_release_m3s": 400.0,
+          "channel_capacity_m3s": 1000.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex4_Fort_randall",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex4_Fort_randall/mixed_pooled/observations_si.csv",
+          "sha256": "0a9626561eb62efd317c1608351f252c4f178c0f1e1461ecb9e6254b4196d437"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex4_Fort_randall/mixed_pooled/selection.json",
+          "sha256": "8cf19ee14fba840ce8581ddde6ef2401d24e9177bd6b8a4b74d248f15799f843"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex4_Fort_randall/mixed_pooled/config.json",
+          "sha256": "04990d38e366f4042ddcaa34de534e8d1e6ec0971ee856aeb83dfc2109f484e0"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex4_Fort_randall/mixed_pooled/bounds_si.csv",
+          "sha256": "1ede2e1c14170053012da372a1d9ca5104a63d44ed11a3c4a464288ca659c858"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex4_Fort_randall/mixed_pooled/initial_targets_si.csv",
+          "sha256": "6e1eecf5e511af2645ffe35f9ed3a72e2582d29b919bed41ac903fafad2d4435"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 5800000000.0,
+          "initial_storage_m3": 3630000000.0,
+          "initial_release_m3s": 400.0,
+          "channel_capacity_m3s": 2000.0,
+          "dead_storage_fraction": 0.19648275862068965,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex14_Gardiner",
+      "GRAND_ID": 253,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/observations_si.csv",
+          "sha256": "edde7a476b7e9099a81411db0a269d8e1cbad3dec8fb82ee096bf0538a9e7f51"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/selection.json",
+          "sha256": "64ddce632f89047b822c270d01e28c3f00858f2af456898e31df9be2178299c9"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/config.json",
+          "sha256": "cead430a218878fff87415c171d222602be82d7fe486e1a7d22fae3ca5e047f2"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/bounds_si.csv",
+          "sha256": "f91dc896227ee315f425d7cd198be958cfb7bda897a5ad41ce9c9176157377c4"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex14_Gardiner/mixed_pooled/initial_targets_si.csv",
+          "sha256": "1e32e3a4c7bb95f7012c7744944aa7e1092f99ce025e0379e44384b1118512b2"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 9400000000.0,
+          "initial_storage_m3": 7927529906.0127,
+          "initial_release_m3s": 171.0,
+          "channel_capacity_m3s": 2500.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "reject",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex5_Garrison",
+      "GRAND_ID": 753,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex5_Garrison/mixed_pooled/observations_si.csv",
+          "sha256": "528171593932379030659742e535c58023ddf7e896eccb651ea306e9bb53986b"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex5_Garrison/mixed_pooled/selection.json",
+          "sha256": "9a56e096a53e3e1a8b6b027d2b328f467006e59011d7203c002b37ce625ad9d5"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex5_Garrison/mixed_pooled/config.json",
+          "sha256": "20bf63f6db193ec5dce9f0ddc5d2b2842202f8966ddb4c174b6a19c36df24772"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex5_Garrison/mixed_pooled/bounds_si.csv",
+          "sha256": "1a1daf2bdbed09fd0bbe604af50cbcd78542c980ff5caaabff9a9778e60d442b"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex5_Garrison/mixed_pooled/initial_targets_si.csv",
+          "sha256": "a316e084fac37f7a3006dcc3a0cf7ec6bb02f0351f9628485646b4f56dcf0a86"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 30220000000.0,
+          "initial_storage_m3": 23256000000.0,
+          "initial_release_m3s": 400.0,
+          "channel_capacity_m3s": 2000.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "reject",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex26_Ghost",
+      "GRAND_ID": null,
+      "route": "unresolved_coordinate_source_v1",
+      "action": "retain_deferred"
+    },
+    {
+      "reservoir_id": "ex1_Glen_canyon",
+      "GRAND_ID": 597,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex1_Glen_canyon/mixed_pooled/observations_si.csv",
+          "sha256": "defdbc0cc15ecd2d6e78339eb4a083bf2716579eb9bd4481b2559b4b8488df2a"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex1_Glen_canyon/mixed_pooled/selection.json",
+          "sha256": "8b4d5e19d359e619735fa5022f4341440749930aa541572dc4b33c5ec6330b21"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex1_Glen_canyon/mixed_pooled/config.json",
+          "sha256": "cc3948317aa438c5ae28810eb860fa76f1ef5de2300c974e709c0864d6aab92f"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex1_Glen_canyon/mixed_pooled/bounds_si.csv",
+          "sha256": "a1fe022429abdf8b4db886cb9b664b92ea08d402d5c6edf2fbd628071ef6ff0a"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex1_Glen_canyon/mixed_pooled/initial_targets_si.csv",
+          "sha256": "9bffed524a2246a511eac8c3d472571ad5332eec582f52cbfb6abf078eda8916"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 33304000000.0,
+          "initial_storage_m3": 25134492786.235203,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 2600.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex2_Grand_coulee",
+      "GRAND_ID": 310,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex2_Grand_coulee/mixed_pooled/observations_si.csv",
+          "sha256": "6ed57b78638ba40de3a8f553ddccfdc25b4bffce88c3105f3576428f7d7f88ad"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex2_Grand_coulee/mixed_pooled/selection.json",
+          "sha256": "2096931eac7cd21e7606709a23576180b225c2ef0ffe996d09be81460a4cad2b"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex2_Grand_coulee/mixed_pooled/config.json",
+          "sha256": "7fe5fe1862557eb29dd4f0427513ed48603929c2ea3f24511e8b69be32fb7171"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex2_Grand_coulee/mixed_pooled/bounds_si.csv",
+          "sha256": "6099aaa6db70c3134ee84409fa0ad514a1156aeccb4f83a4756f0e4c58ec19d3"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex2_Grand_coulee/mixed_pooled/initial_targets_si.csv",
+          "sha256": "36413cd10c04c215cd8ff720fa38c364cf66098fb1e27f11be2ed232ddb2d018"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 11795000000.0,
+          "initial_storage_m3": 11150969370.193441,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 6900.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex18_High_aswan",
+      "GRAND_ID": 4478,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex18_High_aswan/mixed_pooled/observations_si.csv",
+          "sha256": "a1b24c63a903820cbcdc88aae853fa289cf9cf809c241bfd8416fa2fa694de22"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex18_High_aswan/mixed_pooled/selection.json",
+          "sha256": "83876772be19a71af01b0cf57c1b087f0893144690b8fc89771d8bed1db5c8dc"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex18_High_aswan/mixed_pooled/config.json",
+          "sha256": "641cc964d3f5c9fea6bf878169d3ee68e0c201695f31c6ae9e39ed738847f024"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex18_High_aswan/mixed_pooled/bounds_si.csv",
+          "sha256": "0f407727db37eb8e37ff8c47d58558dd9f472beae4660854a915353bd963d626"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex18_High_aswan/mixed_pooled/initial_targets_si.csv",
+          "sha256": "da6be42012ddb225a17945b4ea41b9242061f41dccd7a2a6a5bd47fdf6741ec3"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 162000000000.0,
+          "initial_storage_m3": 76392143581.411,
+          "initial_release_m3s": 1000.0,
+          "channel_capacity_m3s": 50000.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "reject",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex9_Amistad",
+      "GRAND_ID": 1307,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex9_Amistad/mixed_pooled/observations_si.csv",
+          "sha256": "a66b0a3252f94786bd8baf9505544d405e24118d4bfc9e59f33a21be5062da57"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex9_Amistad/mixed_pooled/selection.json",
+          "sha256": "1d7fe0eabad874c57b66f97f81f486fe74f1d3a2fd83a8c2f69358d9a2521a7a"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex9_Amistad/mixed_pooled/config.json",
+          "sha256": "3a8d1cf035ca53ba5e177904132917e920674f665e38a43b6e8338d50a6fb29d"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex9_Amistad/mixed_pooled/bounds_si.csv",
+          "sha256": "194dc0d95825abf5702535ab8b6b6acd51e45f98b35881494d3dba1f5e068a56"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex9_Amistad/mixed_pooled/initial_targets_si.csv",
+          "sha256": "9cd8f286e6308c3826c499613144379e6a1a50253af79b9e09d0974469724fd5"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 6330000000.0,
+          "initial_storage_m3": 4633000000.0,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 500.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "reject",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex10_Falcon",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex10_Falcon/calibration/prepared/ex10_Falcon/observations_si.csv",
+          "sha256": "95c6cc62ea3d65b26eb3fa41b3cb22f5a380a3a1bcf754c7d3e6cedc2f9a18f3"
+        },
+        "selection_json": {
+          "path": "outputs/paper_exploration_v1_20261013/ex10_Falcon/calibration/prepared/ex10_Falcon/selection.json",
+          "sha256": "3306fbea42967a17732503e2ad67dc17b9f4525897ac8f368d479cdb813ccd42"
+        },
+        "model_config": {
+          "path": "outputs/paper_exploration_v1_20261013/ex10_Falcon/calibration/prepared/ex10_Falcon/model_config.json",
+          "sha256": "df1a2dd6f8f670bdcfc578c53c538993806ebb8c06d9a91d72a5d9ded0f1dd7e"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex10_Falcon/calibration/prepared/ex10_Falcon/bounds_si.csv",
+          "sha256": "d27cf745e0651278318f0c6710f688bc74d45000ded04f1d5f03b21b89b861ee"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex10_Falcon/calibration/prepared/ex10_Falcon/initial_targets_si.csv",
+          "sha256": "e53db3c610eac05ec6e86240664cf03a3264763a462a2b30a1d8a0df54cc2b7e"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 3920000000.0,
+          "initial_storage_m3": 2178500000.0,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 600.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex38_Kayrakkum",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex38_Kayrakkum/calibration/prepared/ex38_Kayrakkum/observations_si.csv",
+          "sha256": "e395eb424a978900effba92208e4606f50f093591916f4d70488c4414719d7ba"
+        },
+        "selection_json": {
+          "path": "outputs/paper_exploration_v1_20261013/ex38_Kayrakkum/calibration/prepared/ex38_Kayrakkum/selection.json",
+          "sha256": "2d0d6123b848bbbd0e670b87b4e80df77f41d905374fb64cba8ded43b746bd38"
+        },
+        "model_config": {
+          "path": "outputs/paper_exploration_v1_20261013/ex38_Kayrakkum/calibration/prepared/ex38_Kayrakkum/model_config.json",
+          "sha256": "149e1f790287bbc1d3ce39ffd5a1fef0b2a7271bc002cf0a0dee494e79404bdd"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex38_Kayrakkum/calibration/prepared/ex38_Kayrakkum/bounds_si.csv",
+          "sha256": "1f67d6c92871e22c6d323dbb3fa7eafe753cf7f370db3fc3de22d70ce7525ca6"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex38_Kayrakkum/calibration/prepared/ex38_Kayrakkum/initial_targets_si.csv",
+          "sha256": "b898d716ef2807916c8164bf8f5c3fba6252dc2ee18bf680414e9e67cd4f3932"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 4160000000.0,
+          "initial_storage_m3": 3381000000.0,
+          "initial_release_m3s": 900.0,
+          "channel_capacity_m3s": 1200.0,
+          "dead_storage_fraction": 0.05,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex33_Navajo",
+      "GRAND_ID": null,
+      "route": "signed_net_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex33_Navajo/observations_si.csv",
+          "sha256": "adc256b0bc5e65bac62fb28d6e719bd19506eb6a45a549188d839bb0be29c98e"
+        },
+        "selection_json": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex33_Navajo/selection.json",
+          "sha256": "956afadceddd1c46fa3519e725f757f6dea00e94dc2afacc562930ae6bc7ce5a"
+        },
+        "model_config": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex33_Navajo/model.json",
+          "sha256": "6cba5f98d1a3eb880267a431433f5a6c0ba59f88ca6d3c961e21325f348a02c0"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex33_Navajo/bounds_si.csv",
+          "sha256": "f45f7d3e57712032a419e981991a1a7fd4baa30ae6ffa4897545e375f519fd57"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex33_Navajo/initial_targets_si.csv",
+          "sha256": "68a1f0b5c1bb3c03917e5591e43ef7b0d15b1a32bd516f562e925f9544f755d8"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 2108000000.0,
+          "initial_storage_m3": 1289773898.620272,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 180.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": {
+          "interpretation": "exploratory_net_boundary_flux",
+          "clock": "native_endpoint_trapezoid",
+          "independent_forcing_verified": false,
+          "flood_rule_driver": "storage_only"
+        },
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex39_Nurek",
+      "GRAND_ID": 4692,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex39_Nurek/mixed_pooled/observations_si.csv",
+          "sha256": "3f4291997482eb78501b3d99be0743144c82d49fc9ee8e002732959c53a555e2"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex39_Nurek/mixed_pooled/selection.json",
+          "sha256": "753bd867da672c10907c03899902e3e540737f2e1e384a1afd0a1dfa609145b3"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex39_Nurek/mixed_pooled/config.json",
+          "sha256": "35141e260c9275f6f12d807aad45d72db8973a41e2f95e061826e07abc2daf42"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex39_Nurek/mixed_pooled/bounds_si.csv",
+          "sha256": "09dd61e76d7d7b54d7d534699d60e7529c9a4d85f18b82fdab9e8d42826fdb28"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex39_Nurek/mixed_pooled/initial_targets_si.csv",
+          "sha256": "b63e14ef0e91115169d812efe79045d920cc937d311b92ff16780957d13351ec"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 11300000000.0,
+          "initial_storage_m3": 7767666666.0,
+          "initial_release_m3s": 540.0,
+          "channel_capacity_m3s": 1400.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "reject",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex6_Oahe",
+      "GRAND_ID": 870,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex6_Oahe/mixed_pooled/observations_si.csv",
+          "sha256": "96e88984bf997d12ce8a1b5b88cdb16af17165c7e0f4a4f77327042569d18355"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex6_Oahe/mixed_pooled/selection.json",
+          "sha256": "5d627b1f3c15a446aeabafb0f42637f938def5b1e05d4e482bb79bd6a2633fb2"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex6_Oahe/mixed_pooled/config.json",
+          "sha256": "4e1c28b0a2a12df0116a790f3b41b859c96b3df65952170f9afa924b16ef900f"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex6_Oahe/mixed_pooled/bounds_si.csv",
+          "sha256": "f7a99a683d6472b2d0c62e8712a40219dbffb036a60c9c974a30cbb6cdc1ec86"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_pilot_20261012/prepared/ex6_Oahe/mixed_pooled/initial_targets_si.csv",
+          "sha256": "649575b55e761283d83b2f31b94b5befda6be2d1beb8e54f60f3a41693c43808"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 29110000000.0,
+          "initial_storage_m3": 23464000000.0,
+          "initial_release_m3s": 700.0,
+          "channel_capacity_m3s": 2000.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "reject",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex24_Oldman",
+      "GRAND_ID": 278,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex24_Oldman/mixed_pooled/observations_si.csv",
+          "sha256": "b25e7e1d422ad61bf5e02a2b3c2f2a0a9a4961a1afa52bb5acfd4e4ec56b1d3b"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex24_Oldman/mixed_pooled/selection.json",
+          "sha256": "a81b18b2e4927e498a9479e3b7b8f76946fa7460de6e111df19f7aaf8b75049d"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex24_Oldman/mixed_pooled/config.json",
+          "sha256": "2192d3c606c5b171b5c84ea982e8074ece45637c405c98acfd6d96ffdc6d1641"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex24_Oldman/mixed_pooled/bounds_si.csv",
+          "sha256": "d9911ca75ff938ee1b919a4d7bf4aa5fa3e2cf409d017f29e466f57ee19ba422"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex24_Oldman/mixed_pooled/initial_targets_si.csv",
+          "sha256": "533622c3f7cd9180d7688920fa02de2ce392408dd511ebb8c4170e79e59e06d4"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 493500000.0,
+          "initial_storage_m3": 359235099.72656304,
+          "initial_release_m3s": 171.0,
+          "channel_capacity_m3s": 1500.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex32_Oroville",
+      "GRAND_ID": 148,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex32_Oroville/mixed_pooled/observations_si.csv",
+          "sha256": "f9651c2c2d77b3a9a649c84149b542f7a28e1ed8183fa480d123bb253c994c4f"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex32_Oroville/mixed_pooled/selection.json",
+          "sha256": "2ab6989431b2f2fcdcea13198b3197429aa7b575eeb2cb69c59ce2b98d4cf85f"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex32_Oroville/mixed_pooled/config.json",
+          "sha256": "ccd9a4722ef8c8e09009112236c5d69bccfa4a5390728f45a94a0fb62dd41f27"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex32_Oroville/mixed_pooled/bounds_si.csv",
+          "sha256": "0e2f092f8121d11a6c7a2967f9ed67074517581da013fb19321d8da3449a9a33"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex32_Oroville/mixed_pooled/initial_targets_si.csv",
+          "sha256": "72d521695d44673b3110375a862d03a96c8d451a3150879dcd330d1520060fa1"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 4366000000.0,
+          "initial_storage_m3": 2076953355.9615362,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 3600.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "reject",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex11_Palisades",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex11_Palisades/calibration/prepared/ex11_Palisades/observations_si.csv",
+          "sha256": "3b151e0f6fc5fb1fa137216e2489dc02912ce0ec32d94fd4aea9569c1a066d4a"
+        },
+        "selection_json": {
+          "path": "outputs/paper_exploration_v1_20261013/ex11_Palisades/calibration/prepared/ex11_Palisades/selection.json",
+          "sha256": "e455d32916f7157e453316c947aa7f2de29353eaef7be5db9da7bfacdd273822"
+        },
+        "model_config": {
+          "path": "outputs/paper_exploration_v1_20261013/ex11_Palisades/calibration/prepared/ex11_Palisades/model_config.json",
+          "sha256": "de85b0402a3451e965e044ec3020ecf0fef688ff558590979d9776785b123daa"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex11_Palisades/calibration/prepared/ex11_Palisades/bounds_si.csv",
+          "sha256": "dcab7ddb0a084b22b235037f777ec511937cea1f3524ce1deb879e9b007ee2c3"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex11_Palisades/calibration/prepared/ex11_Palisades/initial_targets_si.csv",
+          "sha256": "11383ad9b913dad23964ac37eca99fd90635f7f20d0e230902cfd8810c052ca0"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 1480000000.0,
+          "initial_storage_m3": 983702635.08,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 900.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex40_Semione",
+      "GRAND_ID": null,
+      "route": "signed_net_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex40_Semione/observations_si.csv",
+          "sha256": "8cf7ef712f1e1ba8d58951d8889126e4d4bad5a54a011e67abd72c5cb68eadba"
+        },
+        "selection_json": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex40_Semione/selection.json",
+          "sha256": "0c25bfa9e46f75fbef7d1a2b0725a35e8878a83bf7ab9e9cfeab0a83f88bfd08"
+        },
+        "model_config": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex40_Semione/model.json",
+          "sha256": "228baa31c50c6d922d4ff0a71b648bebea3f0b135d2edbbf27b9c1671a6a414b"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex40_Semione/bounds_si.csv",
+          "sha256": "5bbcea61f6e7ac732060cde50c5927f3f63422b57b71e57df163f5bcfb18bde9"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_completion_v1_20261014_03/signed_profiles/ex40_Semione/initial_targets_si.csv",
+          "sha256": "011f497fe71d74e549ae90ee225add2aaae327f72f09a790c6e379c771f66206"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 1254800000.0,
+          "initial_storage_m3": 790822212.0,
+          "initial_release_m3s": 13.0,
+          "channel_capacity_m3s": 450.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": {
+          "interpretation": "exploratory_net_boundary_flux",
+          "clock": "native_endpoint_trapezoid",
+          "independent_forcing_verified": false,
+          "flood_rule_driver": "storage_only"
+        },
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex19_Sirikit",
+      "GRAND_ID": 5140,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex19_Sirikit/mixed_pooled/observations_si.csv",
+          "sha256": "ad1939be1f0663fc2ddde35c6f1fa62a60291fa3e0ba2175b6b068aa259384a7"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex19_Sirikit/mixed_pooled/selection.json",
+          "sha256": "d1b504486104ec0ed29344d3bfd0aabb9450dd42b4b30c8a8a53b94cb3cdc3c0"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex19_Sirikit/mixed_pooled/config.json",
+          "sha256": "5a3b31178b20131b9d308de65ba44e65e4694e494ccc1b9a3e48334575d38f93"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex19_Sirikit/mixed_pooled/bounds_si.csv",
+          "sha256": "14487c477904973d5c8a59b84f4c6cad565733ce507ec15447244d7b9b9f526c"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex19_Sirikit/mixed_pooled/initial_targets_si.csv",
+          "sha256": "a798a0e6a195e7adba895a169dfc2ead423ec3261d76e546d4f1092bfa5647aa"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 9510000000.0,
+          "initial_storage_m3": 4274350000.0000005,
+          "initial_release_m3s": 50.0,
+          "channel_capacity_m3s": 350.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "reject",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex20_St_marry",
+      "GRAND_ID": 281,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex20_St_marry/mixed_pooled/observations_si.csv",
+          "sha256": "f5013032c8abd2802946861f12b39e275153a89a9b49f1624a66d074ebe29f9d"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex20_St_marry/mixed_pooled/selection.json",
+          "sha256": "210e050647a91f75df42df71216dc389c9025efe9533b4a9b9def56b51447aba"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex20_St_marry/mixed_pooled/config.json",
+          "sha256": "2c561bc542f3928dd438d484d9837ff92ef2634f53199cbc02746e6e2aa1c81f"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex20_St_marry/mixed_pooled/bounds_si.csv",
+          "sha256": "213e8ce9db996a81b6028d4734c41a3e41fa633512971e3c96ca00654297fcd2"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex20_St_marry/mixed_pooled/initial_targets_si.csv",
+          "sha256": "6494adbad9bbb393c0970a4a35f61a20f408e76ca31b1fa6e0a728e3430d94c2"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 394304000.0,
+          "initial_storage_m3": 136786354.25,
+          "initial_release_m3s": 40.0,
+          "channel_capacity_m3s": 1000.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex41_Toktogul",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex41_Toktogul/calibration/prepared/ex41_Toktogul/observations_si.csv",
+          "sha256": "76f6f95dc69e15b8ee694124cbb6a7911c24479c3f1779dcb7c875e91cf378f8"
+        },
+        "selection_json": {
+          "path": "outputs/paper_exploration_v1_20261013/ex41_Toktogul/calibration/prepared/ex41_Toktogul/selection.json",
+          "sha256": "01ebd9afd3f00c4953e87cade7d6511439a13feca7b1d1d410ea5fdbc189457c"
+        },
+        "model_config": {
+          "path": "outputs/paper_exploration_v1_20261013/ex41_Toktogul/calibration/prepared/ex41_Toktogul/model_config.json",
+          "sha256": "d875399e1ee2b7e6eebf1a15e2f11228b94d94be82d29b0fae34cbae73d27f60"
+        },
+        "bounds_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex41_Toktogul/calibration/prepared/ex41_Toktogul/bounds_si.csv",
+          "sha256": "0afd0080aa59c11890697b639d3df2d9c86764aee88f994cf45af3dca7fe83f1"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/paper_exploration_v1_20261013/ex41_Toktogul/calibration/prepared/ex41_Toktogul/initial_targets_si.csv",
+          "sha256": "41a017561c6414853ee27e2d3b3d20f50a7b16bd08b50cd25806045fea07219f"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 19500000000.0,
+          "initial_storage_m3": 11223000000.0,
+          "initial_release_m3s": 500.0,
+          "channel_capacity_m3s": 800.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "storage"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex12_Trinity",
+      "GRAND_ID": null,
+      "route": "provider_daily_mean_source_v1",
+      "action": "retain_deferred"
+    },
+    {
+      "reservoir_id": "ex42_Tyuyamuyun",
+      "GRAND_ID": null,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/tyuyamuyun_calibration_v2_20261013/prepared/ex42_Tyuyamuyun/observations_si.csv",
+          "sha256": "8c122e1e1f40d8217aaca9887d56e89e241dfa1264db7fcbea124543711c5646"
+        },
+        "selection_json": {
+          "path": "outputs/tyuyamuyun_calibration_v2_20261013/prepared/ex42_Tyuyamuyun/selection.json",
+          "sha256": "414038cfbd59f017da01646066555c5e8efecede584e52911540890ade42b90b"
+        },
+        "model_config": {
+          "path": "outputs/tyuyamuyun_calibration_v2_20261013/prepared/ex42_Tyuyamuyun/model_config.json",
+          "sha256": "12aa096b809abf59236e8ad5d3e125eed601f3d169d371953202dc8b346e0f26"
+        },
+        "bounds_csv": {
+          "path": "outputs/tyuyamuyun_calibration_v2_20261013/prepared/ex42_Tyuyamuyun/bounds_si.csv",
+          "sha256": "56168abecb1e05de5643d78d7dfc2ac43fa4d082ba542d99453110e1d4a4327f"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/tyuyamuyun_calibration_v2_20261013/prepared/ex42_Tyuyamuyun/initial_targets_si.csv",
+          "sha256": "5fc934e9719df43b288a277a5e81fd335c015de881643bb6c79ba4db163cae0c"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 6600000000.0,
+          "initial_storage_m3": 3641000000.0,
+          "initial_release_m3s": 134.0,
+          "channel_capacity_m3s": 3000.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex15_Bennett",
+      "GRAND_ID": null,
+      "route": "unresolved_coordinate_source_v1",
+      "action": "retain_deferred"
+    },
+    {
+      "reservoir_id": "ex23_Waterton",
+      "GRAND_ID": 284,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex23_Waterton/mixed_pooled/observations_si.csv",
+          "sha256": "0318470fa9e3bcc895f53ed5747ee576e16cef91e1ff3d91e678efa92b46d94b"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex23_Waterton/mixed_pooled/selection.json",
+          "sha256": "2690da636a5555fca2d1d84363eaf4535757714d431ae2592371b13ed6187979"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex23_Waterton/mixed_pooled/config.json",
+          "sha256": "bf053702b3e92789f3f2337ad953a4d5b38d3923e5a16441df7f5401b091154d"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex23_Waterton/mixed_pooled/bounds_si.csv",
+          "sha256": "78e02a5cf7bffd40aa345c3967029b24ddc6e406a03cb34aa1d202a050dc685a"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex23_Waterton/mixed_pooled/initial_targets_si.csv",
+          "sha256": "d0a0eec99a3238f14fc78746da1467190d77f0a9d845aacc3c0938859b1d4f35"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 179037700.0,
+          "initial_storage_m3": 117947285.667969,
+          "initial_release_m3s": 1.848,
+          "channel_capacity_m3s": 1000.0,
+          "dead_storage_fraction": 0.1,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "daily",
+          "fixed_step_days": 1.0,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    },
+    {
+      "reservoir_id": "ex16_Yellowtail",
+      "GRAND_ID": 355,
+      "route": "standard_native_v1",
+      "action": "import_verified",
+      "parameterization_method": "observed_monthly_calibration",
+      "input_stage": "prepared",
+      "inputs": {
+        "observations_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex16_Yellowtail/mixed_pooled/observations_si.csv",
+          "sha256": "d43edaf32d21eedd5b1616e7aa5cdb2e8e6c6bfbab5b80a7fd41e908807d23ee"
+        },
+        "selection_json": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex16_Yellowtail/mixed_pooled/selection.json",
+          "sha256": "69ebae2e652ff0222c6670da1309e5326317232fea9ed8c94f9bfefc1afeed2b"
+        },
+        "model_config": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex16_Yellowtail/mixed_pooled/config.json",
+          "sha256": "e2aee0eb7f95e1c587501004e50acbe89e3ae97c23e08be17013f9a08c632fc2"
+        },
+        "bounds_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex16_Yellowtail/mixed_pooled/bounds_si.csv",
+          "sha256": "e66c5664df65f2ba13e1eab81dd8c3c70a3f777329719f42d974259cf919289c"
+        },
+        "initial_targets_csv": {
+          "path": "outputs/strategy_comparison_fleet_v2_20261012/prepared/ex16_Yellowtail/mixed_pooled/initial_targets_si.csv",
+          "sha256": "733f0f7d8fa415b6cb4fd610cc4a4977b0e8e5dad44bddba2cd3684e7548bbc4"
+        }
+      },
+      "expected_model": {
+        "physical_constants": {
+          "capacity_m3": 1500000000.0,
+          "initial_storage_m3": 1088676966.1845121,
+          "initial_release_m3s": 100.0,
+          "channel_capacity_m3s": 350.0,
+          "dead_storage_fraction": 0.5335603092,
+          "inflow_correction": 1.0,
+          "flood_mode": "inflow"
+        },
+        "sampling": {
+          "frequency": "monthly",
+          "fixed_step_days": 30.5,
+          "month_clock": "observed",
+          "legacy_start": null,
+          "allow_signed_inflow": false
+        },
+        "root_policy": "nearest_previous_storage",
+        "atol_storage_m3": 0.0001,
+        "forcing_policy": null,
+        "inflow_preprocessing": {
+          "factor": 1.0,
+          "offset_m3s": 0.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "dztr_run_manager_v4",
+  "schema_version": 4,
+  "description": "32 completed paper reservoirs; CR2-style fixed storage assumptions, release-only DDS, raw/sqrt objective comparison. First checkpoint 64 within frozen 512-evaluation horizon; no convergence claim. Primary arm predeclared sqrt_release_nse.",
+  "stages": [
+    {
+      "id": "flow_calibration",
+      "type": "calibrate",
+      "backend": "prepared_flow_v1",
+      "config": "flow_only_paper_v1.json"
+    }
+  ]
+}

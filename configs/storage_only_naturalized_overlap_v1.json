@@ -1,0 +1,107 @@
+{
+  "kind": "dztr_storage_calibration_v1",
+  "schema_version": 1,
+  "campaign": "../outputs/data_availability_paper_v1_20261017",
+  "profiles": [
+    {
+      "reservoir_id": "ex30_Big_horn",
+      "release_prior": {
+        "source_kind": "simulated_naturalized_outflow",
+        "csv": "../data/storage_release_priors_v1_20261020_final/ex30_Big_horn_naturalized.csv",
+        "format": "si_csv",
+        "evidence": "Etienne archived CR1 simulated column, station mapping verified against the named CR1 coefficient statistics. Only overlap with the original calibration mask is fitted.",
+        "independent_of_target_responses": false,
+        "scope": "calibration_overlap",
+        "multiplier": 1.0
+      }
+    },
+    {
+      "reservoir_id": "ex28_Dickson",
+      "release_prior": {
+        "source_kind": "simulated_naturalized_outflow",
+        "csv": "../data/storage_release_priors_v1_20261020_final/ex28_Dickson_naturalized.csv",
+        "format": "si_csv",
+        "evidence": "Etienne archived CR1 simulated column, station mapping verified against the named CR1 coefficient statistics. Only overlap with the original calibration mask is fitted.",
+        "independent_of_target_responses": false,
+        "scope": "calibration_overlap",
+        "multiplier": 1.0
+      }
+    },
+    {
+      "reservoir_id": "ex29_EB_Campbell",
+      "release_prior": {
+        "source_kind": "simulated_naturalized_outflow",
+        "csv": "../data/storage_release_priors_v1_20261020_final/ex29_EB_Campbell_naturalized.csv",
+        "format": "si_csv",
+        "evidence": "Etienne archived CR1 simulated column, station mapping verified against the named CR1 coefficient statistics. Only overlap with the original calibration mask is fitted.",
+        "independent_of_target_responses": false,
+        "scope": "calibration_overlap",
+        "multiplier": 1.0
+      }
+    },
+    {
+      "reservoir_id": "ex14_Gardiner",
+      "release_prior": {
+        "source_kind": "simulated_naturalized_outflow",
+        "csv": "../data/storage_release_priors_v1_20261020_final/ex14_Gardiner_naturalized.csv",
+        "format": "si_csv",
+        "evidence": "Etienne archived CR1 simulated column, station mapping verified against the named CR1 coefficient statistics. Only overlap with the original calibration mask is fitted.",
+        "independent_of_target_responses": false,
+        "scope": "calibration_overlap",
+        "multiplier": 1.0
+      }
+    },
+    {
+      "reservoir_id": "ex24_Oldman",
+      "release_prior": {
+        "source_kind": "simulated_naturalized_outflow",
+        "csv": "../data/storage_release_priors_v1_20261020_final/ex24_Oldman_naturalized.csv",
+        "format": "si_csv",
+        "evidence": "Etienne archived CR1 simulated column, station mapping verified against the named CR1 coefficient statistics. Only overlap with the original calibration mask is fitted.",
+        "independent_of_target_responses": false,
+        "scope": "calibration_overlap",
+        "multiplier": 1.0
+      }
+    },
+    {
+      "reservoir_id": "ex20_St_marry",
+      "release_prior": {
+        "source_kind": "simulated_naturalized_outflow",
+        "csv": "../data/storage_release_priors_v1_20261020_final/ex20_St_marry_naturalized.csv",
+        "format": "si_csv",
+        "evidence": "Etienne archived CR1 simulated column, station mapping verified against the named CR1 coefficient statistics. Only overlap with the original calibration mask is fitted.",
+        "independent_of_target_responses": false,
+        "scope": "calibration_overlap",
+        "multiplier": 1.0
+      }
+    },
+    {
+      "reservoir_id": "ex23_Waterton",
+      "release_prior": {
+        "source_kind": "simulated_naturalized_outflow",
+        "csv": "../data/storage_release_priors_v1_20261020_final/ex23_Waterton_naturalized.csv",
+        "format": "si_csv",
+        "evidence": "Etienne archived CR1 simulated column, station mapping verified against the named CR1 coefficient statistics. Only overlap with the original calibration mask is fitted.",
+        "independent_of_target_responses": false,
+        "scope": "calibration_overlap",
+        "multiplier": 1.0
+      }
+    }
+  ],
+  "objectives": [
+    "storage_nse"
+  ],
+  "scoring": "pooled",
+  "bounds_policy": "monthly",
+  "optimization": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "horizon": 512,
+    "evaluation_budget": 64,
+    "perturbation": 0.2,
+    "workers": 4
+  }
+}

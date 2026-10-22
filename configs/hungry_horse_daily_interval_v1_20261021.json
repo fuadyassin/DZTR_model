@@ -1,0 +1,63 @@
+{
+  "kind": "daily_interval_scalar_calibration_v1",
+  "reservoir_id": "etienne_Hungry_Horse",
+  "GRAND_ID": 299,
+  "storage_csv": "outputs/reservoir_extension_assessment_completion_20261021/hungry_horse_storage_crosscheck/alternative_observations_si.csv",
+  "flow_csv": "outputs/reservoir_extension_assessment_v1_20261021/supplementary_sources/horizon_usbr_hgh/observations_si.csv",
+  "inventory_csv": "outputs/reservoir_extension_assessment_v1_20261021/reservoir_parameterization_all_62_by_GRAND_ID.csv",
+  "start": "1988-01-01",
+  "end": "2016-12-31",
+  "excluded_inflow_dates": [
+    "2006-08-23"
+  ],
+  "restart_warmup_days": 30,
+  "minimum_calibration_fraction": 0.65,
+  "year_selection_seed": 42,
+  "balance_tolerance_m3": 0.0001,
+  "physical_constants": {
+    "capacity_m3": 4424231685.724206,
+    "dead_storage_fraction": 0.010352173521509385,
+    "initial_storage_m3": 2212115842.862103,
+    "initial_release_m3s": 0.0,
+    "inflow_correction": 1.0,
+    "flood_mode": "storage"
+  },
+  "objective_weights": {
+    "storage": 0.5,
+    "release": 0.5
+  },
+  "optimization": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "horizon": 512,
+    "evaluation_budget": 512,
+    "workers": 3,
+    "perturbation": 0.2
+  },
+  "source_decisions": {
+    "storage": "Use the complete separate USBRPN archive. Contemporary USBR AF observations exactly match this archive on 2006-08-20 through 2006-08-26. Preserve the original USBR archive unchanged.",
+    "inflow": "Retain original externally reported HORIZON USBR inflows except the quarantined 2006-08-23 value. Do not reconstruct missing inflow from fitting/assessment storage and release. Independence of reported inflows remains unverified.",
+    "inflow_exclusion_evidence": "Archived inflow is 152000 cfs on 2006-08-23. Provider HGHM reports estimated unregulated QU=624.69 cfs and QD=2900 cfs. QU is a different estimated product and is not spliced into the calibration forcing. The anomalous interval remains missing.",
+    "inflow_provider_url": "https://www.usbr.gov/pn-bin/daily?station=hghm&format=html&year=2006&month=8&day=20&year=2006&month=8&day=26&pcode=qu&pcode=qd",
+    "storage_provider_url": "https://www.usbr.gov/pn-bin/daily?station=hgh&format=html&year=2006&month=8&day=20&year=2006&month=8&day=26&pcode=af&pcode=fb",
+    "physical_metadata": "USACE 2022 Water Control Manual PDF page 19: gross maximum storage 3586783 acre-feet at 3565 ft, normal full pool 3467178 acre-feet at 3560 ft, physical dead storage 37131 acre-feet at 3196 ft. The DZTR hard storage ceiling includes surcharge storage and is not the normal operating target. Monthly operating targets are estimated from calibration observations.",
+    "normal_full_pool_storage_m3": 4276701090.544335,
+    "physical_dead_storage_m3": 45800414.10997696,
+    "capacity_source": "https://water.usace.army.mil/cda/documents/wc/3390/HungryHorse_WCM_10102022_redacted.pdf#page=19",
+    "storage_definition": "Gross/total storage, matching USACE Table 2-1 and USBR AF; no datum offset added.",
+    "flow_clock": "Declared daily means over nominal 86400-second intervals ending at the current storage row. Exact historical provider clock is not certified; assessment remains conditional.",
+    "channel_capacity": "Calibration-only Hazen Q99 benchmark proxy; not a certified channel or outlet design capacity.",
+    "gap_initialization": "Every forcing block starts at the frozen calibration-only generalized monthly normal storage. Hold out 30 days after each restart. No held-out observations initialize model states.",
+    "window": "All complete calendar years in the combined 1987-10-01 to 2017-12-19 flow archive: 1988 through 2016. No year is discarded using model performance."
+  },
+  "evidence_files": [
+    "outputs/hungry_horse_provider_review_v1_20261021/usace_manual.pdf",
+    "outputs/hungry_horse_provider_review_v1_20261021/manual_capacity_excerpts.txt",
+    "outputs/hungry_horse_provider_review_v1_20261021/daily_hgh_200608.html",
+    "outputs/hungry_horse_provider_review_v1_20261021/daily_hghm_200608.html",
+    "outputs/hungry_horse_provider_review_v1_20261021/provider_review.json"
+  ]
+}

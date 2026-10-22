@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "dztr_forcing_batch",
+  "jobs": [
+    {
+      "job_id": "gardiner_synthetic",
+      "grand_id": 253,
+      "forcing": {
+        "csv": "gardiner_synthetic.csv",
+        "stage": "model_input",
+        "columns": {"date": "date", "inflow": "inflow_m3s"},
+        "units": {"inflow": "m3/s"}
+      },
+      "initial": {
+        "storage": 7900,
+        "storage_unit": "Mm3",
+        "release": 171,
+        "release_unit": "m3/s"
+      },
+      "sampling": {
+        "frequency": "daily",
+        "fixed_step_days": 1.0,
+        "month_clock": "observed",
+        "legacy_start": null,
+        "allow_signed_inflow": false
+      }
+    }
+  ]
+}

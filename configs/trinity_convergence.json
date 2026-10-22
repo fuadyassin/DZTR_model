@@ -1,0 +1,72 @@
+{
+  "reservoir": {
+    "name": "Trinity",
+    "grand_id": 131
+  },
+  "observations_file": "ResDataInflowStorageRelease/Trinity_131.xlsx",
+  "periods": {
+    "calibration": {
+      "start": "1971-01-01",
+      "end": "1985-12-31"
+    },
+    "validation": {
+      "start": "1986-01-01",
+      "end": "2000-12-31"
+    },
+    "warmup_steps": 365
+  },
+  "quantile_method": "hazen",
+  "target_percentiles": [
+    10,
+    45,
+    85
+  ],
+  "model": {
+    "capacity_m3": 2533500000,
+    "initial_storage_m3": 1593000000,
+    "initial_release_m3s": 10,
+    "channel_capacity_m3s": 300,
+    "dead_storage_fraction": 0.1,
+    "inflow_correction": 0.92,
+    "flood_mode": "storage"
+  },
+  "simulation": {
+    "solver": "implicit",
+    "overflow_mode": "conservative",
+    "atol_storage_m3": 0.0001
+  },
+  "optimization": {
+    "seed": 42,
+    "population_size": 16,
+    "evaluation_budget": 1024,
+    "crossover_probability": 0.9,
+    "crossover_eta": 15.0,
+    "mutation_eta": 20.0,
+    "local_initialization_fraction": 0.5,
+    "local_initialization_scale": 0.05
+  },
+  "protocol": {
+    "source": "https://hess.copernicus.org/articles/23/3735/2019/",
+    "date_interpretation": "Calendar-year interpretation of first-year spinup and equal halves of the remaining Trinity 1970-2000 record; the paper does not state these Trinity-specific dates.",
+    "estimation_policy": "Estimate targets and bounds from calibration observations only, excluding spinup and validation; this policy is explicit here and is not claimed as documented in the original paper.",
+    "fixed_configuration": "Physical constants, initial conditions and inflow factor are inherited from the verified Trinity MATLAB configuration.",
+    "optimization_policy": "Three seeded NSGA-II searches at nested generation-aligned budgets; selection and study indicators use calibration costs only, with validation reported after representative IDs are fixed."
+  },
+  "study": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "evaluation_checkpoints": [
+      96,
+      384,
+      1024
+    ],
+    "hypervolume_reference": [
+      1.0,
+      1.0
+    ],
+    "workers": 3
+  }
+}

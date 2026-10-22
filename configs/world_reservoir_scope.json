@@ -1,0 +1,189 @@
+{
+    "schema_version":  1,
+    "kind":  "world_reservoir_scope",
+    "paths_relative_to":  "repository_root",
+    "catalog_file":  "configs/world_reservoir_collection.json",
+    "catalog_sha256":  "aacfaa40880bc60766808e7511c32a991808dd28c42b99fbb76847c3513b2b29",
+    "source_reservoir_count":  42,
+    "active_reservoir_count":  41,
+    "excluded_reservoirs":  [
+                                {
+                                    "reservoir_id":  "ex43_TuyenQuang",
+                                    "name":  "TuyenQuang",
+                                    "status":  "intentionally_excluded",
+                                    "reason":  "Excluded at user request; no storage-data resolution is required for the active collection.",
+                                    "audit_file":  "outputs/world_reservoir_samples_final/reservoirs/ex43_TuyenQuang/observation_provenance.json"
+                                }
+                            ],
+    "active_reservoirs":  [
+                              {
+                                  "reservoir_id":  "ex1_Glen_canyon",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex1_Glen_canyon/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex2_Grand_coulee",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex2_Grand_coulee/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex3_Fort_peck",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex3_Fort_peck/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex4_Fort_randall",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex4_Fort_randall/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex5_Garrison",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex5_Garrison/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex6_Oahe",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex6_Oahe/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex7_CanyonFerry",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex7_CanyonFerry/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex8_Flaming_gorge",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex8_Flaming_gorge/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex9_Amistad",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex9_Amistad/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex10_Falcon",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex10_Falcon/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex11_Palisades",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex11_Palisades/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex12_Trinity",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex12_Trinity/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex13_American_falls",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex13_American_falls/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex14_Gardiner",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex14_Gardiner/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex15_Bennett",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex15_Bennett/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex16_Yellowtail",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex16_Yellowtail/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex17_Bhumibol",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex17_Bhumibol/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex18_High_aswan",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex18_High_aswan/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex19_Sirikit",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex19_Sirikit/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex20_St_marry",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex20_St_marry/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex21_Travers",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex21_Travers/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex22_Mcgregor",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex22_Mcgregor/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex23_Waterton",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex23_Waterton/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex24_Oldman",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex24_Oldman/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex26_Ghost",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex26_Ghost/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex27_Glenmore",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex27_Glenmore/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex28_Dickson",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex28_Dickson/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex29_EB_Campbell",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex29_EB_Campbell/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex30_Big_horn",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex30_Big_horn/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex31_Brazeau",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex31_Brazeau/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex32_Oroville",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex32_Oroville/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex33_Navajo",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex33_Navajo/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex34_Andijan",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex34_Andijan/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex35_Bull_Lake",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex35_Bull_Lake/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex36_Chardara",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex36_Chardara/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex37_Charvak",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex37_Charvak/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex38_Kayrakkum",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex38_Kayrakkum/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex39_Nurek",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex39_Nurek/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex40_Semione",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex40_Semione/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex41_Toktogul",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex41_Toktogul/sample.json"
+                              },
+                              {
+                                  "reservoir_id":  "ex42_Tyuyamuyun",
+                                  "sample_config":  "outputs/world_reservoir_samples_final/reservoirs/ex42_Tyuyamuyun/sample.json"
+                              }
+                          ],
+    "notes":  [
+                  "Use these 41 reservoirs for subsequent parameterization, simulation and optimization work.",
+                  "The original 42-folder catalog and numerical verification records remain historical audit evidence.",
+                  "Brazeau remains in scope; its external-forcing requirement is unchanged."
+              ]
+}

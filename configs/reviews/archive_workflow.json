@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "kind": "reservoir_archive_worklist",
+  "paths_relative_to": "repository_root",
+  "execution_mode": "archive_export_only",
+  "collection_file": "data/reservoirs/manifest.json",
+  "collection_sha256": "b815fe0508f6ac38ffa28ab5c1945ae41ddb2c017bb832ef549c05adf9763ad2",
+  "decision": {
+    "decision_date": "2026-10-10",
+    "population_size": 32,
+    "evaluation_cap": 512,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "status": "provisional_workflow_configuration",
+    "convergence_established": false,
+    "additional_model_evaluations_authorized": false,
+    "job_status": "budget_reached_convergence_unconfirmed",
+    "evidence_file": "outputs/bull_lake_interval_population_20261009/verification.json",
+    "evidence_sha256": "c58e087e0a66fef197efc01cfcc0b2a3c4037018e300f122fcd084f81a990df2",
+    "reason": "Population32 has the highest median calibration hypervolume and smallest between-seed front distance at512. Preserve all three seeds; no further evaluations.",
+    "scope": "Observed evidence is Bull Lake only. This is a provisional computational cap, not a sufficient fleet-wide budget or a source-readiness decision.",
+    "validation_used_for_decision": false,
+    "new_jobs_authorized": false
+  },
+  "archives": [
+    {
+      "reservoir_id": "ex35_Bull_Lake",
+      "seed": 42,
+      "archive_directory": "outputs/bull_lake_interval_population_20261009/runs/population_32/seed_42",
+      "verification_file": "outputs/bull_lake_interval_population_20261009/runs/population_32/verification.json",
+      "verification_sha256": "9bafc19eaefd3eb42e4136c991e0d1451ce8d2636ebf439f82045c5a9208e903",
+      "policy_file": "configs/reviews/bull_lake_interval_policy.json",
+      "policy_sha256": "7816486e3c575110d62b5a7353cd95f7c0eb1064949a9d785af19090a0131de1"
+    },
+    {
+      "reservoir_id": "ex35_Bull_Lake",
+      "seed": 43,
+      "archive_directory": "outputs/bull_lake_interval_population_20261009/runs/population_32/seed_43",
+      "verification_file": "outputs/bull_lake_interval_population_20261009/runs/population_32/verification.json",
+      "verification_sha256": "9bafc19eaefd3eb42e4136c991e0d1451ce8d2636ebf439f82045c5a9208e903",
+      "policy_file": "configs/reviews/bull_lake_interval_policy.json",
+      "policy_sha256": "7816486e3c575110d62b5a7353cd95f7c0eb1064949a9d785af19090a0131de1"
+    },
+    {
+      "reservoir_id": "ex35_Bull_Lake",
+      "seed": 44,
+      "archive_directory": "outputs/bull_lake_interval_population_20261009/runs/population_32/seed_44",
+      "verification_file": "outputs/bull_lake_interval_population_20261009/runs/population_32/verification.json",
+      "verification_sha256": "9bafc19eaefd3eb42e4136c991e0d1451ce8d2636ebf439f82045c5a9208e903",
+      "policy_file": "configs/reviews/bull_lake_interval_policy.json",
+      "policy_sha256": "7816486e3c575110d62b5a7353cd95f7c0eb1064949a9d785af19090a0131de1"
+    }
+  ]
+}

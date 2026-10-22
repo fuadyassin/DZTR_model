@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "stopping_policy_file": "configs/stopping_policy.example.json",
+  "jobs": [
+    {
+      "reservoir_id": "grand_131",
+      "configuration_file": "configs/trinity_convergence.json",
+      "observation_units": {
+        "storage": "mcm",
+        "flow": "m3/s"
+      }
+    }
+  ]
+}
