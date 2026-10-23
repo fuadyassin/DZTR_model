@@ -4,7 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dztr_param"
-version = "0.2.0"
+version = "0.3.0"
+license = {file = "LICENSE"}
 description = "Modular DZTR reservoir parameterization, simulation and calibration"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -12,15 +13,18 @@ authors = [{name = "Fuad Yassin", email = "fuad.yassin@usask.ca"}]
 dependencies = ["numpy>=1.22", "pandas>=1.5", "openpyxl>=3.0", "requests>=2.25"]
 
 [project.optional-dependencies]
-dev = ["pytest>=7"]
+dev = ["pytest>=7", "PyYAML>=6", "tomli>=2; python_version<'3.11'"]
 matlab = ["scipy>=1.8"]
 plots = ["matplotlib>=3.5"]
+docs = ["mkdocs==1.6.1", "mkdocs-material==9.7.7"]
 
 [project.urls]
 Repository = "https://github.com/fuadyassin/DZTR_model"
+Documentation = "https://fuadyassin.github.io/DZTR_model/"
 Paper = "https://doi.org/10.5194/hess-23-3735-2019"
 
 [project.scripts]
+dztr = "dztr.cli:main"
 dztr-parameterization-check = "dztr.parameterization.benchmark:main"
 dztr-trinity-check = "dztr.simulation.benchmark:main"
 dztr-baseline = "dztr.calibration.benchmark:main"

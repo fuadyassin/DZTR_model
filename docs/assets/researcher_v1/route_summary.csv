@@ -1,0 +1,9 @@
+scope,method,requested,completed,storage_scored,release_scored,median_storage_nse,median_release_nse,both_nse_positive
+available_cases,observed_monthly,32,32,32,32,0.71736947601224221,0.63842683891521435,22
+available_cases,flow_only,32,27,27,27,-2.8009225291630306,0.42603316802778879,6
+available_cases,storage_only,32,32,32,32,0.43711688183123798,0.23179811940030048,14
+available_cases,ungauged_mean_flow,32,31,31,31,-1.0556792471032339,0.33361063861700246,4
+common_successful_cases,observed_monthly,27,27,27,27,0.74586629665791548,0.59406813399263947,20
+common_successful_cases,flow_only,27,27,27,27,-2.8009225291630306,0.42603316802778879,6
+common_successful_cases,storage_only,27,27,27,27,0.4306789913379061,0.17649031092624934,11
+common_successful_cases,ungauged_mean_flow,27,27,27,27,-2.0817233428084299,0.33361063861700246,4

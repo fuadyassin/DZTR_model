@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: >-
+  Please cite this software release when using the Python workflow, and cite
+  Yassin et al. (2019) separately for the reservoir model formulation.
+type: software
+title: "DZTR: reservoir parameterization, simulation and calibration workflow"
+authors:
+  - family-names: Yassin
+    given-names: Fuad
+    orcid: https://orcid.org/0000-0001-8179-7928
+version: 0.3.0
+date-released: 2026-10-23
+license: MIT
+url: https://fuadyassin.github.io/DZTR_model/
+repository-code: https://github.com/fuadyassin/DZTR_model
+abstract: >-
+  Modular Python implementation of the dynamically zoned target release
+  reservoir model, with observation normalization, data-availability-specific
+  target estimation, mixed-year calibration, checkpointed optimization and
+  frozen-profile application. Public examples and reproducibility checks
+  accompany the release. Conditional forcing, regional donor assumptions,
+  source limitations and unproven convergence remain explicitly documented.
+keywords:
+  - reservoir operation
+  - hydrological modeling
+  - parameterization
+  - calibration
+  - reproducibility
+references:
+  - type: article
+    title: Representation and improved parameterization of reservoir operation in hydrological and land-surface models
+    authors:
+      - family-names: Yassin
+        given-names: Fuad
+      - family-names: Razavi
+        given-names: Saman
+      - family-names: Elshamy
+        given-names: Mohamed
+      - family-names: Davison
+        given-names: Bruce
+      - family-names: Sapriza-Azuri
+        given-names: Gonzalo
+      - family-names: Wheater
+        given-names: Howard
+    doi: 10.5194/hess-23-3735-2019
+    year: 2019
+    journal: Hydrology and Earth System Sciences
+    volume: 23
+    start: 3735
+    end: 3764

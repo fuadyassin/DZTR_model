@@ -1,0 +1,37 @@
+{
+  "kind": "winnebago_source_reconciliation_v1",
+  "output": "outputs/winnebago_source_reconciliation_v1_20261022",
+  "previous_review": "outputs/paired_source_review_v1_20261022",
+  "aishihik_review": "outputs/aishihik_source_reconciliation_v1_20261022",
+  "base_inventory": "data/catalogs/reservoir_inventory_v8_20261022.csv",
+  "base_catalog": "data/catalogs/reservoir_collection_v8_20261022.json",
+  "reservoir_id": "etienne_Winnebago",
+  "exploratory_boundary": "Lake_Winnebago_alone_not_four_lake_Winnebago_pool",
+  "surface_area_square_miles": 215.0,
+  "area_source": "USGS Oshkosh and Stockbridge station descriptions; constant-area local linear approximation.",
+  "gauge_datums_navd88_ft": {"04082500": 743.91, "04084255": 744.07},
+  "relative_volume_reference_navd88_ft": 743.91,
+  "reference_is_bed_elevation": false,
+  "historical_datum_assumption": "Current published NAVD88 gauge constants are extended to the 2007-2020 record for exploratory anomalies only. June 2020 instantaneous samples check the constants; the full-period datum history remains unverified.",
+  "allow_exploratory_relative_storage": true,
+  "filter_candidates_days": [1, 7],
+  "release_adapter": {
+    "station": "04084445",
+    "usgs_method_id": 226683,
+    "lake_outlet_drainage_area_square_miles": 5880.0,
+    "appleton_drainage_area_square_miles": 5950.0,
+    "rationale": "Exploratory drainage-area proration assumes equal unit runoff in the incremental drainage and coincident daily labels; it does not prove routed total outlet discharge."
+  },
+  "descriptive_percentiles": [10, 45, 85],
+  "quantile_method": "hazen",
+  "capacity_adopted_m3": null,
+  "dead_storage_adopted_m3": null,
+  "calibration_admitted": false,
+  "source_gates": [
+    "full_period_gauge_datum_history_or_explicit_frozen_extension_scenario",
+    "capacity_and_dead_storage_on_declared_relative_coordinate",
+    "outlet_routing_and_drainage_area_adapter_admission",
+    "daily_mean_and_matched_filter_clock_decision",
+    "independent_lake_inflow_or_explicit_conditional_signed_net_experiment"
+  ]
+}

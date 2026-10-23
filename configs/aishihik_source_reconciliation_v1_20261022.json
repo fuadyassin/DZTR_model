@@ -1,0 +1,34 @@
+{
+  "kind": "aishihik_source_reconciliation_v1",
+  "output": "outputs/aishihik_source_reconciliation_v1_20261022",
+  "base_inventory": "data/catalogs/reservoir_inventory_v7_20261022.csv",
+  "base_catalog": "data/catalogs/reservoir_collection_v7_20261022.json",
+  "previous_review": "outputs/paired_source_review_v1_20261022",
+  "nechako_review": "outputs/nechako_source_reconciliation_v1_20261022",
+  "reservoir_id": "etienne_Aishihik",
+  "storage_gauge": "08AA005",
+  "comparison_gauge": "08AA012",
+  "gauge_elevation_offset_m": 911.565,
+  "curve_interpretation": "inferred_x_equals_elevation_minus_912_no_3600",
+  "allow_exploratory_curve_candidate": true,
+  "certified_storage_conversion": false,
+  "smoothing_candidates_days": [1, 3],
+  "parameter_estimator": "shared_empirical_targets_hazen",
+  "target_percentiles": [10, 45, 85],
+  "negative_release_for_descriptive_estimation": "explicitly_missing_in_candidate_fit_view_raw_value_retained",
+  "fitting_scope": "all_available_records_descriptive_only_refit_on_frozen_calibration_years_before_optimization",
+  "calibration_admitted": false,
+  "operator_pdf": "outputs/paired_source_review_v1_20261022/evidence/aishihik_hydrotechnical_2024.pdf",
+  "operator_pdf_sha256": "636f2aabb9fffddf7fb4b9d35745c51dfc89b1972edaee536369b2b2e7e320ad",
+  "evidence_pages": {
+    "datum_and_smoothing_pdf_pages": [118, 119, 120],
+    "equation_clarification_pdf_pages": [371, 372]
+  },
+  "unresolved_gates": [
+    "confirm_reduced_curve_coordinate_and_volume_units_with_operator_or_numeric_table",
+    "adopt_capacity_and_dead_storage_on_same_incremental_coordinate",
+    "freeze_daily_mean_or_trailing_mean_observation_clock",
+    "review_2012_06_09_negative_boundary_subtraction",
+    "independent_inflow_or_explicit_conditional_signed_net_forcing"
+  ]
+}

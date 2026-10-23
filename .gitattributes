@@ -3,3 +3,7 @@
 data/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
 configs/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
 tests/reference_cases/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
+
+# Portable example inputs and curated assessment receipts also carry byte hashes.
+examples/portable/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
+docs/assets/researcher_v1/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol

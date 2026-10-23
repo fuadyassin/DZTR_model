@@ -1,0 +1,212 @@
+{
+  "kind": "dztr_portable_profile_v1",
+  "schema_version": 1,
+  "reservoir_id": "ex6_Oahe",
+  "GRAND_ID": 870,
+  "method": "observed_monthly",
+  "physical_constants": {
+    "capacity_m3": 29110000000.0,
+    "initial_storage_m3": 23464000000.0,
+    "initial_release_m3s": 700.0,
+    "channel_capacity_m3s": 2000.0,
+    "dead_storage_fraction": 0.1,
+    "inflow_correction": 1.0,
+    "flood_mode": "storage"
+  },
+  "sampling": {
+    "frequency": "monthly",
+    "fixed_step_days": 30.5,
+    "month_clock": "observed",
+    "legacy_start": null,
+    "allow_signed_inflow": false
+  },
+  "initial_date": "1970-01-01",
+  "numerics": {
+    "route": "standard_native_v1",
+    "root_policy": "reject",
+    "atol_storage_m3": 0.0001,
+    "forcing_policy": null
+  },
+  "inflow_preprocessing": {
+    "factor": 1.0,
+    "offset_m3s": 0.0
+  },
+  "monthly_targets": [
+    {
+      "month": 1,
+      "storage_critical_m3": 17498856645.604717,
+      "storage_normal_m3": 21926233113.051777,
+      "storage_flood_m3": 23015831122.835693,
+      "release_critical_m3s": 474.09273099362775,
+      "release_normal_m3s": 652.9001483581703,
+      "release_flood_m3s": 729.6885125283383
+    },
+    {
+      "month": 2,
+      "storage_critical_m3": 17235481926.81278,
+      "storage_normal_m3": 23408590486.66019,
+      "storage_flood_m3": 23726091933.8013,
+      "release_critical_m3s": 424.03326203477104,
+      "release_normal_m3s": 631.0388779534334,
+      "release_flood_m3s": 659.6455038829467
+    },
+    {
+      "month": 3,
+      "storage_critical_m3": 19175017198.527424,
+      "storage_normal_m3": 23984641393.397865,
+      "storage_flood_m3": 25109126454.77121,
+      "release_critical_m3s": 427.7377537075371,
+      "release_normal_m3s": 542.191443512848,
+      "release_flood_m3s": 817.5546773218596
+    },
+    {
+      "month": 4,
+      "storage_critical_m3": 19100602288.49475,
+      "storage_normal_m3": 24722466837.557648,
+      "storage_flood_m3": 26346872125.850067,
+      "release_critical_m3s": 434.94676164415023,
+      "release_normal_m3s": 584.7532183703393,
+      "release_flood_m3s": 1001.243205529493
+    },
+    {
+      "month": 5,
+      "storage_critical_m3": 18873316594.846535,
+      "storage_normal_m3": 26312347719.20692,
+      "storage_flood_m3": 26977780332.537632,
+      "release_critical_m3s": 515.3689760952957,
+      "release_normal_m3s": 657.227515911782,
+      "release_flood_m3s": 912.8456028814094
+    },
+    {
+      "month": 6,
+      "storage_critical_m3": 19346418521.096035,
+      "storage_normal_m3": 25092307817.794216,
+      "storage_flood_m3": 27561715957.783676,
+      "release_critical_m3s": 584.1262054862786,
+      "release_normal_m3s": 664.5813860007102,
+      "release_flood_m3s": 987.3246893299075
+    },
+    {
+      "month": 7,
+      "storage_critical_m3": 19531742190.763035,
+      "storage_normal_m3": 24141588447.00567,
+      "storage_flood_m3": 27300071417.18613,
+      "release_critical_m3s": 508.9033369039223,
+      "release_normal_m3s": 976.819381883161,
+      "release_flood_m3s": 1184.871192713476
+    },
+    {
+      "month": 8,
+      "storage_critical_m3": 18329347702.65572,
+      "storage_normal_m3": 24130641153.775528,
+      "storage_flood_m3": 27143898410.777363,
+      "release_critical_m3s": 721.3882886272586,
+      "release_normal_m3s": 919.8835382404609,
+      "release_flood_m3s": 1233.316905337538
+    },
+    {
+      "month": 9,
+      "storage_critical_m3": 17278243138.61723,
+      "storage_normal_m3": 22636409603.00105,
+      "storage_flood_m3": 25833795819.47524,
+      "release_critical_m3s": 525.7514130448724,
+      "release_normal_m3s": 852.7771783253928,
+      "release_flood_m3s": 1367.719521184425
+    },
+    {
+      "month": 10,
+      "storage_critical_m3": 16416297495.387648,
+      "storage_normal_m3": 22581890246.541687,
+      "storage_flood_m3": 25037237832.06803,
+      "release_critical_m3s": 371.1228587889211,
+      "release_normal_m3s": 647.7254594241315,
+      "release_flood_m3s": 1315.0832177176865
+    },
+    {
+      "month": 11,
+      "storage_critical_m3": 17001152178.118725,
+      "storage_normal_m3": 23412841064.689693,
+      "storage_flood_m3": 23602126507.936417,
+      "release_critical_m3s": 384.3168868252144,
+      "release_normal_m3s": 659.7592407127149,
+      "release_flood_m3s": 1365.333892712361
+    },
+    {
+      "month": 12,
+      "storage_critical_m3": 17417839203.96734,
+      "storage_normal_m3": 22316998660.32722,
+      "storage_flood_m3": 22967896893.747746,
+      "release_critical_m3s": 421.58731357770887,
+      "release_normal_m3s": 634.5617265344976,
+      "release_flood_m3s": 859.7432751036803
+    }
+  ],
+  "provenance": {
+    "source_certified": false,
+    "source_gates": [],
+    "convergence_established": false,
+    "selection_uses_assessment": false,
+    "year_selection": "mixed",
+    "scoring": "pooled",
+    "seed": 44,
+    "evaluation_id": 510,
+    "evaluation_budget_per_seed": 512,
+    "selection_sha256": "06cfb265c062970157a39231085291194cc1c526a377115cb16c3b1c7b1be6a3",
+    "quantile_method": "hazen",
+    "source_profile_sha256": "40c9cd23d4aca692d58ac3b33a48ec7a8d935b91cee6246efc22faa38cb34f59",
+    "source_targets_sha256": "19dcd185fa31b6c97204790548ca73730d22a0d8a743bbeafdf513dce4be4949",
+    "source_catalog_sha256": "9ec9f3e4297a8a10e68567739d0d394663e60ae3872b24c933e1df693244f6eb",
+    "source_registry_sha256": "400e91bb8396d1db9885a5a7ada185d5a5269d7862cbb8f0efc19977460edfed",
+    "public_observations_sha256": "96e88984bf997d12ce8a1b5b88cdb16af17165c7e0f4a4f77327042569d18355",
+    "calibration": {
+      "release_nse": 0.5680284501900109,
+      "storage_nse": 0.5577940288660044,
+      "regime_balanced_release_nse": 0.41167448789011196,
+      "regime_balanced_storage_nse": 0.2751209082683689
+    },
+    "assessment": {
+      "feasible": true,
+      "reason": null,
+      "metrics": {
+        "release_nse": 0.7705020354300065,
+        "release_kge": 0.8649660665922607,
+        "release_pbias": 5.17073640764698,
+        "release_rmse": 173.69854649743218,
+        "storage_nse": 0.43749281471282486,
+        "storage_kge": 0.7306234519297423,
+        "dry_release_nse": 0.1525188890727579,
+        "dry_storage_nse": -0.18070503618207612,
+        "normal_release_nse": -1.7040929198372612,
+        "normal_storage_nse": -1.543538912131389,
+        "wet_release_nse": 0.7253381939186778,
+        "wet_storage_nse": -0.27797521428726624,
+        "regime_balanced_release_nse": -0.2754119456152752,
+        "regime_balanced_storage_nse": -0.6674063875335771,
+        "storage_mean_bias_m3": -180627247.86072645
+      },
+      "samples": 48,
+      "maximum_balance_residual_m3": 2.658367156982422e-05
+    },
+    "assumptions": [
+      "Retrospective conditional calibration; forcing independence is unverified.",
+      "Monthly 30.5-day steps are retained where declared; they are not calendar-month means.",
+      "Targets, capacity and root policy were not changed during export."
+    ]
+  },
+  "source_sha256": {
+    "model/__init__.py": "a2f19e5f4d60dab87d9d3226ed2fb4e26794fa367b4ef15d844b47cf7cf09e32",
+    "model/balance.py": "6f946531f06b514b6def78a0aecdb2e39b5f138ed40d77f7acd53c2686d46f00",
+    "model/release.py": "892dbc436df69ee0fe041e00f9664a12cea487a3b5bff66672567ed4e94e6f46",
+    "portable.py": "e0969c493be73bfd6422bc1c0e455c30b5dcdb04faf0065eacf0d84d9b74fbfc",
+    "schemas.py": "f5126ae4bb3d1183f7bd46aa03ce440e225ae89fdaad3afec90aefd26d616e4d",
+    "simulation/__init__.py": "90c46a456ddb74fd8a15802d8fc8a9f37ac8d0f948f258daa23618ebbb3b22eb",
+    "simulation/benchmark.py": "2e40b1deefece000377f4a061ceb80f63cb37d4a88cd316f88c38f9539f7ba53",
+    "simulation/intervals.py": "b628204695ebaac6c81172e740157d7dcfef001f158e30c5bb78860973a4f2a3",
+    "simulation/root_policy.py": "faa81222f2675b3fb8cce56407c64087ea20e8484b1e3c363ca91d343b4b8270",
+    "simulation/runner.py": "ec2eb13bfd83b398d86b9350e1fc4c4945984b9a06c1d2eaea7d51bd80e6829d",
+    "simulation/sampled.py": "55e3e6f4e0ed6d28f0c855116150ccdfed1c9bb274615645388fbaafc6e8b0b9",
+    "simulation/signed_net.py": "588264676318135acb67f163a01fb85fdad9a3904d77f87f0ab4c76e8e8f9a8a",
+    "simulation/substeps.py": "0121ea9588de0c37fee9dc109644fa8e9cbde4010b17bd8f8e71daf8df6a8ae5"
+  },
+  "payload_sha256": "dcfc329d3f545ff9f4bf2af3cd32b4784276c2a3688a88435fac096921270f30"
+}

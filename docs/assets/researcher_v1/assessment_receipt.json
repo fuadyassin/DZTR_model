@@ -1,0 +1,11 @@
+{
+  "kind": "dztr_curated_assessment_v1",
+  "source_manifest_sha256": "599b5e3f834570ca7fb94f5c70c4cd36bd9422799022508693ee2c239089af5a",
+  "source_scores_sha256": "ae7bad5f94773913eb177526fd81044a70bb539315496f59b1d9ad2c95ca8108",
+  "archived_summary_exactly_reproduced": true,
+  "common_reservoir_count": 27,
+  "aggregate_only_no_observation_series": true,
+  "new_optimizer_evaluations": 0,
+  "new_model_simulations": 0,
+  "summary_sha256": "0e9d956ced006f645eadf8828bbcf7e62960bb00151205390eb867fd8c350549"
+}

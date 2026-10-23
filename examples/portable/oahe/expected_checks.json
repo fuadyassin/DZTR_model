@@ -1,0 +1,13 @@
+{
+  "reservoir_id": "ex6_Oahe",
+  "GRAND_ID": 870,
+  "historical_rows": 360,
+  "historical_storage_release_exactly_reproduced": true,
+  "restart_rows": 25,
+  "restart_initial_state_source": "frozen_model_trajectory_not_observations",
+  "restart_storage_release_exactly_reproduced": true,
+  "historical_state_sha256": "dc9036adf2f44df960f3ed9db24039ddbd390afd979c611d799166c7c2683e16",
+  "maximum_balance_residual_m3": 2.658367156982422e-05,
+  "independent_predictive_validation": false,
+  "historical_state_canonical_lf_sha256": "3cd7e2be5009a101edb0f71272b1e5155ab87d527bdb1296ed815f0901e1db02"
+}

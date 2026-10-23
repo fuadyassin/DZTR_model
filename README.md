@@ -2,6 +2,17 @@
 
 A modular Python implementation of the dynamically zoned target release reservoir model described by [Yassin et al. (2019)](https://doi.org/10.5194/hess-23-3735-2019). Observation normalization, generalized parameterization, daily reservoir simulation, evaluation, a calibration/validation baseline and a budgeted NSGA-II calibration search are implemented. The simulation and objective port is checked against saved Trinity MATLAB outputs.
 
+**Start here:** [researcher documentation](docs/index.md),
+[portable application quick start](docs/portable_application_v1.md), and
+[scientific assessment](docs/scientific_assessment_v1.md). The stable `dztr`
+command applies self-contained frozen Gardiner, Oahe and Garrison profiles using
+inflow alone and delegates configured parameterization/calibration jobs to the
+existing versioned run managers. Public examples require no private `outputs/`
+archives. Version 0.3.0 uses the MIT license and includes cross-platform release
+verification. See the [documentation](https://fuadyassin.github.io/DZTR_model/)
+and [release/citation guide](docs/release_v0_3_0.md). The software DOI remains
+pending actual Zenodo archival; the model paper is cited separately.
+
 ## Install and test
 
 Use Python 3.10 or later. From the repository root:

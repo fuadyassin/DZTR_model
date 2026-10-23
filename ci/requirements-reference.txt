@@ -1,0 +1,10 @@
+# Reference environment used for the public Linux/Windows release checks.
+numpy==1.26.4
+pandas==2.2.2
+requests==2.32.3
+openpyxl==3.1.5
+matplotlib==3.9.2
+pytest==7.4.4
+setuptools==75.3.0
+wheel==0.44.0
+PyYAML==6.0.2

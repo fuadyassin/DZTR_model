@@ -1,0 +1,35 @@
+{
+  "kind": "dztr_run_manager_v8",
+  "schema_version": 8,
+  "description": "Optional full-data scalar DDS/GA calibration. Weights are user inputs normalized by the existing backend. Run starts new searches; plan does not.",
+  "stages": [
+    {
+      "id": "targets", "type": "parameterize",
+      "config": {
+        "kind": "dztr_data_availability_v1", "schema_version": 1,
+        "methods": ["observed_monthly"], "quantile_method": "hazen", "channel_policy": "source_defined",
+        "year_selection": {"minimum_fraction": 0.65, "seed": 42, "water_year_start_month": 1, "warmup_years": 1},
+        "reservoirs": [{
+          "reservoir_id": "ex14_Gardiner", "name": "Gardiner", "GRAND_ID": 253,
+          "observations_csv": "../../data/reservoirs/ex14_Gardiner/observations_si.csv",
+          "model_config": "../run_manager/gardiner_model_v1.json", "forcing_stage": "canonical", "source_gates": []
+        }]
+      }
+    },
+    {
+      "id": "calibration", "type": "calibrate", "backend": "prepared_full_data_v1",
+      "config": {
+        "kind": "dztr_full_data_comparison_v1", "schema_version": 1, "campaign": "@targets.campaign",
+        "profiles": [{"reservoir_id": "ex14_Gardiner"}], "scoring": "pooled",
+        "objectives": [
+          {"id": "release_only", "weights": {"storage": 0, "release": 1}},
+          {"id": "weighted_joint", "weights": {"storage": 0.5, "release": 0.5}}
+        ],
+        "optimization": {
+          "seeds": [42, 43, 44], "horizon": 512, "evaluation_budget": 512, "workers": 3,
+          "algorithms": [{"optimizer": "dds", "perturbation": 0.2}, {"optimizer": "ga", "ga": {"population_size": 32}}]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "reservoir_id": "ex14_Gardiner",
+  "GRAND_ID": 253,
+  "historical_rows": 11688,
+  "historical_storage_release_exactly_reproduced": true,
+  "restart_rows": 366,
+  "restart_initial_state_source": "frozen_model_trajectory_not_observations",
+  "restart_storage_release_exactly_reproduced": true,
+  "historical_state_sha256": "7830055231ab4807590f45b5d32dfb34dcc00e6501a1d46540a5e1bbda33393a",
+  "maximum_balance_residual_m3": 3.691762685775757e-06,
+  "independent_predictive_validation": false,
+  "historical_state_canonical_lf_sha256": "538aea81aedd0a129796993ca259c1d761b73223d3a0d0599669721d2000e134"
+}

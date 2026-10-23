@@ -1,0 +1,27 @@
+{
+  "kind": "dztr_public_portable_examples_v1",
+  "reservoirs": [
+    "ex14_Gardiner",
+    "ex6_Oahe",
+    "ex5_Garrison"
+  ],
+  "private_runtime_dependencies": false,
+  "artifact_sha256": {
+    "gardiner/expected_checks.json": "c8ee13f0ab89e27d6622eace649d18b8272c94a9b5d63c66ebb41af15db0b65e",
+    "gardiner/forcing_restart_si.csv": "49927936c9f071ddac027a7906e546a145d1988d46686201721a58d55fbf008b",
+    "gardiner/forcing_si.csv": "db0b2b8495827d70d9181d3f20b98dac1987e1979b2e5af31361a9ccb506b6bf",
+    "gardiner/initial_state_restart.json": "cabf7bf5b7673f1902005cc75f0eade2b759a785b1a82bfa6c12827ad34bd9ad",
+    "gardiner/profile.json": "2841baf71197902bec639186d752133e72ef8207ccef2e7daddeb1326f4b8c3c",
+    "garrison/expected_checks.json": "fd332809ad039ed1b76de5d5564f2421baa0224de4e7a69a5bd1f559516fd3d7",
+    "garrison/forcing_restart_si.csv": "0e62c6037c3380aa2832aa9bd3021cf3c6f64ec6fb685fd137b7d6c70aac9ce6",
+    "garrison/forcing_si.csv": "f10e3a055c98666813b1ed719c14f3e1ad744ab198a4e7df5d941174ca3d5e05",
+    "garrison/initial_state_restart.json": "59659528497ae3c04889780ed86525811c61805ad00499837a1d694f703b1568",
+    "garrison/profile.json": "c9d57220012fa9621628ae0af105947c54051049ad8711bc01acdb1d37a1359d",
+    "oahe/expected_checks.json": "26016dd5e4cd24e7d44739471eed71a93bb3f5fabab03c19565dd3b778d69446",
+    "oahe/forcing_restart_si.csv": "ad0f3b0eeb1a17a6bea63ba7e0221e718fa492289e30321fdb115bea9e1ec819",
+    "oahe/forcing_si.csv": "a6866589f2bed1396a48213b74ac27fc528ebce432bcfe7ae8ffc76a8fa7fffd",
+    "oahe/initial_state_restart.json": "38e106ad0a7b5bc449f67ea0210061fe455cc8395474b44930cbfba791dddf3a",
+    "oahe/profile.json": "558d0965b308e3b8f5c2fa2a3b02e61de93cd1b2a81a5dd5af69562e2463939b",
+    "README.md": "fb7d0c73fd571634e305a37bcaf1fd67e700d06ab18ac059cf4e1a2a58c7c6b9"
+  }
+}

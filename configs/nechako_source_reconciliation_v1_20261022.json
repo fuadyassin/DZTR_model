@@ -1,0 +1,37 @@
+{
+  "kind": "nechako_source_reconciliation_v1",
+  "output": "outputs/nechako_source_reconciliation_v1_20261022",
+  "previous_review": "outputs/paired_source_review_v1_20261022",
+  "base_catalog": "data/catalogs/reservoir_collection_v6_20261022.json",
+  "base_inventory": "data/catalogs/reservoir_inventory_v6_20261022.csv",
+  "reservoir_id": "etienne_Nechako",
+  "level_station": "08JA023",
+  "outlet_stations": ["08JA013", "08FE002"],
+  "operator_reference": {
+    "file": "evidence/operator_storage_reference_2020.pdf",
+    "date": "2020-10-20",
+    "full_supply_elevation_ft": 2800.0,
+    "storage_at_full_supply_m3": 23850000000.0,
+    "licensed_live_storage_m3": 7100000000.0,
+    "licensed_minimum_elevation_ft": 2769.5,
+    "storage_at_licensed_minimum_m3": 16750000000.0,
+    "licensed_minimum_is_adopted_model_dead_storage": false,
+    "gauge_to_operator_elevation_offset_m": null,
+    "storage_curve_digitized_for_calibration": false,
+    "capacity_adopted_for_archived_storage": false
+  },
+  "regeom_curve_comparison_only": "E:/1_DataHub/E_Reservoir_data/ReGeom_Yigzaw_etal/Area_Strg_Dp/15.csv",
+  "timing_review": {
+    "same_day_and_adjacent_mean_to_mean_proxies": true,
+    "component_shifts_days": [-1, 0, 1],
+    "choose_best_clock_from_negative_residuals": false,
+    "inflow_is_independent": false
+  },
+  "outlet_anomaly_review": {
+    "station": "08FE002",
+    "rolling_days": 31,
+    "minimum_supported_days": 15,
+    "multiple_of_local_median": 3.0,
+    "flagged_values_automatically_corrected": false
+  }
+}

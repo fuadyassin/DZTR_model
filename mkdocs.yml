@@ -1,0 +1,60 @@
+site_name: DZTR reservoir workflow
+site_description: Reservoir parameterization, calibration and application for hydrological modeling
+site_url: https://fuadyassin.github.io/DZTR_model/
+repo_url: https://github.com/fuadyassin/DZTR_model
+repo_name: fuadyassin/DZTR_model
+copyright: Copyright © 2026 Fuad Yassin · MIT software license
+docs_dir: .cache/docs_source
+site_dir: outputs/site
+theme:
+  name: material
+  palette:
+    primary: blue grey
+    accent: teal
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/extra.css
+validation:
+  nav:
+    omitted_files: info
+  links:
+    not_found: warn
+    anchors: ignore
+nav:
+  - Start here: index.md
+  - Install and run: portable_application_v1.md
+  - Choose a data route: new_reservoir_v1.md
+  - Scientific assessment: scientific_assessment_v1.md
+  - Technical methods:
+      - Commands and contracts: public_interface_v1.md
+      - Four data-availability routes: four_route_workflow_v1.md
+      - Levels, datum and geometry: shared_geometry_workflow_v1.md
+      - Mixed-year calibration: representative_year_calibration.md
+      - DDS, GA and weighted objectives: full_data_scalar_comparison_v1.md
+      - Multiple and missing roots: root_policy_review.md
+      - Interval simulation: interval_simulation.md
+  - Release and citation: release_v0_3_0.md
