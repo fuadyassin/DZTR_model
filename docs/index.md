@@ -38,5 +38,6 @@ not prerequisites for the portable quick start.
 
 The GitHub Pages outlet builds from these Markdown sources after the public
 Ubuntu and Windows application checks pass. Version 0.3.0 uses the MIT license.
-No software DOI has been registered; the published model paper has its own
-[existing DOI](https://doi.org/10.5194/hess-23-3735-2019).
+Version 0.3.0 is archived with a
+[software DOI](https://doi.org/10.5281/zenodo.23606593). The published model paper
+has its own [separate DOI](https://doi.org/10.5194/hess-23-3735-2019).

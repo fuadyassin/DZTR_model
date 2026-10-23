@@ -39,7 +39,9 @@ The publication sequence is:
    DOI**, then add that registered DOI to citation metadata, the documentation
    and repository links. The model paper's DOI remains a separate reference.
 
-Zenodo integration requires enabling this repository in the owner's account.
-A manual deposit of the sealed release files is an alternative. No placeholder
-software DOI is presented as real. Remaining source investigations stay deferred.
-See [release and citation](release_v0_3_0.md) for the current metadata.
+Version 0.3.0 is published and its tagged public source is archived at
+[Zenodo](https://doi.org/10.5281/zenodo.23606593). The wheel, application bundle,
+rendered documentation and checksums are GitHub release assets. DOI links are
+added to main-branch metadata after archival; the original tag and sealed files
+remain fixed. Remaining source investigations stay deferred. See
+[release and citation](release_v0_3_0.md) for the current metadata.

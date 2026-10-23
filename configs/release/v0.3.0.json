@@ -4,7 +4,9 @@
   "tag": "v0.3.0",
   "license": "MIT",
   "model_paper_doi": "10.5194/hess-23-3735-2019",
-  "software_doi": null,
+  "software_doi": "10.5281/zenodo.23606593",
+  "software_concept_doi": "10.5281/zenodo.23606592",
+  "zenodo_record_url": "https://zenodo.org/records/23606593",
   "documentation_url": "https://fuadyassin.github.io/DZTR_model/",
   "verification": {
     "public_platforms": ["ubuntu-24.04", "windows-2022"],

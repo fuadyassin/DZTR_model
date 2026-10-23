@@ -7,9 +7,9 @@ applicable; see the repository's `THIRD_PARTY_NOTICES.md`.
 
 ## Installable application
 
-Use the [GitHub releases](https://github.com/fuadyassin/DZTR_model/releases) for
-the sealed source/application ZIP, Python wheel and SHA256 checksums once the
-release is published. The [public workflow checks](https://github.com/fuadyassin/DZTR_model/actions/workflows/public-release.yml)
+Use the [v0.3.0 GitHub release](https://github.com/fuadyassin/DZTR_model/releases/tag/v0.3.0)
+for the sealed source/application ZIP, Python wheel, rendered documentation and
+SHA256 checksums. The [public workflow checks](https://github.com/fuadyassin/DZTR_model/actions/workflows/public-release.yml)
 record installation, public tests, parameter generation, fixed-profile
 applications and verified resume on Ubuntu and Windows. Each result identifies
 the tested source commit and environment.
@@ -27,17 +27,25 @@ The release metadata is separate from those frozen scientific identities.
 ## Citation
 
 **Software:** Fuad Yassin. DZTR: reservoir parameterization, simulation and
-calibration workflow. Version 0.3.0. GitHub repository and `CITATION.cff`.
+calibration workflow. Version 0.3.0. Zenodo.
+[Software DOI: 10.5281/zenodo.23606593](https://doi.org/10.5281/zenodo.23606593).
+Machine-readable citation metadata is in `CITATION.cff`.
 
 **Model paper:** Yassin, F., Razavi, S., Elshamy, M., Davison, B., Sapriza-Azuri,
 G., and Wheater, H. (2019). Representation and improved parameterization of
 reservoir operation in hydrological and land-surface models. Hydrology and Earth
 System Sciences, 23, 3735–3764. [Model-paper DOI](https://doi.org/10.5194/hess-23-3735-2019).
 
-The software DOI remains pending actual Zenodo archival. It will be added to
-the citation file and this page after registration. The paper DOI is not used
-as a software DOI. A GitHub/Zenodo connection requires a one-time account setup;
-manual deposition of the sealed files is an alternative.
+The version DOI identifies the published v0.3.0 source snapshot. The
+[all-versions DOI](https://doi.org/10.5281/zenodo.23606592) identifies the software
+across releases. Use the version DOI when reporting results from this release.
+
+Zenodo's GitHub integration archived the full tagged public source, including
+code, public examples and Markdown documentation. The installable wheel,
+allowlisted application bundle, rendered documentation and checksums are GitHub
+release assets. The frozen release files retain their original checksums;
+these current documentation pages and main-branch citation metadata add the
+registered DOI without moving the release tag or replacing its files.
 
 ## Scientific scope
 
