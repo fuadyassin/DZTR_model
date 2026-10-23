@@ -21,6 +21,24 @@ python -B -m pip install ".[dev,plots]"
 python -B -m dztr --help
 ```
 
+On Linux, use a dedicated environment and redirect caches inside the checkout:
+
+```bash
+mkdir -p .cache/{temp,pip,matplotlib,xdg,numba,joblib}
+export TEMP="$PWD/.cache/temp"
+export TMP="$TEMP" TMPDIR="$TEMP"
+export PIP_CACHE_DIR="$PWD/.cache/pip" MPLCONFIGDIR="$PWD/.cache/matplotlib"
+export XDG_CACHE_HOME="$PWD/.cache/xdg" NUMBA_CACHE_DIR="$PWD/.cache/numba"
+export JOBLIB_TEMP_FOLDER="$PWD/.cache/joblib" PYTHONDONTWRITEBYTECODE=1
+python3 -B -m venv .venv
+source .venv/bin/activate
+python -B -m pip install ".[dev,plots]"
+python -B -m dztr --help
+```
+
+The subsequent `python -B -m dztr` commands work in either shell. Keep the
+environment and cache settings in the terminal used for the examples.
+
 Use a dedicated environment if desired. Project-managed caches and temporary
 files are redirected to this checkout's `.cache`. Both the `dztr` console command
 and `python -m dztr` invoke the same interface. The package distribution retains
