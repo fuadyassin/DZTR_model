@@ -56,7 +56,7 @@ To inspect progress, read `outputs/strategy_comparison_fleet_v2_20261012/workflo
 After checking that no workflow is already running, resume an interrupted workflow with:
 
 ```powershell
-& 'C:\Users\YassinF\AppData\Local\anaconda3\python.exe' -B tools\finish_comparison_fleet_v2.py
+python -B tools\finish_comparison_fleet_v2.py
 ```
 
 An exclusive `workflow.lock` prevents duplicate finishers. If a process was forcibly terminated,

@@ -18,7 +18,7 @@ experiments finish. Its adjacent `_job.json`, stage status, per-job execution
 logs and eight-evaluation checkpoints distinguish running, failed and completed
 work. All project cache, inputs, outputs, temporary files and logs stay on D:.
 
-## Release priors and the user's mean-flow proposal
+## Mean-flow release priors
 
 The primary configuration requests all 32 completed monthly paper reservoirs.
 It uses the local GRanD v1.1 `DIS_AVG_LS` field as a mean-flow scale wherever a
@@ -32,7 +32,7 @@ previously verified GRAND ID and positive discharge exist:
 engineering maximum channel discharge. The existing channel capacity is retained
 as a separate physical input. See the
 [GRanD/GDW attribute documentation](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GDW/GDW_TechDoc_v1_delta.pdf).
-The packaged values come from the user's local v1.1 DBF; the newer documentation
+The packaged values come from the archived GRanD v1.1 DBF; the newer documentation
 is cited only for the field definition, not as a replacement dataset.
 
 For each percentile p = 5, 30 or 97, the release prior is:
@@ -146,7 +146,7 @@ but that does not establish a storage-only data-availability experiment: archive
 initial parameters could still use observed release. We reuse scalar storage NSE,
 DDS and the documented bounds as inspiration, while hiding target release here.
 
-The primary mean-flow relationship is the user's new exploratory proposal, not
+The primary mean-flow relationship is an exploratory extension in this workflow, not
 an Etienne implementation. Reconstructed inflows and adopted physical/channel
 metadata may themselves depend on historical observed storage or release. These
 are therefore conditional data-availability benchmarks, not independent ungauged

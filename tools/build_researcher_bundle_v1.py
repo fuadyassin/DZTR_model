@@ -7,14 +7,15 @@ import sys
 from zipfile import ZipFile, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'src'))
+sys.path[:0] = [str(ROOT / 'src'), str(ROOT)]
 from dztr.portable import file_digest, write_json
+from tools.release_hygiene_v1 import is_generated_file
 
 PUBLIC_RESERVOIRS = ('ex14_Gardiner', 'ex12_Trinity', 'ex6_Oahe', 'ex5_Garrison')
 
 
 def selected_files(root):
-    paths = [root / name for name in ('pyproject.toml', 'README.md', 'AGENTS.md', '.gitignore', '.gitattributes')]
+    paths = [root / name for name in ('pyproject.toml', 'README.md', '.gitignore', '.gitattributes')]
     for folder in ('src/dztr', 'dztr_param', 'workflows', 'strategies', 'tools'):
         paths.extend((root / folder).rglob('*.py'))
     paths.append(root / 'tools/Set-ProjectCache.ps1')
@@ -43,7 +44,8 @@ def selected_files(root):
                   'legacy_targets_si.csv', 'legacy_bounds_si.csv'}
     result = []
     for path in sorted(set(paths)):
-        if not path.is_file() or '__pycache__' in path.parts:
+        if (not path.is_file() or is_generated_file(path.relative_to(root))
+                or path.name == 'AGENTS.md'):
             continue
         rel = path.relative_to(root)
         if rel.parts[0] == 'data' and 'reservoirs' in rel.parts and path.name not in data_names:

@@ -12,6 +12,7 @@ sys.path[:0] = [str(ROOT / 'src'), str(ROOT)]
 from dztr._release import __version__
 from dztr.portable import file_digest, read_json, write_json
 from tools.build_researcher_bundle_v1 import selected_files, PUBLIC_RESERVOIRS
+from tools.release_hygiene_v1 import is_generated_file
 
 
 def build(output):
@@ -25,6 +26,8 @@ def build(output):
         paths += [p for p in (ROOT / folder).rglob('*') if p.is_file()]
     paths += [ROOT / 'tests/test_public_release_ci.py']
     for path in sorted(set(paths)):
+        if is_generated_file(path.relative_to(ROOT)) or path.name == 'AGENTS.md':
+            continue
         if not path.is_file():
             raise ValueError('Missing release input: ' + str(path.relative_to(ROOT)))
         target = source / path.relative_to(ROOT)

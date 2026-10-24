@@ -1,7 +1,10 @@
+# Generated development files stay local; release checks also reject tracked copies.
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .pytest_tmp*/
 .venv/
 *.egg-info/

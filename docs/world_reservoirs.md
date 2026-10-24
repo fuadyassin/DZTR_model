@@ -12,7 +12,7 @@ The active collection contains 41 reservoirs, now stored permanently under
 [`data/reservoirs/`](../data/reservoirs/README.md), with model settings under
 [`configs/reservoirs/`](../configs/reservoirs) and a shared
 [manifest](../data/reservoirs/manifest.json). Tuyen Quang is intentionally
-excluded at the user's request, as recorded in the
+excluded from this cohort, as recorded in the
 [active scope](../configs/world_reservoir_scope.json). Its existing storage
 conflict report remains historical audit evidence and needs no resolution for
 this work. The original catalog and results retain all 42 audited folders;

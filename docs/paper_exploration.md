@@ -4,7 +4,7 @@ The published [Table 1](https://hess.copernicus.org/articles/23/3735/2019/hess-2
 defines **37 unique reservoirs**. Its wrapped Falcon name is one reservoir, and
 the paper's Seminoe maps explicitly to the locally spelled `ex40_Semione` folder.
 All 37 have local observations. Travers, Mcgregor, Glenmore and Brazeau are the
-four additional active cases. Tuyen remains excluded by the user.
+four additional active cases. Tuyen is outside this cohort's scope.
 
 The downloaded table and its SHA256 are packaged in `data/paper_cohort_v1`.
 Membership is used to order the programme, while dates, coordinates and capacities

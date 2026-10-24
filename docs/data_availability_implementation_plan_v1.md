@@ -1,6 +1,6 @@
 # Integrated DZTR implementation plan: geometry and data availability
 
-Status: the preparation foundation and target-recipe/fixed-baseline workflow are implemented; see the [V1 operating instructions](data_availability_workflow_v1.md). New-recipe optimizer jobs, transfer and temporal model changes remain later deliveries. This document combines the original level-to-storage work, the [local geometry review](../outputs/level_storage_review_v1_20261017/README.md), the [Etienne implementation review](../outputs/etienne_review_v1_20261017_final/README.md), and the [completed cohort workflow](calibrated_cohort_workflow_v1.md). Existing calibrated profiles remain unchanged.
+This historical design plan connects level-to-storage preparation with data-availability methods. For the current implementation, use the [four-route workflow](four_route_workflow_v1.md); the [V1 operating instructions](data_availability_workflow_v1.md) describe the original preparation stage. The design draws on the [geometry review](../outputs/level_storage_review_v1_20261017/README.md), the [Etienne implementation review](../outputs/etienne_review_v1_20261017_final/README.md), and the [completed cohort workflow](calibrated_cohort_workflow_v1.md). Existing calibrated profiles remain unchanged.
 
 ## Intended result and scope
 
@@ -219,4 +219,4 @@ Focused scientific checks during implementation should cover:
 
 Run the complete regression suite once at the end of each substantial implementation delivery, after focused checks pass. Do not rerun optimization to test document/schema changes. Reuse verified scientific outputs, maintain durable job logs/checkpoints and report the fleet in batches.
 
-The first implementation should deliver **the inventory plus geometry preparation**, followed directly by **all eligible target recipes and a fleet baseline report**. This incorporates the user's existing work and establishes the full preparation-to-assessment path before adding more optimizer experiments.
+The initial implementation sequence is **the inventory plus geometry preparation**, followed by **all eligible target recipes and a fleet baseline report**. This integrates the existing level-to-storage conversion and establishes the preparation-to-assessment path before adding further optimizer experiments.

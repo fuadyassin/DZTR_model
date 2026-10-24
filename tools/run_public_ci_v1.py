@@ -13,6 +13,7 @@ from dztr._release import __version__
 from dztr.portable import file_digest, read_json, write_json
 from tools.build_researcher_bundle_v2 import build
 from tools.verify_researcher_bundle_v1 import verify
+from tools.release_hygiene_v1 import is_generated_file
 
 
 def audit_data(paths):
@@ -30,6 +31,8 @@ def audit_data(paths):
         ('levels_si.csv', 'observations_si.csv', 'station_components_si.csv', 'provenance.json'))
     for name in paths:
         path = Path(name)
+        if is_generated_file(name):
+            raise ValueError('Generated development file entered the tracked release: ' + name)
         if path.parts and path.parts[0] == 'data':
             reservoir_file = (len(path.parts) == 4 and path.parts[1] == 'reservoirs'
                               and path.parts[2] in allowed and path.parts[3] in names)
