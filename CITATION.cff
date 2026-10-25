@@ -9,6 +9,7 @@ authors:
     given-names: Fuad
     orcid: https://orcid.org/0000-0001-8179-7928
 version: 0.3.1
+doi: 10.5281/zenodo.23631633
 date-released: 2026-10-24
 license: MIT
 url: https://fuadyassin.github.io/DZTR_model/

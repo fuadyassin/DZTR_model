@@ -38,7 +38,8 @@ not prerequisites for the portable quick start.
 
 The GitHub Pages outlet builds from these Markdown sources after the public
 Ubuntu and Windows application checks pass. Version 0.3.1 uses the MIT license.
-The [release guide](release_v0_3_1.md) records the version-specific software
-citation; the [all-versions DOI](https://doi.org/10.5281/zenodo.23606592) identifies
-the software across releases. The published model paper has its own
+The [release guide](release_v0_3_1.md) records the
+[v0.3.1 software DOI](https://doi.org/10.5281/zenodo.23631633); the
+[all-versions DOI](https://doi.org/10.5281/zenodo.23606592) identifies the software
+across releases. The published model paper has its own
 [separate DOI](https://doi.org/10.5194/hess-23-3735-2019).

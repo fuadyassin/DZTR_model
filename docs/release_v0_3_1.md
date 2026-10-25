@@ -23,7 +23,7 @@ claim. Existing source gates and benchmark qualifications remain in place.
 
 The [v0.3.1 GitHub release](https://github.com/fuadyassin/DZTR_model/releases/tag/v0.3.1)
 provides the application source ZIP, Python wheel, rendered documentation and
-SHA256 checksums when publication completes. The source bundle is required for
+SHA256 checksums. The source bundle is required for
 workflow orchestration; the wheel supports frozen-profile simulation on its own.
 Install Python dependencies separately. Use the
 [portable application guide](portable_application_v1.md) for examples.
@@ -37,8 +37,9 @@ and third-party input terms remain unchanged.
 ## Citation and archive scope
 
 **Software:** Fuad Yassin (2026). DZTR: reservoir parameterization, simulation
-and calibration workflow. Version 0.3.1. The version-specific Zenodo DOI will be
-added after the release is archived. The
+and calibration workflow. Version 0.3.1. Zenodo.
+[Software DOI: 10.5281/zenodo.23631633](https://doi.org/10.5281/zenodo.23631633).
+Machine-readable metadata is in `CITATION.cff`. The
 [all-versions DOI](https://doi.org/10.5281/zenodo.23606592) identifies the software
 across releases; it is distinct from an individual release DOI.
 
@@ -56,4 +57,6 @@ remain excluded from Git and release bundles.
 
 The [v0.3.0 release and DOI](release_v0_3_0.md) retain their original files and
 checksums. Adding a new release does not replace the earlier archive. Cite the
-version used for a study; the model paper remains a separate reference.
+version used for a study; the model paper remains a separate reference. Current
+main-branch citation metadata adds the registered DOI without replacing the
+frozen release files.

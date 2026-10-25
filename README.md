@@ -1,6 +1,6 @@
 # DZTR model
 
-[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23606592.svg)](https://doi.org/10.5281/zenodo.23606592)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23631633.svg)](https://doi.org/10.5281/zenodo.23631633)
 
 A modular Python implementation of the dynamically zoned target release reservoir model described by [Yassin et al. (2019)](https://doi.org/10.5194/hess-23-3735-2019). Observation normalization, generalized parameterization, daily reservoir simulation, evaluation, a calibration/validation baseline and a budgeted NSGA-II calibration search are implemented. The simulation and objective port is checked against saved Trinity MATLAB outputs.
 
@@ -12,9 +12,8 @@ inflow alone and delegates configured parameterization/calibration jobs to the
 existing versioned run managers. Public examples require no private `outputs/`
 archives. Version 0.3.1 uses the MIT license and includes cross-platform release
 verification. See the [documentation](https://fuadyassin.github.io/DZTR_model/)
-and [release/citation guide](docs/release_v0_3_1.md). The
-[all-versions DOI](https://doi.org/10.5281/zenodo.23606592) identifies the software;
-the version-specific citation is recorded after archival. The model paper is cited
+and [release/citation guide](docs/release_v0_3_1.md). Cite version 0.3.1 with its
+[software DOI](https://doi.org/10.5281/zenodo.23631633). The model paper is cited
 separately. The [GitHub release](https://github.com/fuadyassin/DZTR_model/releases/tag/v0.3.1)
 provides the source bundle, wheel, rendered documentation and checksums.
 
