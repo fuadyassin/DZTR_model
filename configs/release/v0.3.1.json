@@ -1,0 +1,27 @@
+{
+  "kind": "dztr_software_release_v1",
+  "version": "0.3.1",
+  "tag": "v0.3.1",
+  "release_date": "2026-10-24",
+  "license": "MIT",
+  "model_paper_doi": "10.5194/hess-23-3735-2019",
+  "software_doi": null,
+  "software_concept_doi": "10.5281/zenodo.23606592",
+  "zenodo_record_url": null,
+  "documentation_url": "https://fuadyassin.github.io/DZTR_model/",
+  "previous_version": "0.3.0",
+  "previous_version_doi": "10.5281/zenodo.23606593",
+  "verification": {
+    "public_platforms": ["ubuntu-24.04", "windows-2022"],
+    "python": "3.12.7",
+    "private_records_required": false,
+    "new_calibration_searches": false
+  },
+  "scientific_qualifications": {
+    "independent_forecast_skill_established": false,
+    "source_certification_established": false,
+    "optimizer_convergence_established": false,
+    "remaining_source_reviews": "deferred",
+    "numerical_model_and_frozen_profiles_changed": false
+  }
+}

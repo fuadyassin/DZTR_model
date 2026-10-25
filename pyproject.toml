@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dztr_param"
-version = "0.3.0"
+version = "0.3.1"
 license = {file = "LICENSE"}
 description = "Modular DZTR reservoir parameterization, simulation and calibration"
 readme = "README.md"

@@ -29,7 +29,7 @@ flowchart LR
 | Choose release, storage or weighted objectives | [Full-data scalar calibration](full_data_scalar_comparison_v1.md) |
 | Interpret roots, failures and water conservation | [Root policies](root_policy_review.md), [interval simulation](interval_simulation.md) |
 | Review performance and computational budgets | [Scientific assessment](scientific_assessment_v1.md) |
-| Download, cite and verify a release | [Release and citation](release_v0_3_0.md) |
+| Download, cite and verify a release | [Release and citation](release_v0_3_1.md) |
 
 The stable command is `dztr` (also `python -m dztr`). Versioned run managers
 remain the scientific backends. Earlier guides describe frozen experiments and
@@ -37,7 +37,8 @@ can refer to private `outputs/` directories; those paths are archive references,
 not prerequisites for the portable quick start.
 
 The GitHub Pages outlet builds from these Markdown sources after the public
-Ubuntu and Windows application checks pass. Version 0.3.0 uses the MIT license.
-Version 0.3.0 is archived with a
-[software DOI](https://doi.org/10.5281/zenodo.23606593). The published model paper
-has its own [separate DOI](https://doi.org/10.5194/hess-23-3735-2019).
+Ubuntu and Windows application checks pass. Version 0.3.1 uses the MIT license.
+The [release guide](release_v0_3_1.md) records the version-specific software
+citation; the [all-versions DOI](https://doi.org/10.5281/zenodo.23606592) identifies
+the software across releases. The published model paper has its own
+[separate DOI](https://doi.org/10.5194/hess-23-3735-2019).

@@ -16,6 +16,9 @@ from tools.release_hygiene_v1 import is_generated_file
 
 
 def build(output):
+    release = read_json(ROOT / 'configs/release' / f'v{__version__}.json')
+    if release['version'] != __version__ or release['tag'] != f'v{__version__}':
+        raise ValueError('Release configuration does not match the distribution version')
     out = Path(output).resolve()
     if out.exists() or not out.is_relative_to(ROOT / 'outputs'):
         raise ValueError('Use a fresh release directory inside project outputs')
@@ -36,9 +39,9 @@ def build(output):
     commit = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
     dirty = bool(subprocess.run(['git', 'status', '--porcelain'], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip())
     write_json(source / 'SOURCE_IDENTITY.json', {'commit': commit, 'working_tree_dirty': dirty,
-        'version': __version__, 'source_date': '2026-10-23'})
+        'version': __version__, 'source_date': release['release_date']})
     manifest = {'kind': 'dztr_researcher_release_v2', 'version': __version__, 'license': 'MIT',
-        'software_doi': read_json(ROOT / 'configs/release/v0.3.0.json')['software_doi'],
+        'software_doi': release['software_doi'],
         'source_commit': commit, 'working_tree_dirty': dirty,
         'public_observation_reservoirs': list(PUBLIC_RESERVOIRS), 'private_runtime_archives_included': False,
         'artifact_sha256': {p.relative_to(source).as_posix(): file_digest(p)

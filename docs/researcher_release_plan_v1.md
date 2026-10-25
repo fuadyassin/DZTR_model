@@ -1,7 +1,7 @@
 # Researcher release process
 
-Version 0.3.0 is the public researcher application release. Its four
-parts are a stable command, frozen-profile examples, a curated scientific
+The public researcher application release combines four
+parts: a stable command, frozen-profile examples, a curated scientific
 assessment and a tested source/wheel bundle. Existing scientific versions,
 private observations, checkpoints and source gates remain preserved.
 
@@ -29,7 +29,7 @@ dependency installer. A fresh machine needs its Python dependencies installed.
 The publication sequence is:
 
 1. Keep the reviewed public-data allowlist and MIT license together with
-   version 0.3.0 and its software citation metadata.
+   the release version and its software citation metadata.
 2. Freeze the release version, dependencies, tests, source identity and bundle
    checksums; distinguish reproducibility from source/forecast certification.
 3. Build this documentation with strict local-link validation and publish it to
@@ -39,9 +39,9 @@ The publication sequence is:
    DOI**, then add that registered DOI to citation metadata, the documentation
    and repository links. The model paper's DOI remains a separate reference.
 
-Version 0.3.0 is published and its tagged public source is archived at
-[Zenodo](https://doi.org/10.5281/zenodo.23606593). The wheel, application bundle,
+Published versions of the tagged public source are archived at
+[Zenodo](https://doi.org/10.5281/zenodo.23606592). The wheel, application bundle,
 rendered documentation and checksums are GitHub release assets. DOI links are
 added to main-branch metadata after archival; the original tag and sealed files
 remain fixed. Remaining source investigations stay deferred. See
-[release and citation](release_v0_3_0.md) for the current metadata.
+[release and citation](release_v0_3_1.md) for the current metadata.

@@ -51,8 +51,13 @@ def validate_metadata(root):
         import tomli as tomllib
     metadata = tomllib.loads((root / 'pyproject.toml').read_text(encoding='utf-8'))['project']
     citation = yaml.safe_load((root / 'CITATION.cff').read_text(encoding='utf-8'))
+    release = read_json(root / 'configs/release' / f'v{__version__}.json')
     if metadata['version'] != __version__ or citation['version'] != __version__ or citation['license'] != 'MIT':
         raise ValueError('Distribution version, citation and license disagree')
+    if (release['version'] != __version__ or release['tag'] != f'v{__version__}'
+            or release['release_date'] != str(citation['date-released'])
+            or release['software_doi'] != citation.get('doi')):
+        raise ValueError('Release configuration and citation metadata disagree')
     if citation.get('doi') == '10.5194/hess-23-3735-2019':
         raise ValueError('The paper DOI cannot identify the software release')
     if not any(row.get('doi') == '10.5194/hess-23-3735-2019' for row in citation['references']):

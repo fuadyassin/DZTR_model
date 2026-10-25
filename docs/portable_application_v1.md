@@ -42,7 +42,7 @@ environment and cache settings in the terminal used for the examples.
 Use a dedicated environment if desired. Project-managed caches and temporary
 files are redirected to this checkout's `.cache`. Both the `dztr` console command
 and `python -m dztr` invoke the same interface. The package distribution retains
-its existing name, `dztr_param`; version 0.3.0 is distributed through GitHub
+its existing name, `dztr_param`; version 0.3.1 is distributed through GitHub
 release files. It has not been uploaded to PyPI.
 
 ## Apply a frozen profile
